@@ -129,8 +129,8 @@ function projectDetail(p) {
       <p class="eyebrow" style="margin-bottom:6px">研究概要</p>
       <p style="margin:0 0 14px;font-size:15px;line-height:1.75">${esc(p.overview)}</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
-        <div><strong style="display:block;margin-bottom:4px">中心的な研究質問</strong><span style="line-height:1.7">${esc(p.research_question)}</span></div>
-        <div><strong style="display:block;margin-bottom:4px">経済メカニズム</strong><span style="line-height:1.7">${esc(p.mechanism)}</span></div>
+        <div><strong style="display:block;margin-bottom:4px">この研究で知りたいこと</strong><span style="line-height:1.7">${esc(p.research_question)}</span></div>
+        <div><strong style="display:block;margin-bottom:4px">なぜそうなるのか</strong><span style="line-height:1.7">${esc(p.mechanism)}</span></div>
       </div>
     </section>
     <dl class="detail-grid">
@@ -152,7 +152,7 @@ function openDetail(title, rows, subtitle='研究名をクリックすると研�
 
 function openProject(id) {
   const project = state.data.projects.find(p => p.id === id);
-  if (project) openDetail(project.project, [project], '研究概要とサニタイズ済みの進捗情報です。');
+  if (project) openDetail(project.project, [project], '研究の内容と現在の進捗をまとめています。');
 }
 
 function bindDetails() {

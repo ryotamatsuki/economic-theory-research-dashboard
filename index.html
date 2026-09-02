@@ -7,63 +7,39 @@
   <meta name="description" content="経済理論研究ポートフォリオの公開用・サニタイズ済み進捗ダッシュボード。">
   <title>Economic Theory Research Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .kpi-button,.stage,.publication-lane,.attention-row{font:inherit;color:inherit;background:inherit}
-    .kpi-button{width:100%;text-align:left;cursor:pointer;transition:border-color .15s ease,box-shadow .15s ease,transform .15s ease}
-    .kpi-button:hover,.kpi-button:focus-visible{border-color:#54aeff;box-shadow:0 0 0 3px rgba(84,174,255,.18);outline:0;transform:translateY(-1px)}
-    .kpi-hint,.stage-hint,.publication-hint{display:block;margin-top:5px;color:#656d76;font-size:10px;font-weight:600;letter-spacing:.02em}
-    .stage{border:0;border-right:1px dashed #d8dee4;cursor:pointer;width:100%;padding:0;background:transparent}
-    .stage:hover,.stage:focus-visible{background:#f6f8fa;outline:2px solid #54aeff;outline-offset:-2px}
-    .attention-row{width:100%;border:0;border-bottom:1px solid #eaeef2;text-align:left;cursor:pointer;background:transparent}
-    .attention-row:hover,.attention-row:focus-visible{background:#f6f8fa;outline:2px solid #54aeff;outline-offset:-2px}
-    .project-detail-link{border:0;background:transparent;padding:0;color:#1f2328;font:inherit;font-weight:600;cursor:pointer;text-align:left}
-    .project-detail-link:hover,.project-detail-link:focus-visible{color:#0969da;text-decoration:underline;outline:0}
-    .publication-lane{display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:100%;border:0;border-right:1px dashed #d8dee4;cursor:pointer;background:transparent}
-    .publication-lane:hover,.publication-lane:focus-visible{background:#f6f8fa;outline:2px solid #54aeff;outline-offset:-2px}
-    .publication-heading{margin:0 0 8px;color:#656d76;font-size:11px;font-weight:700;text-transform:none;letter-spacing:.02em}
-    .lane-count{display:inline-flex;min-width:20px;height:20px;align-items:center;justify-content:center;margin-left:5px;border-radius:999px;background:#eaeef2;color:#1f2328;font-size:10px}
-    .detail-dialog{width:min(1180px,calc(100vw - 32px));max-height:min(82vh,860px);padding:0;border:1px solid #d8dee4;border-radius:10px;background:#fff;color:#1f2328;box-shadow:0 18px 60px rgba(31,35,40,.22)}
-    .detail-dialog::backdrop{background:rgba(31,35,40,.38)}
-    .detail-dialog-shell{display:flex;flex-direction:column;max-height:82vh}
-    .detail-dialog-header{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;padding:18px 20px 14px;border-bottom:1px solid #eaeef2}
-    .detail-dialog-header h2{font-size:20px;margin:0 0 4px}
-    .detail-close{width:36px;height:36px;border:1px solid #d8dee4;border-radius:6px;background:#fff;color:#656d76;font-size:24px;line-height:1;cursor:pointer}
-    .detail-close:hover,.detail-close:focus-visible{color:#1f2328;border-color:#8c959f;outline:2px solid #54aeff;outline-offset:2px}
-    .detail-content{padding:16px 20px 20px;overflow:auto}
-    .detail-table-wrap{overflow:auto;border:1px solid #eaeef2;border-radius:7px}
-    .detail-table{min-width:980px}
-    .detail-table th{position:static}
-    .detail-empty{padding:28px;color:#656d76;text-align:center}
-    .project-detail-card{max-width:900px}
-    .project-detail-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:16px}
-    .project-detail-head h3{font-size:22px;margin:2px 0 0}
-    .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:0;background:#eaeef2;border:1px solid #eaeef2;border-radius:8px;overflow:hidden}
-    .detail-grid>div{background:#fff;padding:12px 14px}
-    .detail-grid dt{color:#656d76;font-size:10px;font-weight:700;letter-spacing:.03em}
-    .detail-grid dd{margin:4px 0 0;font-weight:600}
-    @media(max-width:720px){
-      .detail-dialog{width:calc(100vw - 16px);max-height:90vh}
-      .detail-dialog-shell{max-height:90vh}
-      .detail-dialog-header{padding:14px}
-      .detail-content{padding:12px 14px 16px}
-      .detail-grid{grid-template-columns:1fr}
-    }
-  </style>
 </head>
 <body>
   <main class="shell">
     <header class="topbar">
-      <div>
-        <p class="eyebrow">研究ポートフォリオ・コマンドセンター</p>
-        <h1>Economic Theory Research Portfolio</h1>
-        <p class="subtitle">公開用ポートフォリオダッシュボード · 管理情報のみをサニタイズして表示</p>
+      <div class="topbar-copy">
+        <p class="eyebrow">ECONOMIC THEORY / RESEARCH PORTFOLIO</p>
+        <h1>Economic Theory<br><span>Research Portfolio</span></h1>
+        <p class="subtitle">進行中の理論研究・訂正論文を、研究段階、科学的判定、投稿状況まで一つの画面で追跡する公開ポートフォリオです。</p>
       </div>
-      <div class="sync-block" aria-live="polite">
-        <span id="last-sync">最終更新: —</span>
-        <span class="sync-divider">|</span>
-        <span id="sync-health" class="sync-health"><span class="dot"></span>読み込み中</span>
-      </div>
+      <aside class="topbar-meta">
+        <div class="sync-block" aria-live="polite">
+          <span class="sync-label">LIVE STATUS</span>
+          <span id="sync-health" class="sync-health"><span class="dot"></span>読み込み中</span>
+          <span id="last-sync" class="last-sync">最終更新: —</span>
+        </div>
+        <p class="public-note">公開用にサニタイズした管理情報のみを表示しています。</p>
+      </aside>
     </header>
+
+    <nav class="section-nav" aria-label="ページ内ナビゲーション">
+      <a href="#overview">概要</a>
+      <a href="#attention">要対応</a>
+      <a href="#portfolio">研究一覧</a>
+      <a href="#publication">投稿状況</a>
+    </nav>
+
+    <section id="overview" class="snapshot-section">
+      <div class="section-heading">
+        <div><span class="section-index">01</span><h2>Portfolio Snapshot</h2></div>
+        <p>現在の研究ポートフォリオを俯瞰</p>
+      </div>
+      <section id="kpis" class="kpis" aria-label="ポートフォリオ概要"></section>
+    </section>
 
     <section class="filters" aria-label="ポートフォリオ絞り込み">
       <label>優先度<select id="filter-priority"><option value="">すべて</option></select></label>
@@ -74,23 +50,28 @@
       <button id="clear-filters" type="button">リセット</button>
     </section>
 
-    <section id="kpis" class="kpis" aria-label="ポートフォリオ概要"></section>
-
-    <section class="overview-grid">
+    <section id="attention" class="overview-grid">
       <article class="panel attention-panel">
-        <div class="panel-title"><span aria-hidden="true">△</span><h2>要対応</h2></div>
+        <div class="panel-title">
+          <div><span class="panel-kicker">ATTENTION</span><h2>要対応</h2></div>
+          <span class="panel-mark" aria-hidden="true">↗</span>
+        </div>
         <div id="attention-list" class="attention-list"></div>
       </article>
 
-      <article class="panel">
-        <div class="panel-title"><h2>研究・投稿パイプライン</h2></div>
+      <article class="panel pipeline-panel">
+        <div class="panel-title">
+          <div><span class="panel-kicker">RESEARCH FLOW</span><h2>研究・投稿パイプライン</h2></div>
+          <span class="panel-mark" aria-hidden="true">→</span>
+        </div>
         <div id="stage-pipeline" class="stage-pipeline"></div>
       </article>
     </section>
 
-    <section class="panel portfolio-panel">
+    <section id="portfolio" class="panel portfolio-panel">
       <div class="panel-title table-title-row">
         <div>
+          <span class="panel-kicker">LIVE PORTFOLIO</span>
           <h2>進行中の研究一覧</h2>
           <p id="result-count" class="muted"></p>
         </div>
@@ -108,26 +89,34 @@
       </div>
     </section>
 
-    <section class="bottom-grid">
-      <article class="panel">
-        <div class="panel-title"><h2>投稿パイプライン</h2></div>
+    <section id="publication" class="bottom-grid">
+      <article class="panel publication-panel">
+        <div class="panel-title">
+          <div><span class="panel-kicker">PUBLICATION</span><h2>投稿パイプライン</h2></div>
+          <span class="panel-mark" aria-hidden="true">↗</span>
+        </div>
         <div id="publication-pipeline" class="publication-pipeline"></div>
       </article>
-      <article class="panel">
-        <div class="panel-title"><h2>最近の更新</h2></div>
+      <article class="panel recent-panel">
+        <div class="panel-title">
+          <div><span class="panel-kicker">ACTIVITY</span><h2>最近の更新</h2></div>
+          <span class="panel-mark" aria-hidden="true">○</span>
+        </div>
         <div id="recent-list" class="recent-list"></div>
       </article>
     </section>
 
-    <details class="methodology panel">
-      <summary>ダッシュボードの公開範囲とプライバシー境界</summary>
-      <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、リポジトリ内容、認証情報、非公開の研究エビデンスは含みません。</p>
-      <p>リポジトリの更新状況は自動観測しますが、科学的判定や研究ゲートの変更は自動化せず、人間が管理するcanonical decisionとして維持します。</p>
+    <details class="methodology">
+      <summary>公開範囲とプライバシー境界</summary>
+      <div class="methodology-body">
+        <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、リポジトリ内容、認証情報、非公開の研究エビデンスは含みません。</p>
+        <p>リポジトリの更新状況は自動観測しますが、科学的判定や研究ゲートの変更は自動化せず、人間が管理するcanonical decisionとして維持します。</p>
+      </div>
     </details>
 
     <footer>
-      <span>データ元: PORTFOLIO.yaml / canonical GitHub Issues / Portfolio Sync</span>
-      <span>静的サニタイズ済みartifact · 認証情報は埋め込まれていません</span>
+      <span>Economic Theory Research Portfolio</span>
+      <span>PORTFOLIO.yaml / canonical GitHub Issues / Portfolio Sync</span>
     </footer>
   </main>
 
@@ -135,7 +124,7 @@
     <section class="detail-dialog-shell">
       <header class="detail-dialog-header">
         <div>
-          <p class="eyebrow">研究詳細</p>
+          <p class="eyebrow">RESEARCH DETAIL</p>
           <h2 id="detail-title">ポートフォリオ詳細</h2>
           <p id="detail-subtitle" class="muted"></p>
         </div>

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-02T05:56:13.303314Z",
-    "generated_jst": "2026-09-02 14:56 JST",
+    "generated_utc": "2026-09-02T07:29:43.213481Z",
+    "generated_jst": "2026-09-02 16:29 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -44,6 +44,9 @@
     {
       "id": "information-appropriability",
       "project": "Information Appropriability",
+      "overview": "Studies incentives to acquire product-improvement information when downstream opportunities can be reallocated across routes. The project asks whether organizational reallocation changes the gap between privately optimal and system-optimal information acquisition.",
+      "research_question": "When can downstream reallocation reduce a firm's incentive to acquire information even though coordinated information acquisition becomes more valuable?",
+      "mechanism": "Reallocation changes which route captures the payoff from a discovery, shifting private appropriability relative to the system-wide value of information.",
       "priority": "P0",
       "type": "Theory",
       "stage": "Stage 9",
@@ -51,7 +54,7 @@
       "health": "Blocked",
       "next_gate": "Resolve CI",
       "journal": "",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": false,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Theory Frozen",
@@ -60,6 +63,9 @@
     {
       "id": "shared-core-entry",
       "project": "Shared-Core Entry",
+      "overview": "Studies entry when several peripheral platforms or hubs draw from a common residual market or network core. The application includes competition among regional co-creation hubs linked to a larger metropolitan or national core.",
+      "research_question": "How does entry by one peripheral option affect the profitability and welfare impact of entry by another when both interact through a shared core?",
+      "mechanism": "One entrant can thin the common core faced by others; network feedback on the core can amplify or reverse the resulting entry externality.",
       "priority": "P0",
       "type": "Theory",
       "stage": "Welfare / Generality",
@@ -67,7 +73,7 @@
       "health": "Review",
       "next_gate": "Evidence gate",
       "journal": "",
-      "activity": "1m",
+      "activity": "1h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -76,6 +82,9 @@
     {
       "id": "private-compatibility",
       "project": "Private Compatibility",
+      "overview": "Studies standardization coalitions when firms can privately create compatibility after governments choose coalition structures. It examines whether private circumvention changes coalition incentives and stability.",
+      "research_question": "Can private compatibility overturn governments' preferred standardization coalition and the stability of exclusionary arrangements?",
+      "mechanism": "Private compatibility selectively erodes exclusion rents while leaving other market disadvantages intact, changing governments' payoff rankings.",
       "priority": "P0",
       "type": "Theory",
       "stage": "Submission Ready",
@@ -83,7 +92,7 @@
       "health": "On track",
       "next_gate": "Submit",
       "journal": "IJIO",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -92,6 +101,9 @@
     {
       "id": "shy-2002-correction",
       "project": "Shy (2002)",
+      "overview": "A correction paper on the multi-firm implementation of undercut-proof pricing with downward-sloping demand. It revisits how switching-cost pricing should be computed when firms face non-flat demand.",
+      "research_question": "What pricing condition correctly characterizes undercut-proof prices in the multi-firm, downward-sloping-demand setting?",
+      "mechanism": "The correction restores the relevant demand response when evaluating whether a firm can profitably undercut its rivals.",
       "priority": "P0",
       "type": "Correction",
       "stage": "Submitted",
@@ -99,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "Editorial status",
       "journal": "IJIO",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -108,6 +120,9 @@
     {
       "id": "gandal-shy-correction",
       "project": "Gandal–Shy",
+      "overview": "A correction note on standardization unions and foreclosure. It studies pricing when an outsider may sell zero units but still constrain the prices chosen by coalition members.",
+      "research_question": "Can a foreclosed outsider remain strategically relevant even after its equilibrium sales fall to zero?",
+      "mechanism": "The outsider's potential re-entry through price competition creates a limit-pricing constraint before the market reaches an unconstrained duopoly regime.",
       "priority": "P0",
       "type": "Correction",
       "stage": "Submission Ready",
@@ -115,7 +130,7 @@
       "health": "On track",
       "next_gate": "Submit",
       "journal": "RIO",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -124,6 +139,9 @@
     {
       "id": "ishikawa-shibata-correction",
       "project": "Ishikawa–Shibata",
+      "overview": "A correction paper on R&D competition and cooperation with asymmetric spillovers. It re-examines the parameter boundaries used to compare individual and aggregate R&D outcomes.",
+      "research_question": "Are the published cutoff rules for comparing R&D outcomes valid throughout the admissible asymmetric-spillover parameter space?",
+      "mechanism": "Asymmetry makes the relevant comparison boundaries parameter-dependent, so fixed cutoffs can misclassify economically valid regions.",
       "priority": "P1",
       "type": "Correction",
       "stage": "Manuscript",
@@ -131,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "Fee verification",
       "journal": "IJIO",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -140,6 +158,9 @@
     {
       "id": "c022-behrens-lijesen",
       "project": "C022",
+      "overview": "A correction candidate emerging from a replication audit of an oligopoly model with a residual-monopoly stage. The project tests whether the reported equilibrium profile is robust to unilateral deviations.",
+      "research_question": "Does the published residual-monopoly pricing profile satisfy the underlying best-response conditions throughout the stated parameter region?",
+      "mechanism": "A local pricing deviation can alter continuation payoffs and, if profitable, propagate to upstream capacity and welfare calculations.",
       "priority": "P1",
       "type": "Candidate",
       "stage": "Verification",
@@ -147,7 +168,7 @@
       "health": "Review",
       "next_gate": "Human verification",
       "journal": "",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -156,6 +177,9 @@
     {
       "id": "regional-lab-diversification",
       "project": "Regional Public Lab",
+      "overview": "Studies decentralized R&D choices by regional public research institutes that choose both research capacity and research direction. The application includes public laboratories and cultivar or technology development.",
+      "research_question": "When do decentralized regional laboratories choose too much duplication or too little diversification relative to the socially desirable research portfolio?",
+      "mechanism": "Discovery correlation, failure insurance, commercialization, and downstream product-market substitution jointly determine the value of parallel versus diversified research.",
       "priority": "P1",
       "type": "Theory",
       "stage": "Prior-Art Kill",
@@ -163,7 +187,7 @@
       "health": "Review",
       "next_gate": "Prior-art gate",
       "journal": "",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -172,17 +196,17 @@
   ],
   "recent": [
     {
-      "when": "1m",
+      "when": "1h",
       "project": "Shared-Core Entry",
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "4h",
+      "when": "6h",
       "project": "Regional Public Lab",
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "4h",
+      "when": "6h",
       "project": "C022",
       "event": "Repository observation refreshed"
     }

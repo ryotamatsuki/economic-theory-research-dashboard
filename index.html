@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Sanitized public dashboard for an economic theory research portfolio.">
+  <title>Economic Theory Research Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Research Portfolio Command Center</p>
+        <h1>Economic Theory Research Portfolio</h1>
+        <p class="subtitle">Public portfolio dashboard · sanitized management view</p>
+      </div>
+      <div class="sync-block" aria-live="polite">
+        <span id="last-sync">Last sync: —</span>
+        <span class="sync-divider">|</span>
+        <span id="sync-health" class="sync-health"><span class="dot"></span>Loading</span>
+      </div>
+    </header>
+
+    <section class="filters" aria-label="Portfolio filters">
+      <label>Priority<select id="filter-priority"><option value="">All</option></select></label>
+      <label>Type<select id="filter-type"><option value="">All</option></select></label>
+      <label>Stage<select id="filter-stage"><option value="">All</option></select></label>
+      <label>Health<select id="filter-health"><option value="">All</option></select></label>
+      <label>Journal<select id="filter-journal"><option value="">All</option></select></label>
+      <button id="clear-filters" type="button">Clear</button>
+    </section>
+
+    <section id="kpis" class="kpis" aria-label="Portfolio summary"></section>
+
+    <section class="overview-grid">
+      <article class="panel attention-panel">
+        <div class="panel-title"><span aria-hidden="true">△</span><h2>Needs Attention</h2></div>
+        <div id="attention-list" class="attention-list"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-title"><h2>Research / Publication Pipeline</h2></div>
+        <div id="stage-pipeline" class="stage-pipeline"></div>
+      </article>
+    </section>
+
+    <section class="panel portfolio-panel">
+      <div class="panel-title table-title-row">
+        <div>
+          <h2>Live Research Portfolio</h2>
+          <p id="result-count" class="muted"></p>
+        </div>
+        <span class="legend"><span class="legend-dot blocked"></span>Blocked <span class="legend-dot review"></span>Review <span class="legend-dot track"></span>On track <span class="legend-dot waiting"></span>Waiting</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>P</th><th>Project</th><th>Type</th><th>Stage</th><th>Scientific Verdict</th><th>Health</th><th>Next Gate</th><th>Journal</th><th>Activity</th>
+            </tr>
+          </thead>
+          <tbody id="portfolio-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel">
+        <div class="panel-title"><h2>Publication Pipeline</h2></div>
+        <div id="publication-pipeline" class="publication-pipeline"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-title"><h2>Recently Changed</h2></div>
+        <div id="recent-list" class="recent-list"></div>
+      </article>
+    </section>
+
+    <details class="methodology panel">
+      <summary>Dashboard scope and privacy boundary</summary>
+      <p>This page publishes management metadata only. Mathematical derivations, proofs, manuscripts, exact counterexamples, detailed blockers, repository contents, credentials, and private research evidence are not included in the public artifact.</p>
+      <p>Repository activity is observed automatically, but scientific verdicts and research gates remain human-controlled canonical decisions.</p>
+    </details>
+
+    <footer>
+      <span>Data source: PORTFOLIO.yaml / canonical GitHub Issues / Portfolio Sync</span>
+      <span>Static sanitized artifact · no credentials embedded</span>
+    </footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

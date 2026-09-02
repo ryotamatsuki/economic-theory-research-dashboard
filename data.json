@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-02T02:20:09.986005Z",
-    "generated_jst": "2026-09-02 11:20 JST",
+    "generated_utc": "2026-09-02T02:39:26.008325Z",
+    "generated_jst": "2026-09-02 11:39 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -51,11 +51,11 @@
       "health": "Blocked",
       "next_gate": "Resolve CI",
       "journal": "",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Theory Frozen",
-      "publication_lane": null,
-      "activity": "53m"
+      "publication_lane": null
     },
     {
       "id": "shared-core-entry",
@@ -67,11 +67,11 @@
       "health": "Review",
       "next_gate": "Evidence gate",
       "journal": "",
+      "activity": "1h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
-      "publication_lane": null,
-      "activity": "53m"
+      "publication_lane": null
     },
     {
       "id": "private-compatibility",
@@ -83,11 +83,11 @@
       "health": "On track",
       "next_gate": "Submit",
       "journal": "IJIO",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
-      "activity": "53m"
+      "publication_lane": "Submission Ready"
     },
     {
       "id": "shy-2002-correction",
@@ -99,11 +99,11 @@
       "health": "Waiting",
       "next_gate": "Editorial status",
       "journal": "IJIO",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
-      "activity": "53m"
+      "publication_lane": "Submitted"
     },
     {
       "id": "gandal-shy-correction",
@@ -115,11 +115,11 @@
       "health": "On track",
       "next_gate": "Submit",
       "journal": "RIO",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
-      "activity": "53m"
+      "publication_lane": "Submission Ready"
     },
     {
       "id": "ishikawa-shibata-correction",
@@ -131,11 +131,11 @@
       "health": "Blocked",
       "next_gate": "Fee verification",
       "journal": "IJIO",
+      "activity": "1h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
-      "publication_lane": "Manuscript",
-      "activity": "53m"
+      "publication_lane": "Manuscript"
     },
     {
       "id": "c022-behrens-lijesen",
@@ -147,11 +147,11 @@
       "health": "Review",
       "next_gate": "Human verification",
       "journal": "",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
-      "publication_lane": null,
-      "activity": "53m"
+      "publication_lane": null
     },
     {
       "id": "regional-lab-diversification",
@@ -163,29 +163,28 @@
       "health": "Review",
       "next_gate": "Prior-art gate",
       "journal": "",
+      "activity": "1h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
-      "publication_lane": null,
-      "activity": "53m"
+      "publication_lane": null
     }
   ],
   "recent": [
     {
-      "when": "53m",
+      "when": "1h",
       "project": "Regional Public Lab",
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "53m",
+      "when": "1h",
       "project": "C022",
       "event": "Repository observation refreshed"
     },
     {
-      "when": "53m",
+      "when": "1h",
       "project": "Ishikawa–Shibata",
       "event": "Portfolio review signal detected"
     }
   ]
 }
-

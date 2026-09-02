@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "sync": {
+    "generated_utc": "2026-09-02T02:20:09.986005Z",
+    "generated_jst": "2026-09-02 11:20 JST",
+    "status": "Healthy",
+    "label": "Auto Sync Healthy"
+  },
+  "stats": {
+    "live": 8,
+    "p0": 5,
+    "blocked": 2,
+    "submission_ready": 2,
+    "submitted": 1,
+    "review_needed": 3
+  },
+  "pipeline": [
+    {
+      "label": "Prior-Art",
+      "count": 1
+    },
+    {
+      "label": "Research Gate",
+      "count": 2
+    },
+    {
+      "label": "Theory Frozen",
+      "count": 1
+    },
+    {
+      "label": "Manuscript",
+      "count": 1
+    },
+    {
+      "label": "Submission Ready",
+      "count": 2
+    },
+    {
+      "label": "Submitted",
+      "count": 1
+    }
+  ],
+  "projects": [
+    {
+      "id": "information-appropriability",
+      "project": "Information Appropriability",
+      "priority": "P0",
+      "type": "Theory",
+      "stage": "Stage 9",
+      "verdict": "THEORY_FROZEN",
+      "health": "Blocked",
+      "next_gate": "Resolve CI",
+      "journal": "",
+      "review_needed": false,
+      "attention_reason": "Blocking gate",
+      "pipeline_lane": "Theory Frozen",
+      "publication_lane": null,
+      "activity": "53m"
+    },
+    {
+      "id": "shared-core-entry",
+      "project": "Shared-Core Entry",
+      "priority": "P0",
+      "type": "Theory",
+      "stage": "Welfare / Generality",
+      "verdict": "CONDITIONAL_GO",
+      "health": "Review",
+      "next_gate": "Evidence gate",
+      "journal": "",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null,
+      "activity": "53m"
+    },
+    {
+      "id": "private-compatibility",
+      "project": "Private Compatibility",
+      "priority": "P0",
+      "type": "Theory",
+      "stage": "Submission Ready",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "Submit",
+      "journal": "IJIO",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "activity": "53m"
+    },
+    {
+      "id": "shy-2002-correction",
+      "project": "Shy (2002)",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Submitted",
+      "verdict": "CORRECTION_SUBMITTED",
+      "health": "Waiting",
+      "next_gate": "Editorial status",
+      "journal": "IJIO",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
+      "activity": "53m"
+    },
+    {
+      "id": "gandal-shy-correction",
+      "project": "Gandal–Shy",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Submission Ready",
+      "verdict": "CORRECTION_READY",
+      "health": "On track",
+      "next_gate": "Submit",
+      "journal": "RIO",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "activity": "53m"
+    },
+    {
+      "id": "ishikawa-shibata-correction",
+      "project": "Ishikawa–Shibata",
+      "priority": "P1",
+      "type": "Correction",
+      "stage": "Manuscript",
+      "verdict": "CORRECTION_READY",
+      "health": "Blocked",
+      "next_gate": "Fee verification",
+      "journal": "IJIO",
+      "review_needed": true,
+      "attention_reason": "Blocking gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
+      "activity": "53m"
+    },
+    {
+      "id": "c022-behrens-lijesen",
+      "project": "C022",
+      "priority": "P1",
+      "type": "Candidate",
+      "stage": "Verification",
+      "verdict": "CORRECTION_CANDIDATE",
+      "health": "Review",
+      "next_gate": "Human verification",
+      "journal": "",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null,
+      "activity": "53m"
+    },
+    {
+      "id": "regional-lab-diversification",
+      "project": "Regional Public Lab",
+      "priority": "P1",
+      "type": "Theory",
+      "stage": "Prior-Art Kill",
+      "verdict": "UNRESOLVED",
+      "health": "Review",
+      "next_gate": "Prior-art gate",
+      "journal": "",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
+      "pipeline_lane": "Prior-Art",
+      "publication_lane": null,
+      "activity": "53m"
+    }
+  ],
+  "recent": [
+    {
+      "when": "53m",
+      "project": "Regional Public Lab",
+      "event": "Portfolio review signal detected"
+    },
+    {
+      "when": "53m",
+      "project": "C022",
+      "event": "Repository observation refreshed"
+    },
+    {
+      "when": "53m",
+      "project": "Ishikawa–Shibata",
+      "event": "Portfolio review signal detected"
+    }
+  ]
+}
+

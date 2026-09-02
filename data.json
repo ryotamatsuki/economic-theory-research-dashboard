@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-02T19:52:28.632610Z",
-    "generated_jst": "2026-09-03 04:52 JST",
+    "generated_utc": "2026-09-02T22:42:30.463556Z",
+    "generated_jst": "2026-09-03 07:42 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -54,7 +54,7 @@
       "health": "Blocked",
       "next_gate": "CI解消",
       "journal": "",
-      "activity": "3h",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Theory Frozen",
@@ -73,7 +73,7 @@
       "health": "Review",
       "next_gate": "エビデンス確認",
       "journal": "",
-      "activity": "3h",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -92,7 +92,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "IJIO",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -111,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -130,7 +130,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "RIO",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -149,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -168,7 +168,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -187,7 +187,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "18h",
+      "activity": "21h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -196,17 +196,17 @@
   ],
   "recent": [
     {
-      "when": "3h",
+      "when": "1m",
       "project": "Shared-Core Entry",
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "3h",
+      "when": "1m",
       "project": "Information Appropriability",
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "18h",
+      "when": "21h",
       "project": "Regional Public Lab",
       "event": "Portfolio review signal detected"
     }

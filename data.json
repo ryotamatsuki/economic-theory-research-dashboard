@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T14:26:01.985903Z",
+    "generated_utc": "2026-09-03T14:26:45.769874Z",
     "generated_jst": "2026-09-03 23:26 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
   "stats": {
-    "live": 8,
+    "live": 10,
     "p0": 5,
     "blocked": 1,
     "submission_ready": 2,
     "submitted": 1,
-    "review_needed": 4
+    "review_needed": 6
   },
   "pipeline": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "label": "Research Gate",
-      "count": 2
+      "count": 4
     },
     {
       "label": "Theory Frozen",
@@ -44,15 +44,15 @@
     {
       "id": "information-appropriability",
       "project": "Information Appropriability",
-      "overview": "企業が新しい製品改善のアイデアや情報を得たとき、その成果をどの事業や販売ルートで生かすかを後から振り分けられる組織を考えます。こうした柔軟な再配分は一見すると情報収集を促しそうですが、情報を集めた部門自身が成果の利益を十分に受け取れないと、逆に情報を探す動機が弱くなる可能性があります。この研究では、個々の部門にとって望ましい情報収集と、組織全体にとって望ましい情報収集が、どのような条件で食い違うのかを理論的に分析します。",
-      "research_question": "組織全体ではもっと情報を集めた方がよいのに、現場や個別部門では情報を集める動機が弱くなるのは、どのような場合か。",
-      "mechanism": "情報を見つけた部門とは別のルートでもその成果を使えると、組織全体が得る利益は大きくなります。一方で、情報を見つけた部門自身がその利益をすべて受け取れるとは限りません。この「情報を集める主体」と「成果の利益を受け取る主体」のずれが中心です。",
+      "overview": "組織の中で、情報を集める主体と、その情報を使って事業配分や組織判断を行う主体が異なるときに、情報収集のインセンティブがどのように変わるかを研究するプロジェクトです。これまで複数の情報・学習メカニズムを検討しましたが、既存理論やより単純な非情報モデルでも同じ結果を説明できるものが多く、現在はモデルを拡張するのではなく研究質問そのものを再設計する段階に戻っています。",
+      "research_question": "情報や学習が本当に不可欠で、より単純な投資・配分モデルでは再現できない組織内の戦略的問題は何か。",
+      "mechanism": "これまでの候補では、情報取得、組織選択、将来価値のつながりを考えてきましたが、多くが一般的な投資や状態変化として置き換えられました。次の段階では、信念や情報構造を取り除くと結果そのものが消えるメカニズムに絞って再探索します。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 9",
+      "stage": "研究質問再設計",
       "verdict": "NO_GO_FOR_CURRENT_ROUTE",
       "health": "Review",
-      "next_gate": "CI解消",
+      "next_gate": "Stage 0再設定",
       "journal": "",
       "activity": "3m",
       "review_needed": false,
@@ -62,18 +62,18 @@
     },
     {
       "id": "shared-core-entry",
-      "project": "Shared-Core Entry",
-      "overview": "複数の地域拠点やプラットフォームが、それぞれ独立して活動しながら、実は同じ企業・人材・案件のプールにもつながっている状況を考えます。例えば、愛媛や香川、大阪、東京などの官民共創拠点が、地域内の利用者だけでなく全国の企業や専門人材を引き付けようとするようなケースです。この研究では、ある地域の拠点が新しく参入したり魅力を高めたりしたとき、他地域の拠点にどのような影響が及ぶのかを理論的に分析します。",
-      "research_question": "一つの地域拠点が成長すると、他の拠点も市場全体の活性化によって得をするのか。それとも、共通の企業や人材を奪われて不利になるのか。",
-      "mechanism": "各拠点は別々に見えても、背後では同じ「共通の市場・ネットワーク」につながっています。一つの拠点がそこから利用者を引き付けると、残された共通市場の厚みが変わり、それが別の拠点の魅力や参入利益にも影響します。この共通コアを介した間接的な競争が中心です。",
+      "project": "Public Innovation Hubs",
+      "overview": "複数の地域政府が公共のイノベーション拠点へ投資し、同時に両地域の利用者が共通の民間イノベーション拠点も利用できる状況を考えます。公共投資は企業や支援者の参加を変え、さらに民間拠点が利用価格を調整することで地域間の戦略関係も変化します。現在は理論と原稿の統合を終え、Journal of Public Economic Theoryへの提出前QAまで進んでいます。",
+      "research_question": "地域の公共イノベーション投資は互いに支え合うのか、それとも共通の民間拠点が価格を調整すると競い合う関係へ変わるのか。",
+      "mechanism": "公共投資が増えると利用者と支援者の参加先が変わり、ネットワーク効果を通じて他地域の投資誘因にも影響します。民間拠点が価格を固定している場合の正の関係に、民間側の最適な価格調整が加わることで、その戦略関係が反転し得ることが中心です。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "厚生・一般化",
+      "stage": "JPET提出QA",
       "verdict": "THEORY_FROZEN",
       "health": "On track",
-      "next_gate": "エビデンス確認",
+      "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "2m",
+      "activity": "3m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -192,12 +192,50 @@
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
       "publication_lane": null
+    },
+    {
+      "id": "agentic-ai-authority",
+      "project": "Agentic AI Authority",
+      "overview": "外部のAgentic AIプラットフォームへ業務を委ねる企業が、人間の経験や復旧能力をどこまで残し、誰に意思決定権限を持たせるべきかを考える理論研究です。現在のモデルは、AIが通常時には優れていても人間の能力を一定程度残す理由を表現できますが、既存のアウトソーシングや学習の理論との差を十分に確保できず、独自の戦略メカニズムを探し直す段階に戻っています。",
+      "research_question": "外部AIへの依存だからこそ生じ、通常のアウトソーシングやバックアップ能力の理論では再現できない権限配分の戦略的効果は何か。",
+      "mechanism": "外部AIの価格・障害リスクと、人間が実務経験を失うことで復旧能力が低下する動学的な関係を扱います。ただし現在の主要結果は既存理論に近いため、次のモデルでは外部プラットフォーム依存が新しいフィードバックを生む場合に限定して再探索します。",
+      "priority": "P1",
+      "type": "Theory",
+      "stage": "Stage 3再探索",
+      "verdict": "NO_GO_FOR_CURRENT_ROUTE",
+      "health": "Review",
+      "next_gate": "新規メカニズム探索",
+      "journal": "",
+      "activity": "4m",
+      "review_needed": false,
+      "attention_reason": "Research reset",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null
+    },
+    {
+      "id": "directional-friction",
+      "project": "Directional Friction",
+      "overview": "消費者が左右どちらへ移動するかによって負担が異なる「方向依存のアクセス摩擦」を空間競争に導入し、企業間距離と価格競争の関係がどう変わるかを調べる研究です。価格反応に特徴的な結果は得られましたが、標準的なHotellingモデルの仮想的な立地点として読み替えられる部分が大きく、現在のプリミティブによる単独論文ルートは終了しています。",
+      "research_question": "方向依存の摩擦は、標準的な空間競争モデルへの変換では説明できない新しい戦略的結果を生み出せるか。",
+      "mechanism": "一方向だけに追加負担を課すと、均衡上は企業の実効的な立地点がずれたように作用します。この変換可能性が現在の新規性を弱めたため、再開する場合は単なる立地点の置換では消えない別の戦略的相互作用を導入する必要があります。",
+      "priority": "P1",
+      "type": "Theory",
+      "stage": "現ルート終了",
+      "verdict": "NO_GO_FOR_CURRENT_ROUTE",
+      "health": "Review",
+      "next_gate": "新プリミティブ再設計",
+      "journal": "",
+      "activity": "3m",
+      "review_needed": false,
+      "attention_reason": "Research reset",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null
     }
   ],
   "recent": [
     {
-      "when": "2m",
-      "project": "Shared-Core Entry",
+      "when": "3m",
+      "project": "Public Innovation Hubs",
       "event": "Repository observation refreshed"
     },
     {
@@ -206,9 +244,9 @@
       "event": "Research route requires reset"
     },
     {
-      "when": "1d",
-      "project": "Regional Public Lab",
-      "event": "Portfolio review signal detected"
+      "when": "3m",
+      "project": "Directional Friction",
+      "event": "Research route requires reset"
     }
   ]
 }

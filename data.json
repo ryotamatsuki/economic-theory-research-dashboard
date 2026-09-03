@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T11:26:21.167271Z",
-    "generated_jst": "2026-09-03 20:26 JST",
+    "generated_utc": "2026-09-03T14:24:31.844015Z",
+    "generated_jst": "2026-09-03 23:24 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -12,7 +12,7 @@
     "blocked": 2,
     "submission_ready": 2,
     "submitted": 1,
-    "review_needed": 4
+    "review_needed": 2
   },
   "pipeline": [
     {
@@ -54,8 +54,8 @@
       "health": "Blocked",
       "next_gate": "CI解消",
       "journal": "",
-      "activity": "5h",
-      "review_needed": true,
+      "activity": "1m",
+      "review_needed": false,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Theory Frozen",
       "publication_lane": null
@@ -70,12 +70,12 @@
       "type": "Theory",
       "stage": "厚生・一般化",
       "verdict": "CONDITIONAL_GO",
-      "health": "Review",
+      "health": "On track",
       "next_gate": "エビデンス確認",
       "journal": "",
       "activity": "1m",
-      "review_needed": true,
-      "attention_reason": "Sync drift",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
       "publication_lane": null
     },
@@ -198,12 +198,12 @@
     {
       "when": "1m",
       "project": "Shared-Core Entry",
-      "event": "Portfolio review signal detected"
+      "event": "Repository observation refreshed"
     },
     {
-      "when": "5h",
+      "when": "1m",
       "project": "Information Appropriability",
-      "event": "Portfolio review signal detected"
+      "event": "Blocking gate active"
     },
     {
       "when": "1d",

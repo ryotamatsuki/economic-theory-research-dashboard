@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T05:55:43.392540Z",
-    "generated_jst": "2026-09-03 14:55 JST",
+    "generated_utc": "2026-09-03T11:26:21.167271Z",
+    "generated_jst": "2026-09-03 20:26 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -54,7 +54,7 @@
       "health": "Blocked",
       "next_gate": "CI解消",
       "journal": "",
-      "activity": "1m",
+      "activity": "5h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Theory Frozen",
@@ -201,7 +201,7 @@
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "1m",
+      "when": "5h",
       "project": "Information Appropriability",
       "event": "Portfolio review signal detected"
     },

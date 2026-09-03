@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T14:24:55.969077Z",
-    "generated_jst": "2026-09-03 23:24 JST",
+    "generated_utc": "2026-09-03T14:26:01.985903Z",
+    "generated_jst": "2026-09-03 23:26 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
   "stats": {
     "live": 8,
     "p0": 5,
-    "blocked": 2,
+    "blocked": 1,
     "submission_ready": 2,
     "submitted": 1,
-    "review_needed": 3
+    "review_needed": 4
   },
   "pipeline": [
     {
@@ -25,11 +25,11 @@
     },
     {
       "label": "Theory Frozen",
-      "count": 1
+      "count": 0
     },
     {
       "label": "Manuscript",
-      "count": 1
+      "count": 2
     },
     {
       "label": "Submission Ready",
@@ -50,14 +50,14 @@
       "priority": "P0",
       "type": "Theory",
       "stage": "Stage 9",
-      "verdict": "THEORY_FROZEN",
-      "health": "Blocked",
+      "verdict": "NO_GO_FOR_CURRENT_ROUTE",
+      "health": "Review",
       "next_gate": "CI解消",
       "journal": "",
-      "activity": "1m",
+      "activity": "3m",
       "review_needed": false,
-      "attention_reason": "Blocking gate",
-      "pipeline_lane": "Theory Frozen",
+      "attention_reason": "Research reset",
+      "pipeline_lane": "Research Gate",
       "publication_lane": null
     },
     {
@@ -69,15 +69,15 @@
       "priority": "P0",
       "type": "Theory",
       "stage": "厚生・一般化",
-      "verdict": "CONDITIONAL_GO",
+      "verdict": "THEORY_FROZEN",
       "health": "On track",
       "next_gate": "エビデンス確認",
-      "journal": "",
-      "activity": "1m",
+      "journal": "JPET",
+      "activity": "2m",
       "review_needed": false,
       "attention_reason": "Verification gate",
-      "pipeline_lane": "Research Gate",
-      "publication_lane": null
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript"
     },
     {
       "id": "private-compatibility",
@@ -196,14 +196,14 @@
   ],
   "recent": [
     {
-      "when": "1m",
+      "when": "2m",
       "project": "Shared-Core Entry",
       "event": "Repository observation refreshed"
     },
     {
-      "when": "1m",
+      "when": "3m",
       "project": "Information Appropriability",
-      "event": "Blocking gate active"
+      "event": "Research route requires reset"
     },
     {
       "when": "1d",

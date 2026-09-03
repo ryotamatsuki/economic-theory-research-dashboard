@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T14:26:45.769874Z",
-    "generated_jst": "2026-09-03 23:26 JST",
+    "generated_utc": "2026-09-03T15:42:12.929626Z",
+    "generated_jst": "2026-09-04 00:42 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -10,8 +10,8 @@
     "live": 10,
     "p0": 5,
     "blocked": 1,
-    "submission_ready": 2,
-    "submitted": 1,
+    "submission_ready": 1,
+    "submitted": 2,
     "review_needed": 6
   },
   "pipeline": [
@@ -33,11 +33,11 @@
     },
     {
       "label": "Submission Ready",
-      "count": 2
+      "count": 1
     },
     {
       "label": "Submitted",
-      "count": 1
+      "count": 2
     }
   ],
   "projects": [
@@ -54,7 +54,7 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "journal": "",
-      "activity": "3m",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -73,7 +73,7 @@
       "health": "On track",
       "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "3m",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -127,14 +127,14 @@
       "type": "Correction",
       "stage": "投稿準備完了",
       "verdict": "CORRECTION_READY",
-      "health": "On track",
+      "health": "Waiting",
       "next_gate": "投稿",
       "journal": "RIO",
-      "activity": "1d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready"
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted"
     },
     {
       "id": "ishikawa-shibata-correction",
@@ -206,7 +206,7 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "journal": "",
-      "activity": "4m",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -225,7 +225,7 @@
       "health": "Review",
       "next_gate": "新プリミティブ再設計",
       "journal": "",
-      "activity": "3m",
+      "activity": "1h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -234,18 +234,18 @@
   ],
   "recent": [
     {
-      "when": "3m",
+      "when": "1m",
+      "project": "Gandal–Shy",
+      "event": "Repository observation refreshed"
+    },
+    {
+      "when": "1h",
       "project": "Public Innovation Hubs",
       "event": "Repository observation refreshed"
     },
     {
-      "when": "3m",
+      "when": "1h",
       "project": "Information Appropriability",
-      "event": "Research route requires reset"
-    },
-    {
-      "when": "3m",
-      "project": "Directional Friction",
       "event": "Research route requires reset"
     }
   ]

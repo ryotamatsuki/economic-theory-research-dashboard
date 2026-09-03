@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T14:24:31.844015Z",
+    "generated_utc": "2026-09-03T14:24:55.969077Z",
     "generated_jst": "2026-09-03 23:24 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
@@ -12,7 +12,7 @@
     "blocked": 2,
     "submission_ready": 2,
     "submitted": 1,
-    "review_needed": 2
+    "review_needed": 3
   },
   "pipeline": [
     {
@@ -170,7 +170,7 @@
       "journal": "",
       "activity": "1d",
       "review_needed": false,
-      "attention_reason": "Verification gate",
+      "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
       "publication_lane": null
     },

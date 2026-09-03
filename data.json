@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T01:12:31.995980Z",
-    "generated_jst": "2026-09-03 10:12 JST",
+    "generated_utc": "2026-09-03T05:55:43.392540Z",
+    "generated_jst": "2026-09-03 14:55 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -92,7 +92,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "IJIO",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -111,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -130,7 +130,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "RIO",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -149,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -168,7 +168,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -187,7 +187,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "23h",
+      "activity": "1d",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -206,7 +206,7 @@
       "event": "Portfolio review signal detected"
     },
     {
-      "when": "23h",
+      "when": "1d",
       "project": "Regional Public Lab",
       "event": "Portfolio review signal detected"
     }

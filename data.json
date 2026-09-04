@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-04T13:45:30.810881Z",
-    "generated_jst": "2026-09-04 22:45 JST",
+    "generated_utc": "2026-09-04T13:47:09.338835Z",
+    "generated_jst": "2026-09-04 22:47 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -225,7 +225,7 @@
       "health": "On track",
       "next_gate": "Stage 14投稿QA",
       "journal": "",
-      "activity": "5m",
+      "activity": "6m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -244,7 +244,7 @@
       "health": "On track",
       "next_gate": "Stage 13 CI",
       "journal": "IJIO",
-      "activity": "6m",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -253,13 +253,13 @@
   ],
   "recent": [
     {
-      "when": "5m",
-      "project": "Directional Friction",
+      "when": "1m",
+      "project": "Standards Repositioning",
       "event": "Repository observation refreshed"
     },
     {
       "when": "6m",
-      "project": "Standards Repositioning",
+      "project": "Directional Friction",
       "event": "Repository observation refreshed"
     },
     {

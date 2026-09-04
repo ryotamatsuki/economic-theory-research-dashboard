@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-04T13:47:48.005316Z",
-    "generated_jst": "2026-09-04 22:47 JST",
+    "generated_utc": "2026-09-04T22:35:18.050666Z",
+    "generated_jst": "2026-09-05 07:35 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
@@ -12,7 +12,7 @@
     "blocked": 1,
     "submission_ready": 1,
     "submitted": 2,
-    "review_needed": 7
+    "review_needed": 9
   },
   "pipeline": [
     {
@@ -54,7 +54,7 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "journal": "",
-      "activity": "21h",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -73,7 +73,7 @@
       "health": "Review",
       "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "21h",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
@@ -92,7 +92,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "IJIO",
-      "activity": "2d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -111,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "2d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -130,7 +130,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "RIO",
-      "activity": "21h",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Submitted",
@@ -149,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "2d",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -168,7 +168,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "2d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -187,7 +187,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "2d",
+      "activity": "1m",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -206,9 +206,9 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "journal": "",
-      "activity": "23h",
-      "review_needed": false,
-      "attention_reason": "Research reset",
+      "activity": "1m",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
       "publication_lane": null
     },
@@ -222,12 +222,12 @@
       "type": "Theory",
       "stage": "投稿QA前",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
+      "health": "Review",
       "next_gate": "Stage 14投稿QA",
       "journal": "",
-      "activity": "7m",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
+      "activity": "1m",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript"
     },
@@ -241,12 +241,12 @@
       "type": "Theory",
       "stage": "投稿QA前",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
+      "health": "Review",
       "next_gate": "Stage 14投稿QA",
       "journal": "IJIO",
       "activity": "1m",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript"
     }
@@ -255,16 +255,16 @@
     {
       "when": "1m",
       "project": "Standards Repositioning",
-      "event": "Repository observation refreshed"
+      "event": "Portfolio review signal detected"
     },
     {
-      "when": "7m",
+      "when": "1m",
       "project": "Directional Friction",
-      "event": "Repository observation refreshed"
+      "event": "Portfolio review signal detected"
     },
     {
-      "when": "21h",
-      "project": "Gandal–Shy",
+      "when": "1m",
+      "project": "Agentic AI Authority",
       "event": "Portfolio review signal detected"
     }
   ]

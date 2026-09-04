@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-04T13:47:09.338835Z",
+    "generated_utc": "2026-09-04T13:47:48.005316Z",
     "generated_jst": "2026-09-04 22:47 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
@@ -225,7 +225,7 @@
       "health": "On track",
       "next_gate": "Stage 14投稿QA",
       "journal": "",
-      "activity": "6m",
+      "activity": "7m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -234,15 +234,15 @@
     {
       "id": "endogenous-interoperability",
       "project": "Standards Repositioning",
-      "overview": "標準化政策の後に企業が製品位置を調整できると、国際標準化と地域的な標準化連合の国別厚生順位や連合安定性がどう変わるかを分析する研究です。理論は凍結済みで、先行研究再監査と反復的な査読者攻撃を経て、International Journal of Industrial Organization向けの原稿統合を進めています。",
+      "overview": "標準化政策の後に企業が製品位置を調整できると、国際標準化と地域的な標準化連合の国別厚生順位や連合安定性がどう変わるかを分析する研究です。理論は凍結済みで、先行研究再監査、反復的な査読者攻撃、投稿先選定、IJIO向け原稿統合まで完了し、提出QAが次の段階です。",
       "research_question": "標準化政策の後に企業が戦略的に製品位置を調整できると、製品位置を固定した評価と比べて国際標準化と地域連合の厚生順位・安定性は変わるか。",
       "mechanism": "標準化の構造が企業間の実効的な競争距離を変え、それを受けた製品の再配置が価格競争と生産者利潤を変化させます。その結果、国別厚生と標準化連合の安定性が変わり得ます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "IJIO原稿統合",
+      "stage": "投稿QA前",
       "verdict": "THEORY_FROZEN",
       "health": "On track",
-      "next_gate": "Stage 13 CI",
+      "next_gate": "Stage 14投稿QA",
       "journal": "IJIO",
       "activity": "1m",
       "review_needed": false,
@@ -258,7 +258,7 @@
       "event": "Repository observation refreshed"
     },
     {
-      "when": "6m",
+      "when": "7m",
       "project": "Directional Friction",
       "event": "Repository observation refreshed"
     },

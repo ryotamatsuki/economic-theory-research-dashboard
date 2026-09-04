@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-03T15:42:12.929626Z",
-    "generated_jst": "2026-09-04 00:42 JST",
+    "generated_utc": "2026-09-04T13:45:30.810881Z",
+    "generated_jst": "2026-09-04 22:45 JST",
     "status": "Healthy",
     "label": "Auto Sync Healthy"
   },
   "stats": {
-    "live": 10,
+    "live": 11,
     "p0": 5,
     "blocked": 1,
     "submission_ready": 1,
     "submitted": 2,
-    "review_needed": 6
+    "review_needed": 7
   },
   "pipeline": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "label": "Research Gate",
-      "count": 4
+      "count": 3
     },
     {
       "label": "Theory Frozen",
@@ -29,7 +29,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 2
+      "count": 4
     },
     {
       "label": "Submission Ready",
@@ -44,9 +44,9 @@
     {
       "id": "information-appropriability",
       "project": "Information Appropriability",
-      "overview": "組織の中で、情報を集める主体と、その情報を使って事業配分や組織判断を行う主体が異なるときに、情報収集のインセンティブがどのように変わるかを研究するプロジェクトです。これまで複数の情報・学習メカニズムを検討しましたが、既存理論やより単純な非情報モデルでも同じ結果を説明できるものが多く、現在はモデルを拡張するのではなく研究質問そのものを再設計する段階に戻っています。",
+      "overview": "組織の中で、情報を集める主体と、その情報を使って事業配分や組織判断を行う主体が異なるときに、情報収集のインセンティブがどう変わるかを研究します。複数の候補メカニズムを検証した結果、既存理論やより単純なモデルで説明できるものが多く、現在は研究質問そのものを再設計する段階に戻っています。",
       "research_question": "情報や学習が本当に不可欠で、より単純な投資・配分モデルでは再現できない組織内の戦略的問題は何か。",
-      "mechanism": "これまでの候補では、情報取得、組織選択、将来価値のつながりを考えてきましたが、多くが一般的な投資や状態変化として置き換えられました。次の段階では、信念や情報構造を取り除くと結果そのものが消えるメカニズムに絞って再探索します。",
+      "mechanism": "情報取得、組織選択、将来価値のつながりを検討してきましたが、多くが一般的な投資や状態変化として置き換えられました。次は、信念や情報構造を取り除くと結果そのものが消えるメカニズムに限定して再探索します。",
       "priority": "P0",
       "type": "Theory",
       "stage": "研究質問再設計",
@@ -54,37 +54,37 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "journal": "",
-      "activity": "1h",
-      "review_needed": false,
-      "attention_reason": "Research reset",
+      "activity": "21h",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
       "publication_lane": null
     },
     {
       "id": "shared-core-entry",
       "project": "Public Innovation Hubs",
-      "overview": "複数の地域政府が公共のイノベーション拠点へ投資し、同時に両地域の利用者が共通の民間イノベーション拠点も利用できる状況を考えます。公共投資は企業や支援者の参加を変え、さらに民間拠点が利用価格を調整することで地域間の戦略関係も変化します。現在は理論と原稿の統合を終え、Journal of Public Economic Theoryへの提出前QAまで進んでいます。",
+      "overview": "複数の地域政府が公共のイノベーション拠点へ投資し、同時に両地域の利用者が共通の民間拠点も利用できる状況を考える研究です。公共投資と民間拠点の価格調整が地域間の戦略関係をどう変えるかを分析し、現在はJournal of Public Economic Theoryへの提出前QAまで進んでいます。",
       "research_question": "地域の公共イノベーション投資は互いに支え合うのか、それとも共通の民間拠点が価格を調整すると競い合う関係へ変わるのか。",
-      "mechanism": "公共投資が増えると利用者と支援者の参加先が変わり、ネットワーク効果を通じて他地域の投資誘因にも影響します。民間拠点が価格を固定している場合の正の関係に、民間側の最適な価格調整が加わることで、その戦略関係が反転し得ることが中心です。",
+      "mechanism": "公共投資が利用者や支援者の参加先を変え、ネットワーク効果を通じて他地域の投資誘因にも影響します。さらに民間拠点が価格を調整することで、地域間の戦略関係が変化します。",
       "priority": "P0",
       "type": "Theory",
       "stage": "JPET提出QA",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
+      "health": "Review",
       "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "1h",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
+      "activity": "21h",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript"
     },
     {
       "id": "private-compatibility",
       "project": "Private Compatibility",
-      "overview": "国や政府が異なる技術標準を採用すると、どの国と同じ標準を使うかによって企業の競争条件が変わります。ただし、政府が標準を分けた後でも、企業が自ら費用を払って互換性を確保できるかもしれません。この研究では、企業が後から互換性を作れることを考慮すると、政府がどの国と標準化連合を組みたいと考えるのか、またその連合が安定するのかがどう変わるかを分析します。",
-      "research_question": "政府が標準を分けて企業を保護・排除しようとしても、企業が自力で互換性を確保できるなら、政府の望む標準化連合やその安定性は変わるのか。",
-      "mechanism": "企業が後から互換性を確保すると、標準を分けることで得られていた「相手企業を排除する利益」が小さくなります。一方で、すべての競争上の差がなくなるわけではありません。そのため、どの連合が政府にとって有利かという順位そのものが変わる可能性があります。",
+      "overview": "政府が異なる技術標準を採用した後でも、企業が自ら費用を払って互換性を確保できる場合を考えます。企業による事後的な互換性確保を織り込むと、政府がどの国と標準化連合を組みたいか、その連合が安定するかがどう変わるかを分析します。原稿と投稿パッケージは完成しています。",
+      "research_question": "政府が標準を分けても企業が自力で互換性を確保できるなら、政府の望む標準化連合やその安定性は変わるのか。",
+      "mechanism": "企業が後から互換性を確保すると、標準を分けることで得られていた競争上の排除利益が小さくなります。そのため、政府にとって有利な連合の順位が変わる可能性があります。",
       "priority": "P0",
       "type": "Theory",
       "stage": "投稿準備完了",
@@ -92,7 +92,7 @@
       "health": "On track",
       "next_gate": "投稿",
       "journal": "IJIO",
-      "activity": "1d",
+      "activity": "2d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -101,9 +101,9 @@
     {
       "id": "shy-2002-correction",
       "project": "Shy (2002)",
-      "overview": "携帯電話会社や銀行のように、利用者が他社へ乗り換えるときに手間や費用がかかる市場では、企業は既存顧客をある程度囲い込むことができます。Shy (2002) は、競合より少し安くして顧客を奪う値下げが割に合わなくなる価格を簡便に推計する方法を提案しました。この研究は、その方法を多企業・右下がり需要のケースへ拡張する部分の計算を見直し、どのように計算すべきかを示す訂正論文です。",
-      "research_question": "多くの企業が競争し、価格を下げると需要量そのものも増える市場では、値下げが割に合わない価格をどのように正しく求めるべきか。",
-      "mechanism": "企業が価格を下げると、単に競合企業から顧客が移ってくるだけでなく、市場で購入される量そのものも変わります。その需要の変化を正しく計算に入れることが訂正のポイントです。",
+      "overview": "乗り換え費用のある市場で、値下げによる顧客獲得が割に合わなくなる価格を求めるShy (2002)の方法について、多企業・右下がり需要への拡張部分を再検証する訂正論文です。International Journal of Industrial Organizationへ投稿済みで、現在は次の編集ステータスを待っています。",
+      "research_question": "多くの企業が競争し、価格を下げると需要量そのものも変わる市場では、値下げが割に合わない価格をどう正しく求めるべきか。",
+      "mechanism": "値下げでは競合から顧客を奪うだけでなく、市場全体の購入量も変化します。その需要変化を正しく計算へ組み込むことが訂正のポイントです。",
       "priority": "P0",
       "type": "Correction",
       "stage": "投稿済み",
@@ -111,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "1d",
+      "activity": "2d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -120,28 +120,28 @@
     {
       "id": "gandal-shy-correction",
       "project": "Gandal–Shy",
-      "overview": "企業や国が共通の標準を採用してグループをつくると、グループ外の企業が市場から締め出されることがあります。ただし、実際の販売量がゼロになった企業でも、価格を十分に下げれば再び顧客を獲得できるなら、既存企業はその存在を無視できません。この研究は、既存研究の価格設定の分析を見直し、販売量ゼロの外部企業がなお価格競争を制約するケースを示す訂正論文です。",
-      "research_question": "市場から締め出されて販売量がゼロになった企業でも、「値下げすれば戻ってこられる」という可能性だけで、既存企業の価格を抑えることがあるのか。",
-      "mechanism": "外部企業がいつでも値下げして再参入できるなら、既存企業は自由に価格を上げることができません。そのため、外部企業が実際には売っていない段階でも、再参入を防ぐための上限価格、いわゆる limit pricing が生じます。",
+      "overview": "標準化連合の外にいる企業が販売量ゼロでも、十分に値下げすれば再び顧客を獲得できる場合、既存企業の価格設定をなお制約し得ることを検証する訂正論文です。Review of Industrial Organizationへ投稿済みで、現在は技術チェック段階です。",
+      "research_question": "市場から締め出されて販売量がゼロになった企業でも、値下げによる再参入可能性だけで既存企業の価格を抑えることがあるのか。",
+      "mechanism": "外部企業が値下げして再参入できるなら、既存企業は自由に価格を上げられません。実際の販売量がゼロでも、再参入を防ぐための上限価格が生じ得ます。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "投稿準備完了",
+      "stage": "技術チェック",
       "verdict": "CORRECTION_READY",
       "health": "Waiting",
-      "next_gate": "投稿",
+      "next_gate": "編集ステータス確認",
       "journal": "RIO",
-      "activity": "1m",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
+      "activity": "21h",
+      "review_needed": true,
+      "attention_reason": "Sync drift",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted"
     },
     {
       "id": "ishikawa-shibata-correction",
       "project": "Ishikawa–Shibata",
-      "overview": "企業が研究開発を行うと、その成果の一部が競争相手にも波及することがあります。しかも、その波及の強さが企業ごと・方向ごとに同じとは限りません。この研究は、こうした非対称なR&Dスピルオーバーを扱う既存論文について、競争した場合と協調した場合のR&D水準を分ける境界条件を再検証する訂正論文です。",
-      "research_question": "「この値を超えれば競争の方がR&Dが多い」といった既存の固定的な基準は、スピルオーバーが非対称な場合にも本当に一貫して使えるのか。",
-      "mechanism": "スピルオーバーが非対称だと、どちらのR&D水準が大きくなるかを分ける境界自体が他のパラメータによって動きます。そのため、一つの固定した閾値だけで全ケースを分類すると、一部の領域を誤って判定する可能性があります。",
+      "overview": "非対称なR&Dスピルオーバーを扱う既存論文について、競争と協調のR&D水準を分ける境界条件を再検証する訂正論文です。数学・原稿・再現性の事前検証は進んでいますが、投稿先固有の費用確認が残っています。",
+      "research_question": "競争と協調のR&D水準を分ける固定的な基準は、スピルオーバーが非対称な場合にも一貫して使えるのか。",
+      "mechanism": "スピルオーバーが非対称だと、どちらのR&D水準が大きくなるかを分ける境界自体が他のパラメータによって動くため、一つの固定閾値では一部領域を誤判定する可能性があります。",
       "priority": "P1",
       "type": "Correction",
       "stage": "原稿作成",
@@ -149,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "1d",
+      "activity": "2d",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -158,9 +158,9 @@
     {
       "id": "c022-behrens-lijesen",
       "project": "C022",
-      "overview": "理論経済学の既存論文を再計算する監査の中で見つかった訂正候補です。対象モデルのある段階では、一社が残された需要に対して価格を決める状況が生じます。この研究では、論文で示された価格が本当にその企業にとって最適なのか、別の価格へ少し変えることで利益を増やせないかを検証しています。",
+      "overview": "理論経済学の既存論文を再計算する監査で見つかった訂正候補です。論文で均衡として示された価格について、企業が一方的に少し価格を変えることで利益を増やせないかを検証しています。",
       "research_question": "論文で均衡として示されている価格は、本当に各企業が一方的に価格を変えても得をしない状態になっているのか。",
-      "mechanism": "もし一社が価格を少し変えるだけで利益を増やせるなら、その価格は均衡ではありません。さらに、その段階の利益が変わると、それを見越して行う前段階の投資や容量選択、厚生計算にも影響が及ぶ可能性があります。",
+      "mechanism": "一社が価格を少し変えるだけで利益を増やせるなら、その価格は均衡ではありません。後続の投資・容量選択・厚生計算への影響も含め、訂正論文として扱うに足るかを検証しています。",
       "priority": "P1",
       "type": "Candidate",
       "stage": "検証",
@@ -168,7 +168,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "1d",
+      "activity": "2d",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -177,9 +177,9 @@
     {
       "id": "regional-lab-diversification",
       "project": "Regional Public Lab",
-      "overview": "県や地域の公設試験研究機関が、それぞれ独自に研究テーマを決める状況を考えます。例えば、隣り合う地域が同じような新品種を開発するのか、それとも異なる品種や技術に分かれて研究するのか、という問題です。同じ研究を並行して行えば片方が失敗したときの保険になりますが、成功後には研究成果が重複して競争する可能性もあります。この研究では、各地域が個別に研究テーマを選んだ結果と、社会全体として望ましい研究の組み合わせがどのようにずれるかを分析します。",
-      "research_question": "地域ごとに研究テーマを決めると、同じ研究への重複投資が多くなりすぎたり、逆に研究の多様性が不足したりするのは、どのような場合か。",
-      "mechanism": "同じ方向の研究を複数地域で行うと、どちらかが成功する確率を高める「保険」の効果があります。一方、両方が成功すると似た成果が重複し、商業化後の競争も強くなります。この保険のメリットと重複・競争のデメリットのバランスが、研究を分散させるべきか多様化させるべきかを決めます。",
+      "overview": "地域の公設試験研究機関がそれぞれ研究テーマを選ぶとき、同じ研究への重複投資と異なる研究への多様化のどちらが生じるかを分析する研究です。現在は、既存のR&D競争・重複投資・ポートフォリオ理論との差を厳密に確認する段階です。",
+      "research_question": "地域ごとに研究テーマを決めると、重複投資が多くなりすぎたり、逆に研究の多様性が不足したりするのはどのような場合か。",
+      "mechanism": "同じ研究を複数地域が行うことには成功確率を高める保険効果がある一方、両方成功した場合には成果の重複や競争が生じます。このトレードオフが研究方向の集中・多様化を左右します。",
       "priority": "P1",
       "type": "Theory",
       "stage": "先行研究精査",
@@ -187,7 +187,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "1d",
+      "activity": "2d",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -196,9 +196,9 @@
     {
       "id": "agentic-ai-authority",
       "project": "Agentic AI Authority",
-      "overview": "外部のAgentic AIプラットフォームへ業務を委ねる企業が、人間の経験や復旧能力をどこまで残し、誰に意思決定権限を持たせるべきかを考える理論研究です。現在のモデルは、AIが通常時には優れていても人間の能力を一定程度残す理由を表現できますが、既存のアウトソーシングや学習の理論との差を十分に確保できず、独自の戦略メカニズムを探し直す段階に戻っています。",
+      "overview": "外部のAgentic AIプラットフォームへ業務を委ねる企業が、人間の経験や復旧能力をどこまで残し、誰に意思決定権限を持たせるべきかを考える理論研究です。現モデルの主要結果は既存のアウトソーシングや学習理論に近いため、独自の戦略メカニズムを探し直す段階に戻っています。",
       "research_question": "外部AIへの依存だからこそ生じ、通常のアウトソーシングやバックアップ能力の理論では再現できない権限配分の戦略的効果は何か。",
-      "mechanism": "外部AIの価格・障害リスクと、人間が実務経験を失うことで復旧能力が低下する動学的な関係を扱います。ただし現在の主要結果は既存理論に近いため、次のモデルでは外部プラットフォーム依存が新しいフィードバックを生む場合に限定して再探索します。",
+      "mechanism": "外部AIの価格・障害リスクと、人間が実務経験を失うことで復旧能力が低下する関係を扱います。次の段階では、外部プラットフォーム依存が生む固有のフィードバックに限定して再探索します。",
       "priority": "P1",
       "type": "Theory",
       "stage": "Stage 3再探索",
@@ -206,7 +206,7 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "journal": "",
-      "activity": "1h",
+      "activity": "23h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -215,38 +215,57 @@
     {
       "id": "directional-friction",
       "project": "Directional Friction",
-      "overview": "消費者が左右どちらへ移動するかによって負担が異なる「方向依存のアクセス摩擦」を空間競争に導入し、企業間距離と価格競争の関係がどう変わるかを調べる研究です。価格反応に特徴的な結果は得られましたが、標準的なHotellingモデルの仮想的な立地点として読み替えられる部分が大きく、現在のプリミティブによる単独論文ルートは終了しています。",
-      "research_question": "方向依存の摩擦は、標準的な空間競争モデルへの変換では説明できない新しい戦略的結果を生み出せるか。",
-      "mechanism": "一方向だけに追加負担を課すと、均衡上は企業の実効的な立地点がずれたように作用します。この変換可能性が現在の新規性を弱めたため、再開する場合は単なる立地点の置換では消えない別の戦略的相互作用を導入する必要があります。",
+      "overview": "小売需要に応じて第三者の交通運営主体が固定された交通供給を方向別に再配分する状況で、空間的な価格競争がどう変わるかを分析する理論研究です。理論を凍結し、査読者攻撃、投稿先選定、原稿統合まで完了しており、Economics of Transportation向けの提出QAが次の段階です。",
+      "research_question": "小売需要に応じて固定された交通供給が方向別に再配分されると、空間的な価格競争と交通サービスの安定性・厚生はどう変わるか。",
+      "mechanism": "小売が生む方向別需要が第三者による固定交通供給の配分を変え、それが待ち時間や実効アクセス費用を通じて価格競争へ戻ります。最低サービス条件は均衡では拘束せず、極端な逸脱時の供給崩壊のみを制約し得ます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "現ルート終了",
-      "verdict": "NO_GO_FOR_CURRENT_ROUTE",
-      "health": "Review",
-      "next_gate": "新プリミティブ再設計",
+      "stage": "投稿QA前",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "Stage 14投稿QA",
       "journal": "",
-      "activity": "1h",
+      "activity": "5m",
       "review_needed": false,
-      "attention_reason": "Research reset",
-      "pipeline_lane": "Research Gate",
-      "publication_lane": null
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript"
+    },
+    {
+      "id": "endogenous-interoperability",
+      "project": "Standards Repositioning",
+      "overview": "標準化政策の後に企業が製品位置を調整できると、国際標準化と地域的な標準化連合の国別厚生順位や連合安定性がどう変わるかを分析する研究です。理論は凍結済みで、先行研究再監査と反復的な査読者攻撃を経て、International Journal of Industrial Organization向けの原稿統合を進めています。",
+      "research_question": "標準化政策の後に企業が戦略的に製品位置を調整できると、製品位置を固定した評価と比べて国際標準化と地域連合の厚生順位・安定性は変わるか。",
+      "mechanism": "標準化の構造が企業間の実効的な競争距離を変え、それを受けた製品の再配置が価格競争と生産者利潤を変化させます。その結果、国別厚生と標準化連合の安定性が変わり得ます。",
+      "priority": "P1",
+      "type": "Theory",
+      "stage": "IJIO原稿統合",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "Stage 13 CI",
+      "journal": "IJIO",
+      "activity": "6m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript"
     }
   ],
   "recent": [
     {
-      "when": "1m",
+      "when": "5m",
+      "project": "Directional Friction",
+      "event": "Repository observation refreshed"
+    },
+    {
+      "when": "6m",
+      "project": "Standards Repositioning",
+      "event": "Repository observation refreshed"
+    },
+    {
+      "when": "21h",
       "project": "Gandal–Shy",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "1h",
-      "project": "Public Innovation Hubs",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "1h",
-      "project": "Information Appropriability",
-      "event": "Research route requires reset"
+      "event": "Portfolio review signal detected"
     }
   ]
 }

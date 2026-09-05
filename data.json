@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-05T10:19:00Z",
-    "generated_jst": "2026-09-05 19:19 JST",
+    "generated_utc": "2026-09-05T12:50:00Z",
+    "generated_jst": "2026-09-05 21:50 JST",
     "status": "Healthy",
     "label": "Manual Refresh"
   },
   "stats": {
-    "live": 11,
+    "live": 12,
     "p0": 5,
     "blocked": 1,
     "submission_ready": 0,
@@ -15,30 +15,12 @@
     "review_needed": 8
   },
   "pipeline": [
-    {
-      "label": "Prior-Art",
-      "count": 1
-    },
-    {
-      "label": "Research Gate",
-      "count": 3
-    },
-    {
-      "label": "Theory Frozen",
-      "count": 0
-    },
-    {
-      "label": "Manuscript",
-      "count": 3
-    },
-    {
-      "label": "Submission Ready",
-      "count": 0
-    },
-    {
-      "label": "Submitted",
-      "count": 4
-    }
+    {"label": "Prior-Art", "count": 1},
+    {"label": "Research Gate", "count": 3},
+    {"label": "Theory Frozen", "count": 0},
+    {"label": "Manuscript", "count": 4},
+    {"label": "Submission Ready", "count": 0},
+    {"label": "Submitted", "count": 4}
   ],
   "projects": [
     {
@@ -54,7 +36,7 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "journal": "",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -73,7 +55,7 @@
       "health": "Review",
       "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
@@ -92,7 +74,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "18m",
+      "activity": "2h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -111,7 +93,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -130,7 +112,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "RIO",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Submitted",
@@ -149,7 +131,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -168,7 +150,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -187,7 +169,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "11h",
+      "activity": "13h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -206,7 +188,7 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "journal": "",
-      "activity": "10h",
+      "activity": "12h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -225,7 +207,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "",
-      "activity": "18m",
+      "activity": "2h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -244,28 +226,35 @@
       "health": "Review",
       "next_gate": "Stage 14投稿QA",
       "journal": "IJIO",
-      "activity": "4h",
+      "activity": "6h",
       "review_needed": true,
       "attention_reason": "Sync drift",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript"
+    },
+    {
+      "id": "strategic-local-green-policy",
+      "project": "Local Green Policy Competition",
+      "overview": "二つの地域政府が、企業の環境投資を促す補助金と、企業の生産性にも役立つグリーン公共インフラの両方を使って競争する状況を考えます。同時に企業も、通常のコスト削減投資とグリーン投資を選び、製品市場で競争します。本研究は、企業間競争が強くなると、相手地域のグリーン政策に対する自地域のインフラ政策の反応が、削減から拡大へと切り替わる可能性を分析する理論研究です。",
+      "research_question": "企業間の製品市場競争が強まると、ある地域のグリーン政策に対するライバル地域の最適な公共インフラ反応は、なぜ負から正へ切り替わり得るのか。",
+      "mechanism": "相手地域が企業のグリーン投資を後押しすると、その企業の競争力が高まり、自地域企業にも投資や生産の調整圧力がかかります。競争が比較的弱いと、自地域政府はインフラを抑えて政策競争を避ける誘因を持ち得ます。しかし競争が強くなると、自地域企業の競争力を守る便益が大きくなり、逆にインフラを増やす反応が有利になります。この競争強度の変化が政策反応の符号を切り替える中心メカニズムです。",
+      "priority": "P1",
+      "type": "Theory",
+      "stage": "査読者監査前",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "Stage 11R査読者攻撃",
+      "journal": "",
+      "activity": "1m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript"
     }
   ],
   "recent": [
-    {
-      "when": "18m",
-      "project": "Directional Friction",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "18m",
-      "project": "Private Compatibility",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "4h",
-      "project": "Standards Repositioning",
-      "event": "Portfolio review signal detected"
-    }
+    {"when": "1m", "project": "Local Green Policy Competition", "event": "Repository observation refreshed"},
+    {"when": "2h", "project": "Directional Friction", "event": "Repository observation refreshed"},
+    {"when": "2h", "project": "Private Compatibility", "event": "Repository observation refreshed"}
   ]
 }

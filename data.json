@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-05T05:42:11.191849Z",
-    "generated_jst": "2026-09-05 14:42 JST",
+    "generated_utc": "2026-09-05T10:03:00Z",
+    "generated_jst": "2026-09-05 19:03 JST",
     "status": "Healthy",
-    "label": "Auto Sync Healthy"
+    "label": "Manual Refresh"
   },
   "stats": {
     "live": 11,
     "p0": 5,
     "blocked": 1,
-    "submission_ready": 1,
-    "submitted": 2,
-    "review_needed": 9
+    "submission_ready": 0,
+    "submitted": 4,
+    "review_needed": 8
   },
   "pipeline": [
     {
@@ -29,15 +29,15 @@
     },
     {
       "label": "Manuscript",
-      "count": 4
+      "count": 3
     },
     {
       "label": "Submission Ready",
-      "count": 1
+      "count": 0
     },
     {
       "label": "Submitted",
-      "count": 2
+      "count": 4
     }
   ],
   "projects": [
@@ -54,7 +54,7 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "journal": "",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -73,7 +73,7 @@
       "health": "Review",
       "next_gate": "ORCID・資金情報確認",
       "journal": "JPET",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
@@ -82,21 +82,21 @@
     {
       "id": "private-compatibility",
       "project": "Private Compatibility",
-      "overview": "政府が異なる技術標準を採用した後でも、企業が自ら費用を払って互換性を確保できる場合を考えます。企業による事後的な互換性確保を織り込むと、政府がどの国と標準化連合を組みたいか、その連合が安定するかがどう変わるかを分析します。原稿と投稿パッケージは完成しています。",
+      "overview": "政府が異なる技術標準を採用した後でも、企業が自ら費用を払って互換性を確保できる場合を考えます。企業による事後的な互換性確保を織り込むと、政府がどの国と標準化連合を組みたいか、その連合が安定するかがどう変わるかを分析します。International Journal of Industrial Organizationへ投稿済みで、現在は次の編集ステータスを待っています。",
       "research_question": "政府が標準を分けても企業が自力で互換性を確保できるなら、政府の望む標準化連合やその安定性は変わるのか。",
       "mechanism": "企業が後から互換性を確保すると、標準を分けることで得られていた競争上の排除利益が小さくなります。そのため、政府にとって有利な連合の順位が変わる可能性があります。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿準備完了",
+      "stage": "投稿済み",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
-      "next_gate": "投稿",
+      "health": "Waiting",
+      "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "7h",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready"
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted"
     },
     {
       "id": "shy-2002-correction",
@@ -111,7 +111,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "IJIO",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submitted",
@@ -130,7 +130,7 @@
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
       "journal": "RIO",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Submitted",
@@ -149,7 +149,7 @@
       "health": "Blocked",
       "next_gate": "投稿料確認",
       "journal": "IJIO",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
       "pipeline_lane": "Manuscript",
@@ -168,7 +168,7 @@
       "health": "Review",
       "next_gate": "人手による検証",
       "journal": "",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -187,7 +187,7 @@
       "health": "Review",
       "next_gate": "先行研究ゲート",
       "journal": "",
-      "activity": "7h",
+      "activity": "11h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -206,7 +206,7 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "journal": "",
-      "activity": "6h",
+      "activity": "10h",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -215,21 +215,21 @@
     {
       "id": "directional-friction",
       "project": "Directional Friction",
-      "overview": "小売需要に応じて第三者の交通運営主体が固定された交通供給を方向別に再配分する状況で、空間的な価格競争がどう変わるかを分析する理論研究です。理論を凍結し、査読者攻撃、投稿先選定、原稿統合まで完了しており、Economics of Transportation向けの提出QAが次の段階です。",
+      "overview": "小売需要に応じて第三者の交通運営主体が固定された交通供給を方向別に再配分する状況で、空間的な価格競争がどう変わるかを分析する理論研究です。理論凍結と投稿前監査を完了し、Economics of Transportationへ投稿済みです。現在は次の編集ステータスを待っています。",
       "research_question": "小売需要に応じて固定された交通供給が方向別に再配分されると、空間的な価格競争と交通サービスの安定性・厚生はどう変わるか。",
       "mechanism": "小売が生む方向別需要が第三者による固定交通供給の配分を変え、それが待ち時間や実効アクセス費用を通じて価格競争へ戻ります。最低サービス条件は均衡では拘束せず、極端な逸脱時の供給崩壊のみを制約し得ます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "投稿QA前",
+      "stage": "投稿済み",
       "verdict": "THEORY_FROZEN",
-      "health": "Review",
-      "next_gate": "Stage 14投稿QA",
+      "health": "Waiting",
+      "next_gate": "編集ステータス確認",
       "journal": "",
       "activity": "1m",
-      "review_needed": true,
-      "attention_reason": "Sync drift",
-      "pipeline_lane": "Manuscript",
-      "publication_lane": "Manuscript"
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted"
     },
     {
       "id": "endogenous-interoperability",
@@ -244,7 +244,7 @@
       "health": "Review",
       "next_gate": "Stage 14投稿QA",
       "journal": "IJIO",
-      "activity": "1m",
+      "activity": "4h",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Manuscript",
@@ -254,18 +254,18 @@
   "recent": [
     {
       "when": "1m",
-      "project": "Standards Repositioning",
-      "event": "Portfolio review signal detected"
+      "project": "Directional Friction",
+      "event": "Repository observation refreshed"
     },
     {
       "when": "1m",
-      "project": "Directional Friction",
-      "event": "Portfolio review signal detected"
+      "project": "Private Compatibility",
+      "event": "Repository observation refreshed"
     },
     {
-      "when": "6h",
-      "project": "Agentic AI Authority",
-      "event": "Research route requires reset"
+      "when": "4h",
+      "project": "Standards Repositioning",
+      "event": "Portfolio review signal detected"
     }
   ]
 }

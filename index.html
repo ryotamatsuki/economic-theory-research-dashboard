@@ -6,76 +6,9 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="経済理論研究ポートフォリオの公開用・サニタイズ済み進捗ダッシュボード。">
   <title>Economic Theory Research Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260906-page1">
   <style>
-    /* Custom overlay instead of the native <dialog> element.
-       iOS Safari can hand scroll gestures unpredictably between a native
-       dialog, its inner scroller, and the page. This overlay uses one
-       ordinary DOM scroll surface and explicitly locks the page behind it. */
-    .detail-overlay{
-      position:fixed;
-      inset:0;
-      z-index:1000;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:18px;
-      background:rgba(0,0,0,.32);
-    }
-    .detail-overlay[hidden]{display:none}
-    .detail-panel{
-      width:min(1120px,calc(100vw - 36px));
-      max-height:min(88dvh,900px);
-      display:flex;
-      flex-direction:column;
-      min-height:0;
-      overflow:hidden;
-      border:1px solid rgba(17,17,17,.18);
-      border-radius:14px;
-      background:#fff;
-      color:var(--ink);
-      box-shadow:0 28px 90px rgba(0,0,0,.20);
-    }
-    .detail-panel .detail-dialog-header{flex:0 0 auto}
-    .detail-panel .detail-content{
-      flex:1 1 auto;
-      min-height:0;
-      overflow-y:auto;
-      overflow-x:hidden;
-      -webkit-overflow-scrolling:touch;
-    }
-    @media(max-width:720px){
-      .detail-overlay{
-        padding:0;
-        align-items:stretch;
-        background:#fff;
-      }
-      .detail-panel{
-        width:100%;
-        height:100vh;
-        height:100dvh;
-        max-height:none;
-        border:0;
-        border-radius:0;
-        box-shadow:none;
-        display:block;
-        overflow-y:auto;
-        overflow-x:hidden;
-        -webkit-overflow-scrolling:touch;
-      }
-      .detail-panel .detail-dialog-header{
-        position:sticky;
-        top:0;
-        z-index:10;
-        padding:calc(14px + env(safe-area-inset-top)) 18px 14px;
-        background:rgba(255,255,255,.98);
-      }
-      .detail-panel .detail-content{
-        overflow:visible;
-        min-height:auto;
-        padding:18px 18px calc(30px + env(safe-area-inset-bottom));
-      }
-    }
+    a.kpi-button,a.attention-row,a.stage,a.publication-lane,a.project-detail-link{text-decoration:none;color:inherit}
   </style>
 </head>
 <body>
@@ -189,21 +122,6 @@
       <span>PORTFOLIO.yaml / canonical GitHub Issues / Manual Update</span>
     </footer>
   </main>
-
-  <div id="detail-overlay" class="detail-overlay" hidden>
-    <section id="detail-dialog" class="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title" tabindex="-1">
-      <header class="detail-dialog-header">
-        <div>
-          <p class="eyebrow">RESEARCH DETAIL</p>
-          <h2 id="detail-title">ポートフォリオ詳細</h2>
-          <p id="detail-subtitle" class="muted"></p>
-        </div>
-        <button id="detail-close" class="detail-close" type="button" aria-label="詳細を閉じる">×</button>
-      </header>
-      <div id="detail-content" class="detail-content"></div>
-    </section>
-  </div>
-
-  <script src="app.js" defer></script>
+  <script src="dashboard.js?v=20260906-page1" defer></script>
 </body>
 </html>

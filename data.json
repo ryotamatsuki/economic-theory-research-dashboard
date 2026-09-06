@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-06T10:42:00Z",
-    "generated_jst": "2026-09-06 19:42 JST",
+    "generated_utc": "2026-09-06T10:55:00Z",
+    "generated_jst": "2026-09-06 19:55 JST",
     "status": "Healthy",
     "label": "Manual Refresh"
   },
@@ -100,7 +100,7 @@
     },
     {
       "id": "shy-2002-correction",
-      "project": "Shy (2002)",
+      "project": "Shy (2002) Correction",
       "overview": "乗り換え費用モデルの undercut-proof pricing を右下がり需要へ拡張する際、値下げが顧客移動だけでなく総需要量も変える点を正しく扱う必要があることを示す訂正研究です。",
       "research_question": "価格依存の総需要がある市場で、企業が値下げしても利益を増やせない価格をどのように正しく導くべきか。",
       "mechanism": "値下げによる顧客獲得効果だけでなく、既存顧客と市場全体の数量変化を利益計算へ入れる必要があります。",
@@ -119,7 +119,7 @@
     },
     {
       "id": "gandal-shy-correction",
-      "project": "Gandal–Shy",
+      "project": "Gandal–Shy Correction",
       "overview": "標準化で現在販売量がゼロになった企業でも、十分に値下げすれば再参入できるなら、その逸脱可能性が既存企業の価格を制約することを検討する訂正研究です。",
       "research_question": "現在は販売量ゼロの企業の再参入可能性は、既存企業の均衡価格を制約するのか。",
       "mechanism": "重要なのは現在の販売量ではなく、利益を上げる一方的価格逸脱が存在するかどうかです。",
@@ -138,7 +138,7 @@
     },
     {
       "id": "ishikawa-shibata-correction",
-      "project": "Ishikawa–Shibata",
+      "project": "Ishikawa–Shibata Correction",
       "overview": "R&Dスピルオーバーが企業間で非対称な場合に、R&D競争と協力の比較を単一の固定閾値で整理できるかを再検討する訂正研究です。",
       "research_question": "非対称スピルオーバー下で、競争と協力のR&D水準を分ける境界は固定値で表せるのか。",
       "mechanism": "各企業の私的R&D便益が非対称に変わるため、比較境界は他の市場パラメータにも依存して動きます。",
@@ -157,7 +157,7 @@
     },
     {
       "id": "c022-behrens-lijesen",
-      "project": "C022",
+      "project": "Behrens–Lijesen Correction",
       "overview": "既存理論論文で均衡とされる価格について、一社だけが価格を変えると利益が増える可能性を検証する訂正候補です。",
       "research_question": "提示された価格は本当に一方的な利益改善余地のないナッシュ均衡なのか。",
       "mechanism": "微小または離散的な価格逸脱で利益が増えるなら、その候補価格はナッシュ均衡ではありません。",
@@ -176,7 +176,7 @@
     },
     {
       "id": "regional-lab-diversification",
-      "project": "Regional Public Lab",
+      "project": "Regional Public R&D",
       "overview": "地域の公設試験研究機関が限られた研究資源を同一テーマへ重複配分するか、異なるテーマへ分散するかという研究方向の選択を分析する理論研究です。",
       "research_question": "地域分権的な研究テーマ選択は、社会全体として重複投資過多になるのか、それとも研究方向の分散過多になるのか。",
       "mechanism": "同一テーマへの重複には成功確率を高める保険効果がある一方、重複成功の機会費用があります。各地域はこの外部性を完全には内部化しません。",
@@ -214,7 +214,7 @@
     },
     {
       "id": "directional-friction",
-      "project": "Directional Friction",
+      "project": "Retail Demand & Transit Supply",
       "overview": "小売価格が買い物需要を変え、その需要に応じて固定車両の方向別配分が変化することで、交通供給と小売価格競争が相互作用する空間競争モデルです。",
       "research_question": "需要に応じて交通供給が内生的に再配分されると、均衡価格・交通サービス・厚生はどう変わるのか。",
       "mechanism": "値下げが顧客を増やすと交通資源もその方向へ移動し、アクセス条件が変わってさらに店舗選択と価格競争へフィードバックします。",
@@ -233,7 +233,7 @@
     },
     {
       "id": "endogenous-interoperability",
-      "project": "Standards Repositioning",
+      "project": "Standards & Product Repositioning",
       "overview": "標準化後の企業による製品再配置を内生化した standards-coalition モデルを再構築してきた研究です。再監査で global price continuation の破綻が見つかり、その後の複数の再設計も policy/welfare/coalition レベルで成立しませんでした。",
       "research_question": "標準化後の戦略的製品再配置を内生化しても、整合的な価格均衡と連合厚生比較を同時に成立させられるか。",
       "mechanism": "旧モデルでは価格サブゲームの global continuation が成立せず、修正版でも連合厚生まで一貫した非自明な結果を維持できませんでした。",
@@ -271,7 +271,7 @@
     },
     {
       "id": "standardization-scope-direction-innovation",
-      "project": "Standardization Scope & Innovation Portfolios",
+      "project": "Standardization & Innovation Portfolios",
       "overview": "政府が technical standard の scope を選び、その後企業が固定R&D capacityを common/standardized layer と proprietary layer の間で内生的に配分するモデルです。標準化範囲が common innovation の rival への transferability を高めることで、企業のR&D portfolioが proprietary innovation 側へ移る可能性を分析します。",
       "research_question": "標準化の直接便益が大きくても、企業の内生的R&D再配分を考慮すると、なぜ完全標準化ではなく selective standardization が最適になり得るのか。",
       "mechanism": "standardization scope が common innovation の私的収益性を低下させ、固定R&D資源を proprietary innovationへ再配分させます。この direction-of-innovation channel が政策の直接便益を相殺し、二番目に良い標準化範囲を内点化します。",
@@ -292,7 +292,7 @@
   "recent": [
     {
       "when": "7m",
-      "project": "Standardization Scope & Innovation Portfolios",
+      "project": "Standardization & Innovation Portfolios",
       "event": "Repository observation refreshed"
     },
     {
@@ -302,7 +302,7 @@
     },
     {
       "when": "12h",
-      "project": "Standards Repositioning",
+      "project": "Standards & Product Repositioning",
       "event": "Blocking gate active"
     }
   ]

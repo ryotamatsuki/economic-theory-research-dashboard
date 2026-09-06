@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "sync": {
-    "generated_utc": "2026-09-06T10:55:00Z",
-    "generated_jst": "2026-09-06 19:55 JST",
+    "generated_utc": "2026-09-06T11:59:00Z",
+    "generated_jst": "2026-09-06 20:59 JST",
     "status": "Healthy",
     "label": "Manual Refresh"
   },
@@ -15,30 +15,12 @@
     "review_needed": 6
   },
   "pipeline": [
-    {
-      "label": "Prior-Art",
-      "count": 1
-    },
-    {
-      "label": "Research Gate",
-      "count": 4
-    },
-    {
-      "label": "Theory Frozen",
-      "count": 0
-    },
-    {
-      "label": "Manuscript",
-      "count": 3
-    },
-    {
-      "label": "Submission Ready",
-      "count": 1
-    },
-    {
-      "label": "Submitted",
-      "count": 4
-    }
+    {"label": "Prior-Art", "count": 1},
+    {"label": "Research Gate", "count": 4},
+    {"label": "Theory Frozen", "count": 0},
+    {"label": "Manuscript", "count": 3},
+    {"label": "Submission Ready", "count": 1},
+    {"label": "Submitted", "count": 4}
   ],
   "projects": [
     {
@@ -53,7 +35,7 @@
       "verdict": "NO_GO_FOR_CURRENT_ROUTE",
       "health": "Review",
       "next_gate": "Stage 0再設定",
-      "journal": "",
+      "field": "Information Economics / Organizational Economics",
       "activity": "3d",
       "review_needed": true,
       "attention_reason": "Sync drift",
@@ -68,11 +50,11 @@
       "mechanism": "公共投資が利用者配分とネットワーク価値を変え、その結果として民間拠点が価格を調整します。この再価格設定が政府の投資誘因へ戻ることで、固定価格ベンチマークと異なる戦略関係が生じます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 14R-TP 提出QA（条件付きPASS）",
+      "stage": "Stage 14 提出QA（条件付きPASS）",
       "verdict": "THEORY_FROZEN",
       "health": "Review",
-      "next_gate": "ORCID・資金情報確認 → Stage 15 live portal再確認",
-      "journal": "JPET",
+      "next_gate": "著者情報確認 → live portal再確認",
+      "field": "Public Economics / Regional Economics",
       "activity": "3d",
       "review_needed": true,
       "attention_reason": "Blocking gate",
@@ -91,7 +73,7 @@
       "verdict": "THEORY_FROZEN",
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
-      "journal": "IJIO",
+      "field": "Industrial Organization / Standards",
       "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
@@ -106,11 +88,11 @@
       "mechanism": "値下げによる顧客獲得効果だけでなく、既存顧客と市場全体の数量変化を利益計算へ入れる必要があります。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "投稿済み / With Editor",
+      "stage": "投稿済み / editorial handling",
       "verdict": "CORRECTION_SUBMITTED",
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
-      "journal": "IJIO",
+      "field": "Industrial Organization",
       "activity": "5d",
       "review_needed": false,
       "attention_reason": "Verification gate",
@@ -125,11 +107,11 @@
       "mechanism": "重要なのは現在の販売量ではなく、利益を上げる一方的価格逸脱が存在するかどうかです。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "技術チェック",
+      "stage": "投稿済み / technical check",
       "verdict": "CORRECTION_READY",
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
-      "journal": "RIO",
+      "field": "Industrial Organization / Standards",
       "activity": "3d",
       "review_needed": true,
       "attention_reason": "Sync drift",
@@ -148,7 +130,7 @@
       "verdict": "CORRECTION_READY",
       "health": "Blocked",
       "next_gate": "投稿料・投稿先条件の確定",
-      "journal": "IJIO",
+      "field": "Industrial Organization / Innovation",
       "activity": "3d",
       "review_needed": true,
       "attention_reason": "Blocking gate",
@@ -167,7 +149,7 @@
       "verdict": "CORRECTION_CANDIDATE",
       "health": "Review",
       "next_gate": "人手による検証",
-      "journal": "",
+      "field": "Industrial Organization",
       "activity": "3d",
       "review_needed": false,
       "attention_reason": "Research reset",
@@ -186,7 +168,7 @@
       "verdict": "UNRESOLVED",
       "health": "Review",
       "next_gate": "先行研究ゲート",
-      "journal": "",
+      "field": "Public Economics / Innovation",
       "activity": "3d",
       "review_needed": true,
       "attention_reason": "Sync drift",
@@ -205,7 +187,7 @@
       "verdict": "NO_GO_FOR_CURRENT_ROUTE",
       "health": "Review",
       "next_gate": "新規メカニズム探索",
-      "journal": "",
+      "field": "Organizational Economics / Digital Economics",
       "activity": "3d",
       "review_needed": false,
       "attention_reason": "Research reset",
@@ -224,7 +206,7 @@
       "verdict": "THEORY_FROZEN",
       "health": "Waiting",
       "next_gate": "編集ステータス確認",
-      "journal": "Economics of Transportation",
+      "field": "Transportation Economics / Industrial Organization",
       "activity": "1d",
       "review_needed": false,
       "attention_reason": "Verification gate",
@@ -243,7 +225,7 @@
       "verdict": "NO_GO",
       "health": "Blocked",
       "next_gate": "再開する場合は新architectureで Stage 0から",
-      "journal": "",
+      "field": "Industrial Organization / Standards",
       "activity": "12h",
       "review_needed": false,
       "attention_reason": "Blocking gate",
@@ -261,8 +243,8 @@
       "stage": "Stage 14 再QA完了",
       "verdict": "SUBMISSION_READY_CONDITIONAL",
       "health": "Review",
-      "next_gate": "ITPF live portal fee gate → submission",
-      "journal": "ITPF",
+      "next_gate": "live portal fee gate → submission",
+      "field": "Environmental Economics / Industrial Organization",
       "activity": "7h",
       "review_needed": true,
       "attention_reason": "Blocking gate",
@@ -277,11 +259,11 @@
       "mechanism": "standardization scope が common innovation の私的収益性を低下させ、固定R&D資源を proprietary innovationへ再配分させます。この direction-of-innovation channel が政策の直接便益を相殺し、二番目に良い標準化範囲を内点化します。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 12完了 / Stage 13 IJIO統合へ",
+      "stage": "Stage 12完了 / Stage 13統合へ",
       "verdict": "THEORY_FROZEN_V3",
       "health": "On track",
-      "next_gate": "Stage 13 — IJIO full-paper integration",
-      "journal": "IJIO",
+      "next_gate": "Stage 13 — full-paper integration",
+      "field": "Industrial Organization / Innovation Economics",
       "activity": "7m",
       "review_needed": false,
       "attention_reason": "Verification gate",
@@ -290,20 +272,8 @@
     }
   ],
   "recent": [
-    {
-      "when": "7m",
-      "project": "Standardization & Innovation Portfolios",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "7h",
-      "project": "Local Green Policy Competition",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "12h",
-      "project": "Standards & Product Repositioning",
-      "event": "Blocking gate active"
-    }
+    {"when": "7m", "project": "Standardization & Innovation Portfolios", "event": "Repository observation refreshed"},
+    {"when": "7h", "project": "Local Green Policy Competition", "event": "Repository observation refreshed"},
+    {"when": "12h", "project": "Standards & Product Repositioning", "event": "Blocking gate active"}
   ]
 }

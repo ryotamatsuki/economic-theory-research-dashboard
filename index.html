@@ -7,6 +7,34 @@
   <meta name="description" content="経済理論研究ポートフォリオの公開用・サニタイズ済み進捗ダッシュボード。">
   <title>Economic Theory Research Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Keep the research-detail modal to one dedicated scroll surface.
+       This avoids iOS Safari handing a vertical swipe back and forth
+       between the dialog, its flex shell, and the page behind it. */
+    .detail-dialog{overflow:hidden}
+    .detail-dialog-shell{overflow:hidden;min-height:0}
+    .detail-dialog-header{flex:0 0 auto}
+    .detail-content{
+      flex:1 1 auto;
+      min-height:0;
+      overflow-y:auto;
+      overflow-x:hidden;
+      -webkit-overflow-scrolling:touch;
+      overscroll-behavior-y:contain;
+      touch-action:pan-y;
+    }
+    @media(max-width:720px){
+      .detail-dialog{
+        width:calc(100vw - 14px);
+        height:calc(100dvh - 28px);
+        max-height:none;
+        margin:auto;
+      }
+      .detail-dialog-shell{height:100%;max-height:none}
+      .detail-content{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
+      .detail-dialog::backdrop{backdrop-filter:none}
+    }
+  </style>
 </head>
 <body>
   <main class="shell">

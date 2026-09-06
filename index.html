@@ -22,7 +22,7 @@
           <span id="sync-health" class="sync-health"><span class="dot"></span>読み込み中</span>
           <span id="last-sync" class="last-sync">最終更新: —</span>
         </div>
-        <p class="public-note">公開用にサニタイズした管理情報のみを表示しています。</p>
+        <p class="public-note">公開用にサニタイズした管理情報のみを表示し、具体的な投稿先・投稿IDは公開していません。</p>
       </aside>
     </header>
 
@@ -46,7 +46,7 @@
       <label>種別<select id="filter-type"><option value="">すべて</option></select></label>
       <label>ステージ<select id="filter-stage"><option value="">すべて</option></select></label>
       <label>状態<select id="filter-health"><option value="">すべて</option></select></label>
-      <label>投稿先<select id="filter-journal"><option value="">すべて</option></select></label>
+      <label>研究分野<select id="filter-field"><option value="">すべて</option></select></label>
       <button id="clear-filters" type="button">リセット</button>
     </section>
 
@@ -81,7 +81,7 @@
         <table>
           <thead>
             <tr>
-              <th>優先度</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>投稿先</th><th>更新</th>
+              <th>優先度</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th>
             </tr>
           </thead>
           <tbody id="portfolio-body"></tbody>
@@ -109,8 +109,8 @@
     <details class="methodology">
       <summary>公開範囲とプライバシー境界</summary>
       <div class="methodology-body">
-        <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、リポジトリ内容、認証情報、非公開の研究エビデンスは含みません。</p>
-        <p>リポジトリの更新状況は自動観測しますが、科学的判定や研究ゲートの変更は自動化せず、人間が管理するcanonical decisionとして維持します。</p>
+        <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。具体的な投稿先、投稿ID、投稿システム上の内部情報、数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、認証情報、非公開の研究エビデンスは含みません。</p>
+        <p>投稿先そのものは非公開のGitHub管理記録に保持し、公開ページでは研究分野と投稿ステータスのみを表示します。リポジトリの更新状況は自動観測しますが、科学的判定や研究ゲートの変更は自動化せず、人間が管理するcanonical decisionとして維持します。</p>
       </div>
     </details>
 

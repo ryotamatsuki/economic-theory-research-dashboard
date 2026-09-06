@@ -8,31 +8,52 @@
   <title>Economic Theory Research Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Keep the research-detail modal to one dedicated scroll surface.
-       This avoids iOS Safari handing a vertical swipe back and forth
-       between the dialog, its flex shell, and the page behind it. */
-    .detail-dialog{overflow:hidden}
-    .detail-dialog-shell{overflow:hidden;min-height:0}
-    .detail-dialog-header{flex:0 0 auto}
-    .detail-content{
-      flex:1 1 auto;
-      min-height:0;
-      overflow-y:auto;
-      overflow-x:hidden;
-      -webkit-overflow-scrolling:touch;
-      overscroll-behavior-y:contain;
-      touch-action:pan-y;
-    }
+    /* iOS Safari: use the dialog itself as the only vertical scroll surface.
+       Avoid nested scrolling between dialog -> flex shell -> detail content. */
     @media(max-width:720px){
-      .detail-dialog{
-        width:calc(100vw - 14px);
-        height:calc(100dvh - 28px);
-        max-height:none;
-        margin:auto;
+      html:has(#detail-dialog[open]),
+      body:has(#detail-dialog[open]){
+        overflow:hidden;
       }
-      .detail-dialog-shell{height:100%;max-height:none}
-      .detail-content{padding-bottom:calc(22px + env(safe-area-inset-bottom))}
-      .detail-dialog::backdrop{backdrop-filter:none}
+      #detail-dialog.detail-dialog[open]{
+        position:fixed;
+        inset:0;
+        width:100vw;
+        max-width:none;
+        height:100vh;
+        height:100dvh;
+        max-height:none;
+        margin:0;
+        padding:0;
+        border:0;
+        border-radius:0;
+        box-shadow:none;
+        overflow-y:auto;
+        overflow-x:hidden;
+        -webkit-overflow-scrolling:touch;
+      }
+      #detail-dialog .detail-dialog-shell{
+        display:block;
+        min-height:100%;
+        max-height:none;
+        overflow:visible;
+      }
+      #detail-dialog .detail-dialog-header{
+        position:sticky;
+        top:0;
+        z-index:10;
+        padding:18px;
+        background:rgba(255,255,255,.98);
+      }
+      #detail-dialog .detail-content{
+        padding:18px 18px calc(28px + env(safe-area-inset-bottom));
+        overflow:visible;
+        min-height:auto;
+      }
+      #detail-dialog::backdrop{
+        background:rgba(0,0,0,.18);
+        backdrop-filter:none;
+      }
     }
   </style>
 </head>

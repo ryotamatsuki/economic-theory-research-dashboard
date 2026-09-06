@@ -7,8 +7,9 @@ const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文'
 const healthLabel = value => ({'Blocked':'ブロック','Review':'要確認','On track':'順調','Waiting':'待機'}[value] || value);
 const pipelineLabel = value => ({'Prior-Art':'先行研究','Research Gate':'研究ゲート','Theory Frozen':'理論凍結','Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み'}[value] || value);
 const publicationLabel = value => ({'Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み','R&R':'R&R'}[value] || value);
-const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'更新差分あり','Verification gate':'検証ゲート'}[value] || value);
-const recentEventLabel = value => ({'Portfolio review signal detected':'ポートフォリオ差分を検出','Blocking gate active':'ブロック中','Repository observation refreshed':'リポジトリ情報を更新'}[value] || value);
+const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'更新差分あり','Verification gate':'検証ゲート','Research reset':'研究ルート再検討'}[value] || value);
+const recentEventLabel = value => ({'Portfolio review signal detected':'ポートフォリオ差分を検出','Blocking gate active':'ブロック中','Repository observation refreshed':'GitHub上の研究記録を確認して更新'}[value] || value);
+
 function relativeLabel(value) {
   const match = String(value ?? '').match(/^(\d+)(m|h|d)$/);
   if (!match) return value || '—';
@@ -118,17 +119,19 @@ function detailTable(rows) {
   return `<div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>研究</th><th>優先度</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th></tr></thead><tbody>${rows.map(p => `<tr><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td class="priority">${esc(p.priority)}</td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.field||'—')}</td><td>${esc(relativeLabel(p.activity))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
+function explanationBlock(kicker, title, body, background='#f7f7f5') {
+  return `<section style="padding:17px 18px;border:1px solid rgba(17,17,17,.12);border-radius:9px;background:${background}"><p class="eyebrow" style="margin:0 0 6px">${esc(kicker)}</p><h4 style="margin:0 0 8px;font-size:16px;font-weight:650;letter-spacing:-.015em">${esc(title)}</h4><p style="margin:0;font-size:14px;line-height:1.9;color:#33332f">${esc(body)}</p></section>`;
+}
+
 function projectDetail(p) {
+  const interesting = p.interesting_point || p.research_question || '—';
   return `<div class="project-detail-card">
     <div class="project-detail-head"><div><span class="priority">${esc(p.priority)}</span><h3>${esc(p.project)}</h3></div><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></div>
-    <section style="margin:0 0 16px;padding:16px;border:1px solid #eaeef2;border-radius:8px;background:#f6f8fa">
-      <p class="eyebrow" style="margin-bottom:6px">研究概要</p>
-      <p style="margin:0 0 14px;font-size:15px;line-height:1.75">${esc(p.overview)}</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px">
-        <div><strong style="display:block;margin-bottom:4px">この研究で知りたいこと</strong><span style="line-height:1.7">${esc(p.research_question)}</span></div>
-        <div><strong style="display:block;margin-bottom:4px">なぜそうなるのか</strong><span style="line-height:1.7">${esc(p.mechanism)}</span></div>
-      </div>
-    </section>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 18px">
+      ${explanationBlock('01 / CONTEXT','どんな研究？',p.overview,'#f7f7f5')}
+      ${explanationBlock('02 / WHY IT MATTERS','何が面白い？',interesting,'#ffffff')}
+      ${explanationBlock('03 / MECHANISM','どういう仕組み？',p.mechanism,'#f7f7f5')}
+    </div>
     <dl class="detail-grid">
       <div><dt>種別</dt><dd>${esc(typeLabel(p.type))}</dd></div><div><dt>ステージ</dt><dd>${esc(p.stage)}</dd></div>
       <div><dt>科学的判定</dt><dd>${esc(p.verdict)}</dd></div><div><dt>次のゲート</dt><dd>${esc(p.next_gate)}</dd></div>
@@ -138,7 +141,7 @@ function projectDetail(p) {
   </div>`;
 }
 
-function openDetail(title, rows, subtitle='研究名をクリックすると研究概要と公開用管理情報を確認できます。') {
+function openDetail(title, rows, subtitle='研究名をクリックすると、一般向けの研究紹介と現在の公開ステータスを確認できます。') {
   $('#detail-title').textContent = title;
   $('#detail-subtitle').textContent = `${rows.length}件 · ${subtitle}`;
   $('#detail-content').innerHTML = rows.length === 1 ? projectDetail(rows[0]) : detailTable(rows);
@@ -148,7 +151,7 @@ function openDetail(title, rows, subtitle='研究名をクリックすると研�
 
 function openProject(id) {
   const project = state.data.projects.find(p => p.id === id);
-  if (project) openDetail(project.project, [project], '研究の内容と現在の進捗をまとめています。');
+  if (project) openDetail(project.project, [project], '30秒程度で問題意識・面白さ・仕組みをつかめるようにまとめています。');
 }
 
 function bindDetails() {
@@ -182,8 +185,15 @@ async function init() {
     setSelect('#filter-stage', state.data.projects.map(p=>p.stage));
     setSelect('#filter-health', state.data.projects.map(p=>p.health), healthLabel);
     setSelect('#filter-field', state.data.projects.map(p=>p.field));
-    bindFilters(); bindDetails();
-    renderSync(); renderKpis(); renderAttention(); renderStagePipeline(); renderTable(); renderPublication(); renderRecent();
+    bindFilters();
+    bindDetails();
+    renderSync();
+    renderKpis();
+    renderAttention();
+    renderStagePipeline();
+    renderTable();
+    renderPublication();
+    renderRecent();
   } catch (error) {
     document.body.innerHTML = `<main class="shell"><section class="panel"><div class="panel-title"><h2>ダッシュボードデータを読み込めませんでした</h2></div><div class="empty">${esc(error.message)}</div></section></main>`;
   }

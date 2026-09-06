@@ -6,9 +6,11 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="経済理論研究ポートフォリオの公開用・サニタイズ済み進捗ダッシュボード。">
   <title>Economic Theory Research Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=20260906-page1">
+  <link rel="stylesheet" href="styles.css?v=20260906-public2">
   <style>
     a.kpi-button,a.attention-row,a.stage,a.publication-lane,a.project-detail-link{text-decoration:none;color:inherit}
+    .stage-pipeline{grid-template-columns:repeat(5,1fr)}
+    @media(max-width:1180px){.stage-pipeline{grid-template-columns:repeat(5,minmax(150px,1fr))}}
   </style>
 </head>
 <body>
@@ -17,7 +19,7 @@
       <div class="topbar-copy">
         <p class="eyebrow">ECONOMIC THEORY / RESEARCH PORTFOLIO</p>
         <h1>Economic Theory<br><span>Research Portfolio</span></h1>
-        <p class="subtitle">進行中の理論研究・訂正論文を、研究段階、科学的判定、投稿状況まで一つの画面で追跡する公開ポートフォリオです。</p>
+        <p class="subtitle">理論研究・訂正論文を、研究上の現在地、科学的判定、投稿状況まで一つの画面で追跡する公開ポートフォリオです。</p>
       </div>
       <aside class="topbar-meta">
         <div class="sync-block" aria-live="polite">
@@ -45,7 +47,7 @@
     </section>
 
     <section class="filters" aria-label="ポートフォリオ絞り込み">
-      <label>優先度<select id="filter-priority"><option value="">すべて</option></select></label>
+      <label>優先区分<select id="filter-priority"><option value="">すべて</option></select></label>
       <label>種別<select id="filter-type"><option value="">すべて</option></select></label>
       <label>ステージ<select id="filter-stage"><option value="">すべて</option></select></label>
       <label>状態<select id="filter-health"><option value="">すべて</option></select></label>
@@ -74,8 +76,8 @@
     <section id="portfolio" class="panel portfolio-panel">
       <div class="panel-title table-title-row">
         <div>
-          <span class="panel-kicker">LIVE PORTFOLIO</span>
-          <h2>進行中の研究一覧</h2>
+          <span class="panel-kicker">PORTFOLIO</span>
+          <h2>研究案件一覧</h2>
           <p id="result-count" class="muted"></p>
         </div>
         <span class="legend"><span class="legend-dot blocked"></span>ブロック <span class="legend-dot review"></span>要確認 <span class="legend-dot track"></span>順調 <span class="legend-dot waiting"></span>待機</span>
@@ -84,7 +86,7 @@
         <table>
           <thead>
             <tr>
-              <th>優先度</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th>
+              <th>優先区分</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th>
             </tr>
           </thead>
           <tbody id="portfolio-body"></tbody>
@@ -113,7 +115,7 @@
       <summary>公開範囲とプライバシー境界</summary>
       <div class="methodology-body">
         <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。具体的な投稿先、投稿ID、投稿システム上の内部情報、数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、認証情報、非公開の研究エビデンスは含みません。</p>
-        <p>投稿先そのものは非公開のGitHub管理記録に保持し、公開ページでは研究分野と投稿ステータスのみを表示します。公開ページの内容はGitHub上の研究記録を確認したうえで手動更新し、科学的判定や研究ゲートも人間が管理するcanonical decisionとして維持します。</p>
+        <p>投稿先そのものは非公開のGitHub管理記録に保持し、公開ページでは研究分野と一般的な投稿ステータスのみを表示します。研究上の判定は、GitHub上のworkflow・履歴・検証記録を参照しながら節目ごとに評価し、その結果をGitHubへ記録する運用です。公開ページはその状態を必要なタイミングで手動更新しています。</p>
       </div>
     </details>
 
@@ -122,6 +124,6 @@
       <span>PORTFOLIO.yaml / canonical GitHub Issues / Manual Update</span>
     </footer>
   </main>
-  <script src="dashboard.js?v=20260906-page1" defer></script>
+  <script src="dashboard.js?v=20260906-public2" defer></script>
 </body>
 </html>

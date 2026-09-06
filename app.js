@@ -1,4 +1,4 @@
-const state = {data:null, filters:{priority:'',type:'',stage:'',health:'',journal:''}};
+const state = {data:null, filters:{priority:'',type:'',stage:'',health:'',field:''}};
 const $ = selector => document.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const badgeClass = health => ({'Blocked':'blocked','Review':'review','On track':'track','Waiting':'waiting'}[health] || 'waiting');
@@ -65,7 +65,7 @@ function renderStagePipeline() {
 function renderTable() {
   const rows = filtered();
   $('#result-count').textContent = `全${state.data.projects.length}件中 ${rows.length}件を表示`;
-  $('#portfolio-body').innerHTML = rows.map(p => `<tr><td class="priority">${esc(p.priority)}</td><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td class="nowrap">${esc(p.journal||'—')}</td><td class="nowrap">${esc(relativeLabel(p.activity))}</td></tr>`).join('') || '<tr><td colspan="9" class="empty">現在の絞り込み条件に一致する研究はありません。</td></tr>';
+  $('#portfolio-body').innerHTML = rows.map(p => `<tr><td class="priority">${esc(p.priority)}</td><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.field||'—')}</td><td class="nowrap">${esc(relativeLabel(p.activity))}</td></tr>`).join('') || '<tr><td colspan="9" class="empty">現在の絞り込み条件に一致する研究はありません。</td></tr>';
 }
 
 function renderPublication() {
@@ -119,7 +119,7 @@ function titleForKind(kind) {
 
 function detailTable(rows) {
   if (!rows.length) return '<div class="detail-empty">この区分に該当する研究はありません。</div>';
-  return `<div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>研究</th><th>優先度</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>投稿先</th><th>更新</th></tr></thead><tbody>${rows.map(p => `<tr><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td class="priority">${esc(p.priority)}</td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.journal||'—')}</td><td>${esc(relativeLabel(p.activity))}</td></tr>`).join('')}</tbody></table></div>`;
+  return `<div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>研究</th><th>優先度</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th></tr></thead><tbody>${rows.map(p => `<tr><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td class="priority">${esc(p.priority)}</td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.field||'—')}</td><td>${esc(relativeLabel(p.activity))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 function projectDetail(p) {
@@ -136,7 +136,7 @@ function projectDetail(p) {
     <dl class="detail-grid">
       <div><dt>種別</dt><dd>${esc(typeLabel(p.type))}</dd></div><div><dt>ステージ</dt><dd>${esc(p.stage)}</dd></div>
       <div><dt>科学的判定</dt><dd>${esc(p.verdict)}</dd></div><div><dt>次のゲート</dt><dd>${esc(p.next_gate)}</dd></div>
-      <div><dt>投稿先</dt><dd>${esc(p.journal||'—')}</dd></div><div><dt>更新</dt><dd>${esc(relativeLabel(p.activity))}</dd></div>
+      <div><dt>研究分野</dt><dd>${esc(p.field||'—')}</dd></div><div><dt>更新</dt><dd>${esc(relativeLabel(p.activity))}</dd></div>
       <div><dt>要確認</dt><dd>${p.review_needed?'あり':'なし'}</dd></div><div><dt>注意シグナル</dt><dd>${esc(attentionReasonLabel(p.attention_reason)||'—')}</dd></div>
     </dl>
   </div>`;
@@ -171,7 +171,7 @@ function bindDetails() {
 }
 
 function bindFilters() {
-  const spec = [['#filter-priority','priority'],['#filter-type','type'],['#filter-stage','stage'],['#filter-health','health'],['#filter-journal','journal']];
+  const spec = [['#filter-priority','priority'],['#filter-type','type'],['#filter-stage','stage'],['#filter-health','health'],['#filter-field','field']];
   spec.forEach(([id,key]) => $(id).addEventListener('change', event => { state.filters[key]=event.target.value; renderTable(); }));
   $('#clear-filters').addEventListener('click', () => { spec.forEach(([id,key]) => { $(id).value=''; state.filters[key]=''; }); renderTable(); });
 }
@@ -185,7 +185,7 @@ async function init() {
     setSelect('#filter-type', state.data.projects.map(p=>p.type), typeLabel);
     setSelect('#filter-stage', state.data.projects.map(p=>p.stage));
     setSelect('#filter-health', state.data.projects.map(p=>p.health), healthLabel);
-    setSelect('#filter-journal', state.data.projects.map(p=>p.journal));
+    setSelect('#filter-field', state.data.projects.map(p=>p.field));
     bindFilters(); bindDetails();
     renderSync(); renderKpis(); renderAttention(); renderStagePipeline(); renderTable(); renderPublication(); renderRecent();
   } catch (error) {

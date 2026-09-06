@@ -7,8 +7,8 @@ const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文'
 const healthLabel = value => ({'Blocked':'ブロック','Review':'要確認','On track':'順調','Waiting':'待機'}[value] || value);
 const pipelineLabel = value => ({'Prior-Art':'先行研究','Research Gate':'研究ゲート','Theory Frozen':'理論凍結','Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み'}[value] || value);
 const publicationLabel = value => ({'Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み','R&R':'R&R'}[value] || value);
-const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'同期差分あり','Verification gate':'検証ゲート'}[value] || value);
-const recentEventLabel = value => ({'Portfolio review signal detected':'ポートフォリオ差分を検出','Blocking gate active':'ブロック中','Repository observation refreshed':'リポジトリ観測を更新'}[value] || value);
+const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'更新差分あり','Verification gate':'検証ゲート'}[value] || value);
+const recentEventLabel = value => ({'Portfolio review signal detected':'ポートフォリオ差分を検出','Blocking gate active':'ブロック中','Repository observation refreshed':'リポジトリ情報を更新'}[value] || value);
 function relativeLabel(value) {
   const match = String(value ?? '').match(/^(\d+)(m|h|d)$/);
   if (!match) return value || '—';
@@ -86,13 +86,9 @@ function renderRecent() {
 function renderSync() {
   const sync = state.data.sync;
   $('#last-sync').textContent = `最終更新: ${sync.generated_jst}`;
-  const ageMinutes = (Date.now() - new Date(sync.generated_utc).getTime()) / 60000;
-  let cls='healthy', label='自動同期: 正常';
-  if (!Number.isFinite(ageMinutes) || ageMinutes > 360) { cls='failed'; label='ダッシュボード更新: 遅延'; }
-  else if (ageMinutes > 150) { cls='stale'; label='自動同期: 更新待ち'; }
   const el = $('#sync-health');
-  el.className = `sync-health ${cls}`;
-  el.innerHTML = `<span class="dot"></span>${esc(label)}`;
+  el.className = 'sync-health healthy';
+  el.innerHTML = '<span class="dot"></span>手動更新';
 }
 
 function rowsForKind(kind) {

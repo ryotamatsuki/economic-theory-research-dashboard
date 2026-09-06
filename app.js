@@ -2,6 +2,7 @@ const state = {data:null, filters:{priority:'',type:'',stage:'',health:'',field:
 const $ = selector => document.querySelector(selector);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const badgeClass = health => ({'Blocked':'blocked','Review':'review','On track':'track','Waiting':'waiting'}[health] || 'waiting');
+let modalScrollY = 0;
 
 const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文','Candidate':'訂正候補','Audit':'監査'}[value] || value);
 const healthLabel = value => ({'Blocked':'ブロック','Review':'要確認','On track':'順調','Waiting':'待機'}[value] || value);
@@ -141,12 +142,43 @@ function projectDetail(p) {
   </div>`;
 }
 
+function lockPageScroll() {
+  modalScrollY = window.scrollY || window.pageYOffset || 0;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${modalScrollY}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+}
+
+function unlockPageScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, modalScrollY);
+}
+
+function closeDetail() {
+  const overlay = $('#detail-overlay');
+  if (overlay.hidden) return;
+  overlay.hidden = true;
+  unlockPageScroll();
+}
+
 function openDetail(title, rows, subtitle='研究名をクリックすると、一般向けの研究紹介と現在の公開ステータスを確認できます。') {
   $('#detail-title').textContent = title;
   $('#detail-subtitle').textContent = `${rows.length}件 · ${subtitle}`;
   $('#detail-content').innerHTML = rows.length === 1 ? projectDetail(rows[0]) : detailTable(rows);
-  const dialog = $('#detail-dialog');
-  if (!dialog.open) dialog.showModal();
+  const overlay = $('#detail-overlay');
+  const panel = $('#detail-dialog');
+  if (!overlay.hidden) return;
+  lockPageScroll();
+  overlay.hidden = false;
+  panel.scrollTop = 0;
+  $('#detail-content').scrollTop = 0;
+  requestAnimationFrame(() => $('#detail-close').focus({preventScroll:true}));
 }
 
 function openProject(id) {
@@ -156,7 +188,7 @@ function openProject(id) {
 
 function bindDetails() {
   document.addEventListener('click', event => {
-    if (event.target.closest('#detail-close')) { $('#detail-dialog').close(); return; }
+    if (event.target.closest('#detail-close')) { closeDetail(); return; }
     const project = event.target.closest('[data-project-id]');
     if (project) { openProject(project.dataset.projectId); return; }
     const kpiTrigger = event.target.closest('[data-detail-kind]');
@@ -166,7 +198,12 @@ function bindDetails() {
     const publication = event.target.closest('[data-publication-lane]');
     if (publication) { const label=publication.dataset.publicationLane; openDetail(`${publicationLabel(label)}の投稿案件`, state.data.projects.filter(p=>p.publication_lane===label), 'この投稿ステータスに分類されている案件です。'); }
   });
-  $('#detail-dialog').addEventListener('click', event => { if (event.target === $('#detail-dialog')) $('#detail-dialog').close(); });
+  $('#detail-overlay').addEventListener('click', event => {
+    if (event.target === $('#detail-overlay')) closeDetail();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !$('#detail-overlay').hidden) closeDetail();
+  });
 }
 
 function bindFilters() {

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="経済理論研究ポートフォリオの研究詳細ページ。">
+  <title>Research Detail | Economic Theory Research Portfolio</title>
+  <link rel="stylesheet" href="styles.css?v=20260906-detail1">
+  <style>
+    body{min-height:100vh}
+    .detail-page-shell{max-width:1040px;margin:0 auto;padding:28px 24px 56px}
+    .detail-page-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:4px 0 22px;border-bottom:1px solid var(--line)}
+    .detail-page-nav a{font-size:12px;font-weight:650;text-decoration:none}
+    .detail-page-nav a:hover{text-decoration:underline;text-underline-offset:3px}
+    .detail-page-heading{padding:34px 0 18px}
+    .detail-page-heading h1,.standalone-detail h1{margin:0;font-size:clamp(30px,6vw,50px);line-height:1.05;letter-spacing:-.045em;font-weight:520}
+    .detail-page-heading>p:last-child,.detail-lead{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
+    .standalone-detail{max-width:900px;margin:34px auto 0}
+    .standalone-detail .project-detail-head{margin-bottom:8px}
+    .reader-block{padding:26px 0;border-top:1px solid var(--line)}
+    .reader-block:last-of-type{border-bottom:1px solid var(--line)}
+    .reader-block .eyebrow{margin-bottom:8px}
+    .reader-block h2{margin:0 0 10px;font-size:19px;font-weight:650;letter-spacing:-.02em}
+    .reader-block>p:last-child{margin:0;max-width:820px;font-size:16px;line-height:1.95;color:#33332f}
+    .standalone-detail .detail-grid{margin-top:24px}
+    @media(max-width:720px){
+      .detail-page-shell{padding:18px 16px 40px}
+      .detail-page-nav{padding-top:4px}
+      .standalone-detail{margin-top:24px}
+      .standalone-detail .project-detail-head{display:block}
+      .standalone-detail .project-detail-head>.badge{margin-top:12px}
+      .reader-block{padding:22px 0}
+      .reader-block>p:last-child{font-size:16px;line-height:1.9}
+      .detail-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="detail-page-shell">
+    <nav class="detail-page-nav" aria-label="詳細ページナビゲーション">
+      <a href="./">← ダッシュボードへ戻る</a>
+      <span class="eyebrow" style="margin:0">RESEARCH DETAIL</span>
+    </nav>
+    <div id="detail-root" aria-live="polite"><div class="empty">読み込み中...</div></div>
+    <nav class="detail-page-nav" style="margin-top:32px;border-top:1px solid var(--line);border-bottom:0;padding-top:20px">
+      <a href="./">← ダッシュボードへ戻る</a>
+    </nav>
+  </main>
+  <script src="detail.js?v=20260906-detail1" defer></script>
+</body>
+</html>

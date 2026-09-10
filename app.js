@@ -4,7 +4,26 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp
 const badgeClass = health => ({'Blocked':'blocked','Review':'review','On track':'track','Waiting':'waiting'}[health] || 'waiting');
 let modalScrollY = 0;
 
-const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文','Candidate':'訂正候補','Audit':'監査'}[value] || value);
+const repositoryByProjectId = {
+  'information-appropriability':'https://github.com/ryotamatsuki/information-appropriability-downstream-reallocation',
+  'shared-core-entry':'https://github.com/ryotamatsuki/writepaper_public_co-creation_hubs',
+  'private-compatibility':'https://github.com/ryotamatsuki/private-compatibility-standards-coalitions',
+  'shy-2002-correction':'https://github.com/ryotamatsuki/stable-pricing-switching-costs',
+  'gandal-shy-correction':'https://github.com/ryotamatsuki/gandal-shy-foreclosure-correction',
+  'ishikawa-shibata-correction':'https://github.com/ryotamatsuki/ishikawa-shibata-rd-correction',
+  'c022-behrens-lijesen':'https://github.com/ryotamatsuki/economic-theory-replication-audit',
+  'regional-lab-diversification':'https://github.com/ryotamatsuki/regional-public-lab-research-diversification',
+  'agentic-ai-authority':'https://github.com/ryotamatsuki/agentic-ai-authority-organization',
+  'directional-friction':'https://github.com/ryotamatsuki/directional-friction-spatial-competition',
+  'endogenous-interoperability':'https://github.com/ryotamatsuki/endogenous-interoperability-standards-coalitions',
+  'strategic-local-green-policy':'https://github.com/ryotamatsuki/strategic-local-green-policy-competition',
+  'standardization-scope-direction-innovation':'https://github.com/ryotamatsuki/standardization-scope-direction-innovation',
+  'industrial-policy-composition-regional-value-chains':'https://github.com/ryotamatsuki/industrial-policy-composition-regional-value-chains',
+  'oe-ef-wsp-combinatorial-assignment':'https://github.com/ryotamatsuki/oe-ef-wsp-combinatorial-assignment',
+  'economides-quality-equilibrium-reassessment':'https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment'
+};
+
+const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文','Candidate':'訂正候補','Open Problem':'オープン問題','Audit':'監査'}[value] || value);
 const healthLabel = value => ({'Blocked':'ブロック','Review':'要確認','On track':'順調','Waiting':'待機'}[value] || value);
 const pipelineLabel = value => ({'Prior-Art':'先行研究','Research Gate':'研究ゲート','Theory Frozen':'理論凍結','Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み'}[value] || value);
 const publicationLabel = value => ({'Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み','R&R':'R&R'}[value] || value);
@@ -124,10 +143,17 @@ function explanationBlock(kicker, title, body, background='#f7f7f5') {
   return `<section style="padding:17px 18px;border:1px solid rgba(17,17,17,.12);border-radius:9px;background:${background}"><p class="eyebrow" style="margin:0 0 6px">${esc(kicker)}</p><h4 style="margin:0 0 8px;font-size:16px;font-weight:650;letter-spacing:-.015em">${esc(title)}</h4><p style="margin:0;font-size:14px;line-height:1.9;color:#33332f">${esc(body)}</p></section>`;
 }
 
+function githubRepositoryLink(p) {
+  const url = String(p.repository_url || repositoryByProjectId[p.id] || '');
+  if (!url.startsWith('https://github.com/ryotamatsuki/')) return '';
+  return `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;margin:0 0 18px;padding:9px 12px;border:1px solid rgba(9,105,218,.25);border-radius:8px;background:#f6f8fa;color:#0969da;font-size:14px;font-weight:650;text-decoration:none">GitHubリポジトリを見る <span aria-hidden="true">↗</span></a>`;
+}
+
 function projectDetail(p) {
   const interesting = p.interesting_point || p.research_question || '—';
   return `<div class="project-detail-card">
     <div class="project-detail-head"><div><span class="priority">${esc(p.priority)}</span><h3>${esc(p.project)}</h3></div><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></div>
+    ${githubRepositoryLink(p)}
     <div style="display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 18px">
       ${explanationBlock('01 / CONTEXT','どんな研究？',p.overview,'#f7f7f5')}
       ${explanationBlock('02 / WHY IT MATTERS','何が面白い？',interesting,'#ffffff')}

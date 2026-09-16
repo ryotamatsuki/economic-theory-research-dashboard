@@ -1,0 +1,62 @@
+name: Patch directional-friction review status
+
+on:
+  push:
+    paths:
+      - .github/workflows/patch-directional-friction-under-review.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Correct Economics of Transportation status
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+
+          path = Path('data.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          row = next(p for p in data['projects'] if p['id'] == 'directional-friction')
+          row['stage'] = '査読中'
+          row['health'] = 'Waiting'
+          row['next_gate'] = '査読結果待ち'
+          row['pipeline_lane'] = 'Submitted'
+          row['publication_lane'] = 'Submitted'
+          row['review_needed'] = False
+          row['attention_reason'] = 'Verification gate'
+          row['activity'] = '10d'
+
+          now = datetime.now(timezone.utc)
+          data['sync']['generated_utc'] = now.isoformat().replace('+00:00', 'Z')
+          data['sync']['generated_jst'] = now.astimezone(ZoneInfo('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M JST')
+          data['sync']['status'] = 'Healthy'
+          data['sync']['label'] = '2026-09-17 status correction'
+
+          recent = [r for r in data.get('recent', []) if r.get('project') != 'Retail Demand & Transit Supply']
+          recent.insert(0, {
+              'when': '0m',
+              'project': 'Retail Demand & Transit Supply',
+              'event': 'Repository observation refreshed'
+          })
+          data['recent'] = recent[:5]
+
+          path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
+          PY
+      - name: Commit correction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "No change needed."
+            exit 0
+          fi
+          git commit -m "Correct transit paper status to under review"
+          git push

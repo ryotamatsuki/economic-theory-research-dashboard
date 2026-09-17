@@ -1,0 +1,62 @@
+name: Patch Economides editor-assigned status
+
+on:
+  push:
+    paths:
+      - .github/workflows/patch-economides-editor-assigned.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Correct Economides submission status
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+
+          path = Path('data.json')
+          data = json.loads(path.read_text(encoding='utf-8'))
+          row = next(p for p in data['projects'] if p['id'] == 'economides-quality-equilibrium-reassessment')
+          row['stage'] = 'Editor assigned / 初期編集審査中'
+          row['health'] = 'Waiting'
+          row['next_gate'] = '査読者招待または編集判断待ち'
+          row['pipeline_lane'] = 'Submitted'
+          row['publication_lane'] = 'Submitted'
+          row['review_needed'] = False
+          row['attention_reason'] = 'Verification gate'
+          row['activity'] = '1d'
+
+          now = datetime.now(timezone.utc)
+          data['sync']['generated_utc'] = now.isoformat().replace('+00:00', 'Z')
+          data['sync']['generated_jst'] = now.astimezone(ZoneInfo('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M JST')
+          data['sync']['status'] = 'Healthy'
+          data['sync']['label'] = '2026-09-18 Economides status refresh'
+
+          recent = [r for r in data.get('recent', []) if r.get('project') != 'Economides Quality Reassessment']
+          recent.insert(0, {
+              'when': '0m',
+              'project': 'Economides Quality Reassessment',
+              'event': 'Repository observation refreshed'
+          })
+          data['recent'] = recent[:5]
+
+          path.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
+          PY
+      - name: Commit correction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "No change needed."
+            exit 0
+          fi
+          git commit -m "Update Economides status to editor assigned"
+          git push

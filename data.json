@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-18T00:00:55.054Z",
-    "generated_jst": "2026-09-18 09:00 JST",
+    "generated_utc": "2026-09-18T00:43:45.015Z",
+    "generated_jst": "2026-09-18 09:45 JST",
     "status": "Healthy",
-    "label": "2026-09-18 20-project reconciliation"
+    "label": "2026-09-18 Fixed Policy Capacity Stage 15R"
   },
   "projects": [
     {
@@ -395,10 +395,10 @@
       "mechanism": "fully committedな政策枠が二つのsectoral contestsを結びつけ、政策枠の規模とsame-sector overlap lossが閾値を超えると、duplicationとdifferentiationの質的な乖離を生みます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "Stage 15 PASS / 投稿版freeze",
+      "stage": "Stage 15R PASS / AI開示修正・再freeze",
       "verdict": "THEORY_FROZEN",
       "health": "On track",
-      "next_gate": "投稿ポータル確認 → submit",
+      "next_gate": "投稿ポータル・AI開示欄確認 → submit",
       "field": "Regional Economics / Industrial Policy",
       "activity": "0m",
       "review_needed": false,
@@ -446,7 +446,7 @@
     {
       "when": "0m",
       "project": "Fixed Policy Capacity",
-      "event": "Stage 15 PASS・submission package frozen"
+      "event": "Stage 15R PASS・AI disclosure repair・re-freeze"
     },
     {
       "when": "0m",

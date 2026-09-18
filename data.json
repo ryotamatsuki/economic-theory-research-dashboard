@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-18T00:43:45.015Z",
-    "generated_jst": "2026-09-18 09:45 JST",
+    "generated_utc": "2026-09-18T06:59:00.000Z",
+    "generated_jst": "2026-09-18 15:59 JST",
     "status": "Healthy",
-    "label": "2026-09-18 Fixed Policy Capacity Stage 15R"
+    "label": "2026-09-18 Fixed Policy Capacity project closed"
   },
   "projects": [
     {
@@ -386,35 +386,15 @@
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/supplier-competition-regional-policy-coordination"
-    },
-    {
-      "id": "strategic-industrial-policy-portfolio-choice",
-      "project": "Fixed Policy Capacity",
-      "overview": "地域政府が既定の産業政策枠を二つの産業へ全額配分するとき、分権的な重点分野の重複と調整下の地域間分化を比較する短い理論研究です。",
-      "interesting_point": "分権均衡では両地域が同じ魅力的産業を重視し続ける一方、重複損失と政策枠が十分大きいと、調整下では地域ごとの重点産業が反対方向に分かれます。",
-      "mechanism": "fully committedな政策枠が二つのsectoral contestsを結びつけ、政策枠の規模とsame-sector overlap lossが閾値を超えると、duplicationとdifferentiationの質的な乖離を生みます。",
-      "priority": "P1",
-      "type": "Theory",
-      "stage": "Stage 15R PASS / AI開示修正・再freeze",
-      "verdict": "THEORY_FROZEN",
-      "health": "On track",
-      "next_gate": "投稿ポータル・AI開示欄確認 → submit",
-      "field": "Regional Economics / Industrial Policy",
-      "activity": "0m",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
-      "repository_url": "https://github.com/ryotamatsuki/strategic-industrial-policy-portfolio-choice"
     }
   ],
   "stats": {
-    "live": 20,
+    "live": 19,
     "p0": 8,
     "blocked": 3,
-    "submission_ready": 6,
+    "submission_ready": 5,
     "submitted": 5,
-    "review_needed": 13
+    "review_needed": 11
   },
   "pipeline": [
     {
@@ -435,7 +415,7 @@
     },
     {
       "label": "Submission Ready",
-      "count": 6
+      "count": 5
     },
     {
       "label": "Submitted",
@@ -446,7 +426,7 @@
     {
       "when": "0m",
       "project": "Fixed Policy Capacity",
-      "event": "Stage 15R PASS・AI disclosure repair・re-freeze"
+      "event": "Project closed / not submitted after v2.2 theorem-absorption NO-GO"
     },
     {
       "when": "0m",

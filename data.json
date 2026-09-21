@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-21T03:10:00.000Z",
-    "generated_jst": "2026-09-21 12:10 JST",
+    "generated_utc": "2026-09-21T03:35:00.000Z",
+    "generated_jst": "2026-09-21 12:35 JST",
     "status": "Healthy",
-    "label": "2026-09-21 full live-repository reconciliation"
+    "label": "2026-09-21 Standardization Stage 11N sync"
   },
   "projects": [
     {
@@ -295,10 +295,10 @@
       "mechanism": "標準化範囲→共通R&Dの私的回収可能性→R&D capacityの方向転換→政府の最適標準化範囲をつなぎます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "authenticated portal preflight / refreshed Stage 14待ち",
+      "stage": "Stage 11N先行研究再認証PASS / Stage 12R待ち",
       "verdict": "THEORY_FROZEN_V4",
       "health": "Review",
-      "next_gate": "portal未確認項目解消 → refreshed Stage 14 → Stage 15",
+      "next_gate": "Stage 12R journal positioning → Stage 13R literature integration",
       "field": "Industrial Organization / Innovation Economics",
       "activity": "6d",
       "review_needed": true,

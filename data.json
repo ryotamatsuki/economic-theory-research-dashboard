@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-21T03:03:00.000Z",
-    "generated_jst": "2026-09-21 12:03 JST",
+    "generated_utc": "2026-09-21T03:10:00.000Z",
+    "generated_jst": "2026-09-21 12:10 JST",
     "status": "Healthy",
-    "label": "2026-09-21 Private Compatibility entered editorial decision phase"
+    "label": "2026-09-21 full live-repository reconciliation"
   },
   "projects": [
     {
@@ -106,6 +106,46 @@
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/gandal-shy-foreclosure-correction"
+    },
+    {
+      "id": "shy-stenbacka-correction",
+      "project": "Shy–Stenbacka Correction",
+      "overview": "Shy and Stenbacka (2005) のアウトソーシングモデルを大域的な継続ゲームまで再検証し、比較静学・最適反応・均衡集合を訂正する理論訂正研究です。",
+      "interesting_point": "内点の最適反応だけを見ると見落とす退出・上限制約のregime変化が、比較静学や均衡多重性を変えます。",
+      "mechanism": "アウトソーシング→限界費用低下→下流退出やcap到達→継続regime切替→大域的best responseと均衡対応の再構成、という経路を追跡します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 14条件付きPASS / 投稿ポータル確認待ち",
+      "verdict": "THEORY_FROZEN_AMENDED",
+      "health": "Review",
+      "next_gate": "RIO認証ポータル確認 → Stage 15",
+      "field": "Industrial Organization / Outsourcing",
+      "activity": "1d",
+      "review_needed": true,
+      "attention_reason": "Submission gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "repository_url": "https://github.com/ryotamatsuki/shy-stenbacka-correction"
+    },
+    {
+      "id": "gehrig-shy-stenbacka-correction",
+      "project": "Gehrig–Shy–Stenbacka Correction",
+      "overview": "Gehrig, Shy, and Stenbacka (2011) の履歴依存価格差別モデルを再検証し、表示された価格均衡の成立範囲と消費者余剰・厚生計算を訂正する短い再評価論文です。",
+      "interesting_point": "大域的な価格逸脱条件と正しい消費者余剰計算を組み合わせると、表示された均衡の有効領域を限定し、共通領域では厚生比較が反転します。",
+      "mechanism": "global best responseで価格候補の成立範囲を確定し、輸送ミスマッチ節約とスイッチング費用増加を分解して厚生差を再計算します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "N6条件付きPASS / N7待ち",
+      "verdict": "NOTE_THEORY_FROZEN",
+      "health": "Blocked",
+      "next_gate": "AI利用条件確認 → Submission Freeze",
+      "field": "Industrial Organization / Price Discrimination",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Compliance gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "repository_url": "https://github.com/ryotamatsuki/gehrig-shy-stenbacka-correction"
     },
     {
       "id": "ishikawa-shibata-correction",
@@ -229,7 +269,7 @@
     },
     {
       "id": "strategic-local-green-policy",
-      "project": "Local Green Policy Competition",
+      "project": "Green Subsidies & Public Infrastructure",
       "overview": "地域政府がグリーン投資補助と生産性にも効く公共インフラを選ぶとき、製品市場競争が政策反応をどう変えるかを分析する理論研究です。",
       "interesting_point": "競争強度によって相手地域の支援へのインフラ反応が負から正へ切り替わるinstrument switchingを示します。",
       "mechanism": "相手地域の支援→企業の投資・競争力→自地域インフラの戦略価値という経路を、全regimeのSPNEと照合します。",
@@ -240,7 +280,7 @@
       "health": "Review",
       "next_gate": "live fee gate確認 → Stage 15 submission freeze",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "6d",
+      "activity": "3d",
       "review_needed": true,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -389,12 +429,12 @@
     }
   ],
   "stats": {
-    "live": 19,
-    "p0": 8,
-    "blocked": 3,
-    "submission_ready": 5,
+    "live": 21,
+    "p0": 10,
+    "blocked": 4,
+    "submission_ready": 7,
     "submitted": 5,
-    "review_needed": 11
+    "review_needed": 13
   },
   "pipeline": [
     {
@@ -415,7 +455,7 @@
     },
     {
       "label": "Submission Ready",
-      "count": 5
+      "count": 7
     },
     {
       "label": "Submitted",
@@ -425,6 +465,21 @@
   "recent": [
     {
       "when": "0m",
+      "project": "Gehrig–Shy–Stenbacka Correction",
+      "event": "新規登録：RiE向けN6条件付きPASS / N7待ち"
+    },
+    {
+      "when": "0m",
+      "project": "Shy–Stenbacka Correction",
+      "event": "新規登録：Stage 14条件付きPASS / RIO portal preflight待ち"
+    },
+    {
+      "when": "0m",
+      "project": "Green Subsidies & Public Infrastructure",
+      "event": "ITPF向け最終タイトルへ同期"
+    },
+    {
+      "when": "0m",
       "project": "Private Compatibility",
       "event": "編集判断フェーズへ移行"
     },
@@ -432,21 +487,6 @@
       "when": "0m",
       "project": "Fixed Policy Capacity",
       "event": "Project closed / not submitted after v2.2 theorem-absorption NO-GO"
-    },
-    {
-      "when": "0m",
-      "project": "Dynamic Tariff Choice for Generative AI",
-      "event": "Stage 11 repair / Stage 12 pausedへ再同期"
-    },
-    {
-      "when": "0m",
-      "project": "Economides Quality Reassessment",
-      "event": "Repository observation refreshed"
-    },
-    {
-      "when": "0m",
-      "project": "Retail Demand & Transit Supply",
-      "event": "Repository observation refreshed"
     }
   ]
 }

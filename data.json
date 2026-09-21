@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-18T06:59:00.000Z",
-    "generated_jst": "2026-09-18 15:59 JST",
+    "generated_utc": "2026-09-21T03:03:00.000Z",
+    "generated_jst": "2026-09-21 12:03 JST",
     "status": "Healthy",
-    "label": "2026-09-18 Fixed Policy Capacity project closed"
+    "label": "2026-09-21 Private Compatibility entered editorial decision phase"
   },
   "projects": [
     {
@@ -55,14 +55,14 @@
       "mechanism": "事後互換化が連合参加利得と外部市場不利を非対称に変化させ、安定条件の閾値を動かします。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "技術差戻し修正版を再提出済み",
+      "stage": "編集判断中",
       "verdict": "THEORY_FROZEN",
       "health": "Waiting",
-      "next_gate": "次の編集ステータス確認",
+      "next_gate": "編集判断通知の確認",
       "field": "Industrial Organization / Standards",
-      "activity": "7d",
+      "activity": "0d",
       "review_needed": false,
-      "attention_reason": "Verification gate",
+      "attention_reason": "Editorial decision pending",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/private-compatibility-standards-coalitions"
@@ -425,6 +425,11 @@
   "recent": [
     {
       "when": "0m",
+      "project": "Private Compatibility",
+      "event": "編集判断フェーズへ移行"
+    },
+    {
+      "when": "0m",
       "project": "Fixed Policy Capacity",
       "event": "Project closed / not submitted after v2.2 theorem-absorption NO-GO"
     },
@@ -442,11 +447,6 @@
       "when": "0m",
       "project": "Retail Demand & Transit Supply",
       "event": "Repository observation refreshed"
-    },
-    {
-      "when": "1d",
-      "project": "Supplier Competition & Regional Policy Coordination",
-      "event": "v2.1形式証明・再監査を統合しStage 14/15へ移行"
     }
   ]
 }

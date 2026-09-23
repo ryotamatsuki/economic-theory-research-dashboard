@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-21T03:35:00.000Z",
-    "generated_jst": "2026-09-21 12:35 JST",
+    "generated_utc": "2026-09-23T12:45:00Z",
+    "generated_jst": "2026-09-23 21:45 JST",
     "status": "Healthy",
-    "label": "2026-09-21 Standardization Stage 11N sync"
+    "label": "2026-09-23 full portfolio reconciliation"
   },
   "projects": [
     {
@@ -50,21 +50,21 @@
     {
       "id": "private-compatibility",
       "project": "Private Compatibility",
-      "overview": "企業の事後的な互換化投資が、政府間の標準化連合の安定性をどう変えるかを分析した理論研究です。",
-      "interesting_point": "企業が市場分断を部分的に緩和すると、標準化参加の排他的便益だけが削られ、連合が不安定化する場合があります。",
-      "mechanism": "事後互換化が連合参加利得と外部市場不利を非対称に変化させ、安定条件の閾値を動かします。",
+      "overview": "企業の事後的な互換化投資が政府間の標準化連合の安定性をどう変えるかを再検証し、初回投稿後の再研究で成立範囲と機構を絞り込んだ理論研究です。",
+      "research_question": "企業の事後的な互換化は、政府が標準化連合へ参加する利得をどの条件で弱め、どの条件では残存利得を残すのか。",
+      "mechanism": "事後互換化が排他的便益を削る一方、残存する市場不利・適応利得が政府の継続利得を左右し、成功・中間・失敗の領域を分けます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "編集判断中",
-      "verdict": "THEORY_FROZEN",
-      "health": "Waiting",
-      "next_gate": "編集判断通知の確認",
+      "stage": "R9再開発完了 / 投稿準備",
+      "verdict": "THEORY_FROZEN_REVISED_LIMITED_NOVELTY",
+      "health": "On track",
+      "next_gate": "認証ポータル確認 → final freeze",
       "field": "Industrial Organization / Standards",
-      "activity": "0d",
+      "activity": "1d",
       "review_needed": false,
-      "attention_reason": "Editorial decision pending",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/private-compatibility-standards-coalitions"
     },
     {
@@ -248,26 +248,6 @@
       "repository_url": "https://github.com/ryotamatsuki/directional-friction-spatial-competition"
     },
     {
-      "id": "endogenous-interoperability",
-      "project": "Standards & Product Repositioning",
-      "overview": "標準化後に企業が品質・機能など別の軸で製品を再配置する反応まで内生化し、標準化連合の安定性を分析する研究です。",
-      "interesting_point": "標準化の直接効果だけでなく再差別化反応を入れると政策効果が反転し得ますが、現行architectureは価格均衡整合性の問題で停止しています。",
-      "mechanism": "標準化→規格摩擦低下→製品再配置→価格競争→政府の標準化誘因という経路を狙います。",
-      "priority": "P1",
-      "type": "Theory",
-      "stage": "Stage 4R4B NO-GO / project route closed",
-      "verdict": "NO_GO",
-      "health": "Review",
-      "next_gate": "再開する場合は新architectureでStage 0から",
-      "field": "Industrial Organization / Standards",
-      "activity": "12d",
-      "review_needed": true,
-      "attention_reason": "Research reset",
-      "pipeline_lane": "Research Gate",
-      "publication_lane": null,
-      "repository_url": "https://github.com/ryotamatsuki/endogenous-interoperability-standards-coalitions"
-    },
-    {
       "id": "strategic-local-green-policy",
       "project": "Green Subsidies & Public Infrastructure",
       "overview": "地域政府がグリーン投資補助と生産性にも効く公共インフラを選ぶとき、製品市場競争が政策反応をどう変えるかを分析する理論研究です。",
@@ -275,7 +255,7 @@
       "mechanism": "相手地域の支援→企業の投資・競争力→自地域インフラの戦略価値という経路を、全regimeのSPNEと照合します。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "Stage 14 conditional pass / Lean Phase 7 complete",
+      "stage": "Stage 14 conditional pass / Lean extension verification-only",
       "verdict": "THEORY_FROZEN",
       "health": "Review",
       "next_gate": "live fee gate確認 → Stage 15 submission freeze",
@@ -426,15 +406,135 @@
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/supplier-competition-regional-policy-coordination"
+    },
+    {
+      "id": "ringbom-shy-2004-correction",
+      "project": "Ringbom–Shy (2004) Correction",
+      "overview": "事前予約とキャンセルの二タイプrefundモデルを再検証し、元のrefund選択条件と実行可能なrefund対応を訂正する短い理論訂正研究です。",
+      "research_question": "二タイプの需要不確実性の下で、どのrefund候補が本当に利益最大化し、境界や実行可能性を含む完全なrefund対応はどうなるのか。",
+      "mechanism": "参加条件で区切られるpiecewise profitを端点まで比較すると、局所的な候補比較だけでは落ちる利益項と境界ケースが明示されます。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 14条件付きPASS / portal確認待ち",
+      "verdict": "CORRECTION_THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "認証ポータル確認 → final freeze",
+      "field": "Industrial Organization / Advance Booking",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "repository_url": "https://github.com/ryotamatsuki/ringbom-shy-2004-advance-booking-correction"
+    },
+    {
+      "id": "gss-2012-hbpd-welfare-reassessment",
+      "project": "GSS (2012) HBP Welfare Reassessment",
+      "overview": "履歴依存価格差別とスイッチング費用のモデルを大域的に解き直し、一律価格の純粋戦略均衡領域と厚生比較を再評価する研究です。",
+      "research_question": "一律価格の候補はどのパラメータ領域で大域的Nash均衡となり、正しい需要branchを使うと利益・消費者余剰・厚生比較はどう変わるのか。",
+      "mechanism": "価格差がswitching regimeのkinkを跨ぐと局所FOC候補の大域最適性が失われるため、完全なbest-response対応と実現allocationを用いて下流結果を再構成します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 14条件付きPASS / portal確認待ち",
+      "verdict": "THEORY_FROZEN_REPAIRED",
+      "health": "On track",
+      "next_gate": "認証ポータル確認 → final freeze",
+      "field": "Industrial Organization / Price Discrimination",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "repository_url": "https://github.com/ryotamatsuki/gss-2012-hbpd-welfare-reassessment"
+    },
+    {
+      "id": "shy-stenbacka-2007-liquidity-regulation",
+      "project": "Shy–Stenbacka (2007) Liquidity Regulation",
+      "overview": "銀行の流動性供給・預金金利・手数料・規制のモデルを、表示された利潤関数から直接再微分して訂正する研究です。",
+      "research_question": "公刊された最適反応と対称均衡は表示された銀行利潤を本当に最大化し、訂正後の金利・手数料・比較静学はどうなるのか。",
+      "mechanism": "reduced profitの正しい一階・二階条件からbest responseを再構成し、reserve clippingとendpointを分離して競争均衡と規制実装の範囲を整理します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 10原稿完成 / Stage 11待ち",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "hostile-referee audit → journal positioning",
+      "field": "Banking / Industrial Organization",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
+      "repository_url": "https://github.com/ryotamatsuki/shy-stenbacka-2007-liquidity-regulation-correction"
+    },
+    {
+      "id": "shy-stenbacka-2013-customer-recognition",
+      "project": "Shy–Stenbacka (2013) Customer Recognition",
+      "overview": "顧客認識への投資と情報共有の三段階ゲームを、kinkを含む価格競争からbackward inductionで再構成する再評価研究です。",
+      "research_question": "顧客タイプを一括価格でpoachするときのkinkを正しく扱うと、価格均衡・情報投資・情報共有・厚生結果はどう変わるのか。",
+      "mechanism": "uniform poaching priceが一部顧客群を市場から落とすregime switchを生み、そのcorrected continuation payoffが投資・共有の上流ゲームへ伝播します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 14条件付きPASS / portal確認待ち",
+      "verdict": "THEORY_FROZEN_MODEL_SPECIFIC",
+      "health": "On track",
+      "next_gate": "認証ポータル確認 → final freeze",
+      "field": "Information Economics / Industrial Organization",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
+      "repository_url": "https://github.com/ryotamatsuki/shy-stenbacka-2013-customer-recognition-reassessment"
+    },
+    {
+      "id": "gayer-shy-2016-tying-welfare",
+      "project": "Gayer–Shy (2016) Tying Welfare",
+      "overview": "tying戦略の消費者余剰・総厚生ランキングを、丸められた閾値ではなく正確な交点と境界対応で再検証する訂正候補です。",
+      "research_question": "mixed tying、pure tying、no tyingの消費者余剰と厚生順位は費用パラメータのどこで正確に切り替わるのか。",
+      "mechanism": "各戦略の閉形式の差を多項式・root条件へ落とし、丸め誤差とendpointの弱不等式を分離してランキング領域を再構成します。",
+      "priority": "P1",
+      "type": "Correction",
+      "stage": "Stage 0 Evidence Freeze",
+      "verdict": "UNRESOLVED",
+      "health": "Review",
+      "next_gate": "source freeze → independent re-derivation",
+      "field": "Industrial Organization / Tying",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Research reset",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null,
+      "repository_url": "https://github.com/ryotamatsuki/gayer-shy-2016-tying-welfare-correction"
+    },
+    {
+      "id": "economides-complete-equilibrium-companion",
+      "project": "Economides Complete-Equilibrium Companion",
+      "overview": "Economides型の最大立地quality gameについて、既存の訂正稿とは別に純粋戦略品質均衡の完全対応を導出するcompanion paper projectです。",
+      "research_question": "最大立地を固定したquality subgameで、対称・排除・連続体を含む全純粋戦略Nash均衡は品質費用パラメータに応じてどう切り替わるのか。",
+      "mechanism": "price continuationを全品質差領域で解いたpiecewise quality payoffからglobal best responseを照合し、対称均衡・排除均衡・境界連続体を完全に列挙します。",
+      "priority": "P0",
+      "type": "Correction",
+      "stage": "Stage 7.5A PASS / Stage 8待ち",
+      "verdict": "FORMAL_CERTIFICATION_PASS_PENDING_FREEZE",
+      "health": "On track",
+      "next_gate": "theory freeze → independent production path",
+      "field": "Industrial Organization / Spatial Competition",
+      "activity": "6d",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Research Gate",
+      "publication_lane": null,
+      "repository_url": "https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment"
     }
   ],
   "stats": {
-    "live": 21,
-    "p0": 10,
+    "live": 26,
+    "p0": 15,
     "blocked": 4,
-    "submission_ready": 7,
-    "submitted": 5,
-    "review_needed": 13
+    "submission_ready": 11,
+    "submitted": 4,
+    "review_needed": 15
   },
   "pipeline": [
     {
@@ -443,7 +543,7 @@
     },
     {
       "label": "Research Gate",
-      "count": 5
+      "count": 6
     },
     {
       "label": "Theory Frozen",
@@ -451,42 +551,32 @@
     },
     {
       "label": "Manuscript",
-      "count": 3
+      "count": 4
     },
     {
       "label": "Submission Ready",
-      "count": 7
+      "count": 11
     },
     {
       "label": "Submitted",
-      "count": 5
+      "count": 4
     }
   ],
   "recent": [
     {
-      "when": "0m",
-      "project": "Gehrig–Shy–Stenbacka Correction",
-      "event": "新規登録：RiE向けN6条件付きPASS / N7待ち"
+      "when": "0d",
+      "project": "Ringbom–Shy (2004) Correction",
+      "event": "Stage 14 submission-ready project added"
     },
     {
-      "when": "0m",
-      "project": "Shy–Stenbacka Correction",
-      "event": "新規登録：Stage 14条件付きPASS / RIO portal preflight待ち"
+      "when": "0d",
+      "project": "GSS (2012) HBP Welfare Reassessment",
+      "event": "Post-audit Stage 14 closure synchronized"
     },
     {
-      "when": "0m",
-      "project": "Green Subsidies & Public Infrastructure",
-      "event": "ITPF向け最終タイトルへ同期"
-    },
-    {
-      "when": "0m",
-      "project": "Private Compatibility",
-      "event": "編集判断フェーズへ移行"
-    },
-    {
-      "when": "0m",
-      "project": "Fixed Policy Capacity",
-      "event": "Project closed / not submitted after v2.2 theorem-absorption NO-GO"
+      "when": "0d",
+      "project": "Shy–Stenbacka (2013) Customer Recognition",
+      "event": "Stage 14 submission-ready project added"
     }
   ]
 }

@@ -11,8 +11,13 @@
     body{min-height:100vh}
     .detail-page-shell{max-width:1040px;margin:0 auto;padding:28px 24px 56px}
     .detail-page-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:4px 0 22px;border-bottom:1px solid var(--line)}
+    .detail-page-nav-left{display:flex;align-items:center;gap:14px;min-width:0;flex-wrap:wrap}
     .detail-page-nav a{font-size:12px;font-weight:650;text-decoration:none}
     .detail-page-nav a:hover{text-decoration:underline;text-underline-offset:3px}
+    .detail-page-nav [data-group-back]{font-weight:700}
+    .detail-page-nav .dashboard-back.secondary{color:var(--muted);font-weight:600}
+    .detail-page-nav .dashboard-back.secondary::before{content:"/";margin-right:14px;color:#aaa}
+    [hidden]{display:none!important}
     .detail-page-heading{padding:34px 0 18px}
     .detail-page-heading h1,.standalone-detail h1{margin:0;font-size:clamp(30px,6vw,50px);line-height:1.05;letter-spacing:-.045em;font-weight:520}
     .detail-page-heading>p:last-child,.detail-lead{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
@@ -28,7 +33,9 @@
     .standalone-detail .detail-grid{margin-top:24px}
     @media(max-width:720px){
       .detail-page-shell{padding:18px 16px 40px}
-      .detail-page-nav{padding-top:4px}
+      .detail-page-nav{padding-top:4px;align-items:flex-start}
+      .detail-page-nav-left{gap:8px 12px}
+      .detail-page-nav .dashboard-back.secondary::before{margin-right:12px}
       .standalone-detail{margin-top:24px}
       .standalone-detail .project-detail-head{display:block}
       .standalone-detail .project-detail-head>.badge{margin-top:12px}
@@ -42,14 +49,20 @@
 <body>
   <main class="detail-page-shell">
     <nav class="detail-page-nav" aria-label="詳細ページナビゲーション">
-      <a href="./">← ダッシュボードへ戻る</a>
+      <div class="detail-page-nav-left">
+        <a data-group-back href="#" hidden></a>
+        <a class="dashboard-back" data-dashboard-back href="./">← ダッシュボードへ戻る</a>
+      </div>
       <span class="eyebrow" style="margin:0">RESEARCH DETAIL</span>
     </nav>
     <div id="detail-root" aria-live="polite"><div class="empty">読み込み中...</div></div>
-    <nav class="detail-page-nav" style="margin-top:32px;border-top:1px solid var(--line);border-bottom:0;padding-top:20px">
-      <a href="./">← ダッシュボードへ戻る</a>
+    <nav class="detail-page-nav" aria-label="詳細ページ下部ナビゲーション" style="margin-top:32px;border-top:1px solid var(--line);border-bottom:0;padding-top:20px">
+      <div class="detail-page-nav-left">
+        <a data-group-back href="#" hidden></a>
+        <a class="dashboard-back" data-dashboard-back href="./">← ダッシュボードへ戻る</a>
+      </div>
     </nav>
   </main>
-  <script src="detail.js?v=20260911-public-stage-sanitize1" defer></script>
+  <script src="detail.js?v=20260923-group-return1" defer></script>
 </body>
 </html>

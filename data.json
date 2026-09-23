@@ -415,16 +415,16 @@
       "mechanism": "参加条件で区切られるpiecewise profitを端点まで比較すると、局所的な候補比較だけでは落ちる利益項と境界ケースが明示されます。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "Stage 14条件付きPASS / portal確認待ち",
-      "verdict": "CORRECTION_THEORY_FROZEN",
-      "health": "On track",
-      "next_gate": "認証ポータル確認 → final freeze",
+      "stage": "Economics Bulletin投稿済み / EB-26-00835",
+      "verdict": "CORRECTION_SUBMITTED",
+      "health": "Waiting",
+      "next_gate": "受付メール・次の編集ステータス確認",
       "field": "Industrial Organization / Advance Booking",
       "activity": "0d",
       "review_needed": false,
       "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/ringbom-shy-2004-advance-booking-correction"
     },
     {
@@ -532,8 +532,8 @@
     "live": 26,
     "p0": 15,
     "blocked": 4,
-    "submission_ready": 11,
-    "submitted": 4,
+    "submission_ready": 10,
+    "submitted": 5,
     "review_needed": 15
   },
   "pipeline": [
@@ -555,18 +555,18 @@
     },
     {
       "label": "Submission Ready",
-      "count": 11
+      "count": 10
     },
     {
       "label": "Submitted",
-      "count": 4
+      "count": 5
     }
   ],
   "recent": [
     {
       "when": "0d",
       "project": "Ringbom–Shy (2004) Correction",
-      "event": "Stage 14 submission-ready project added"
+      "event": "Economics Bulletinへ投稿完了（EB-26-00835）"
     },
     {
       "when": "0d",

@@ -533,7 +533,7 @@
     "p0": 15,
     "blocked": 4,
     "submission_ready": 10,
-    "submitted": 5,
+    "submitted": 6,
     "review_needed": 15
   },
   "pipeline": [

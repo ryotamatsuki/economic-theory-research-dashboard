@@ -36,6 +36,7 @@
       <a href="#attention">要対応</a>
       <a href="#portfolio">研究一覧</a>
       <a href="#publication">投稿状況</a>
+      <a href="#revisions">改訂期限</a>
     </nav>
 
     <section id="overview" class="snapshot-section">
@@ -86,7 +87,7 @@
         <table>
           <thead>
             <tr>
-              <th>優先区分</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th>
+              <th>優先区分</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>改訂期限</th><th>研究分野</th><th>更新</th>
             </tr>
           </thead>
           <tbody id="portfolio-body"></tbody>
@@ -109,6 +110,19 @@
         </div>
         <div id="recent-list" class="recent-list"></div>
       </article>
+    </section>
+
+    <section id="revisions" class="panel revision-panel">
+      <div class="panel-title">
+        <div>
+          <span class="panel-kicker">REVISION CONTROL</span>
+          <h2>Major Revision / R&amp;R 期限管理</h2>
+          <p class="muted">判定日・再投稿期限・残日数・改訂ラウンドを期限順に表示</p>
+        </div>
+        <span class="panel-mark" aria-hidden="true">⌛</span>
+      </div>
+      <div class="revision-header" aria-hidden="true"><span>研究</span><span>判定</span><span>ラウンド</span><span>判定日</span><span>期限</span><span>残日数</span></div>
+      <div id="revision-list" class="revision-list"></div>
     </section>
 
     <details class="methodology">

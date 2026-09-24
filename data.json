@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "sync": {
-    "generated_utc": "2026-09-23T12:45:00Z",
-    "generated_jst": "2026-09-23 21:45 JST",
+    "generated_utc": "2026-09-24T04:39:00Z",
+    "generated_jst": "2026-09-24 13:39 JST",
     "status": "Healthy",
-    "label": "2026-09-23 full portfolio reconciliation"
+    "label": "Manual submission-state sync after JRS confirmation"
   },
   "projects": [
     {
@@ -295,16 +295,16 @@
       "mechanism": "地域が自地域便益だけを基準に政策portfolioを選ぶため、cross-regional complementary valueを十分に内部化できず再配分が遅れます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "Stage 15 authorized / portal preflight",
+      "stage": "投稿中",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
-      "next_gate": "portal reconciliation → generated PDF確認 → submit",
+      "health": "Waiting",
+      "next_gate": "次の編集ステータス確認",
       "field": "Regional Economics / Industrial Policy",
-      "activity": "7d",
+      "activity": "1m",
       "review_needed": false,
-      "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
+      "attention_reason": "Journal status",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/industrial-policy-composition-regional-value-chains"
     },
     {

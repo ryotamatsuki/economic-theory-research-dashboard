@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-09-24T14:35:12Z",
-    "generated_jst": "2026-09-24 23:35 JST",
+    "generated_utc": "2026-09-24T23:28:00Z",
+    "generated_jst": "2026-09-25 08:28 JST",
     "status": "Healthy",
-    "label": "Formal Verification Gate closure sync"
+    "label": "Latest workflow audit 2026-09-25"
   },
   "projects": [
     {
@@ -38,7 +38,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "Stage 10でv2.5 exposition architectureとv2.7 reviewer-verifiability mapを新規作成。現時点では原稿retrofit不要。"
     },
     {
       "id": "shared-core-entry",
@@ -71,7 +73,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "次の投稿向けclosure前に、v2.4 portability、v2.5 streamlining、v2.6 author/AI accountability、v2.7 reviewer reconstructionの差分を閉じる。"
     },
     {
       "id": "private-compatibility",
@@ -105,7 +109,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "R9再開発結果を現行canonical workflowへ対応付け、最終freeze前にv2.5–v2.7の明示記録とAI/accountability整合を閉じる。"
     },
     {
       "id": "shy-2002-correction",
@@ -138,7 +144,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "提出済み原稿は変更しない。改訂時に追加均衡族・均衡選択修正をglobality、scope、AI accountability、reviewer verifiabilityまで含めて再監査。"
     },
     {
       "id": "gandal-shy-correction",
@@ -171,7 +179,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "提出済み原稿はretrofitしない。正式な改訂・再開時のみv2.2–v2.7差分監査を実施。"
     },
     {
       "id": "shy-stenbacka-correction",
@@ -204,7 +214,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "Stage 15前にv2.6 author/AI accountabilityとv2.7 reviewer-verifiabilityを追加確認。凍結済み訂正範囲は拡張しない。"
     },
     {
       "id": "gehrig-shy-stenbacka-correction",
@@ -237,7 +249,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "限定retrofit",
+      "workflow_gap": "v2.5 exposition/proof expositionとAI開示は実施済み。未対応は明示的なv2.7 reviewer-verifiability reportと残る人手確認。"
     },
     {
       "id": "ishikawa-shibata-correction",
@@ -270,7 +284,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "Stage 10以降の最新WF監査はまだ未到達。現在のブロッカー解消後、現行workflowで順次適用。"
     },
     {
       "id": "c022-behrens-lijesen",
@@ -303,7 +319,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "訂正候補段階。専用論文へ昇格する場合にStage 0から最新workflowを適用。"
     },
     {
       "id": "regional-lab-diversification",
@@ -336,7 +354,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "先行研究・吸収テストを先に完了。生き残った論文ルートにのみv2.4–v2.7を適用。"
     },
     {
       "id": "agentic-ai-authority",
@@ -369,7 +389,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "現ルートは巻き戻し済み。新しいメカニズムが生き残った後のStage 10以降を最新workflowで再構築。"
     },
     {
       "id": "directional-friction",
@@ -402,7 +424,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "査読中の提出物は固定。editor/refereeから改訂要求が来た場合のみv2.2–v2.7差分を適用。"
     },
     {
       "id": "strategic-local-green-policy",
@@ -435,7 +459,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "Stage 14資産は旧workflow起点。Stage 15前にstructural absorption/portabilityの差分確認、v2.6 accountability、v2.7 reviewer verifiabilityを閉じる。"
     },
     {
       "id": "standardization-scope-direction-innovation",
@@ -468,7 +494,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "prior-art再認証とexposition資産は強いが、Stage 13R前に現行v2.4 portability status、v2.6 author/AI record、v2.7 reviewer-verifiability reportを明示化。"
     },
     {
       "id": "industrial-policy-composition-regional-value-chains",
@@ -501,7 +529,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "提出済み。AI開示等は統合済みのため現提出物は変更せず、改訂時にv2.7を含む最新workflow差分を適用。"
     },
     {
       "id": "oe-ef-wsp-combinatorial-assignment",
@@ -534,7 +564,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "研究・open-problem段階。論文化を開始する時点でStage 10以降のcurrent-workflow crosswalkを作成。"
     },
     {
       "id": "economides-quality-equilibrium-reassessment",
@@ -567,7 +599,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "提出済み。既存exposition/submission QAは凍結し、正式改訂時のみv2.7等の後発workflow差分を適用。"
     },
     {
       "id": "public-climate-protection-private-production-redundancy",
@@ -577,16 +611,16 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Formal Verification Gate CLOSED / PASS",
+      "stage": "Stage 14 technical/public-rule QA PASS / author・portal hold",
       "verdict": "THEORY_FROZEN_REPAIRED_FORMALLY_VERIFIED",
       "health": "Review",
-      "next_gate": "v2.2 structural-absorption再監査",
+      "next_gate": "v2.7 reviewer-verifiability report → author確認・portal QA",
       "field": "Environmental Economics / Industrial Organization",
       "activity": "0d",
       "review_needed": true,
       "attention_reason": "Workflow retrofit gate",
-      "pipeline_lane": "Manuscript",
-      "publication_lane": "Manuscript",
+      "pipeline_lane": "Submission Ready",
+      "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
       "deep_dive": {
         "question": "政府の防災投資と企業のバックアップ生産拠点への投資が、互いにどのように代替・補完するかを分析します。",
@@ -600,7 +634,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "限定retrofit",
+      "workflow_gap": "v2.2 structural absorption、v2.4 portability、v2.5 exposition、v2.6 provenance/author record、formal verification、proof bridge改善は実施済み。残りはv2.7正式reportと人手確認・portal QA。"
     },
     {
       "id": "dynamic-tariff-choice-generative-ai",
@@ -633,7 +669,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "Stage 10 expositionとStage 11 independent attackは実施済み。Stage 12前にv2.6 author/provenance crosswalk、v2.7 reviewer reconstruction、最新candidate-universe ruleを閉じる。"
     },
     {
       "id": "supplier-competition-regional-policy-coordination",
@@ -666,7 +704,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "表示上はcanonical manuscript repair段階。修正版がStage 10/11へ再進入するときにv2.2–v2.7を適用し、status recordも同期。"
     },
     {
       "id": "ringbom-shy-2004-correction",
@@ -700,7 +740,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "提出済み原稿は変更しない。専用repoのroot statusは提出実績とずれているため管理記録は別途同期し、workflow retrofitは改訂時のみ。"
     },
     {
       "id": "gss-2012-hbpd-welfare-reassessment",
@@ -734,7 +776,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "独立監査・修復は進んでいるが、最終freeze前にcanonical status同期とv2.6/v2.7の明示recordを閉じる。"
     },
     {
       "id": "shy-stenbacka-2007-liquidity-regulation",
@@ -768,7 +812,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "canonical mainはearly evidence/source audit段階。そこから最新workflowで進め、Stage 10到達時にv2.5/v2.7を新規適用。"
     },
     {
       "id": "shy-stenbacka-2013-customer-recognition",
@@ -802,7 +848,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "要retrofit",
+      "workflow_gap": "dashboardのlate-stage状態と専用repo root statusに差分あり。最終freeze前にcanonical status同期、v2.6 accountability、v2.7 reviewer-verifiabilityを閉じる。"
     },
     {
       "id": "gayer-shy-2016-tying-welfare",
@@ -836,7 +884,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "Stage 0 Evidence Freeze。source freezeと独立再導出を終えてから最新workflowを前向き適用。"
     },
     {
       "id": "economides-complete-equilibrium-companion",
@@ -870,7 +920,9 @@
         "decision_date": null,
         "deadline": null,
         "round": 0
-      }
+      },
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "Stage 8/9を先に閉じる。Stage 10はv2.5 exposition＋v2.7 reviewer-verifiability前提で構築し、v2.6 accountabilityを引き継ぐ。"
     }
   ],
   "stats": {
@@ -879,7 +931,10 @@
     "blocked": 2,
     "submission_ready": 7,
     "submitted": 6,
-    "review_needed": 12
+    "review_needed": 12,
+    "workflow_retrofit": 10,
+    "workflow_revision_only": 6,
+    "workflow_next_stage": 10
   },
   "pipeline": [
     {

@@ -391,6 +391,55 @@ footer{display:flex;justify-content:space-between;gap:16px;color:#8d8d87;font-si
 .project-detail-card>section>div{gap:24px!important;margin-top:22px}
 .project-detail-card>section strong{font-size:11px;letter-spacing:.01em}
 .project-detail-card>section span{color:#3f3f3b}
+.deep-dive{
+  margin:8px 0 30px;
+  border:1px solid var(--line-strong);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  background:var(--surface);
+}
+.deep-dive summary{
+  list-style:none;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:17px 19px;
+  font-weight:650;
+  transition:background .15s ease;
+}
+.deep-dive summary::-webkit-details-marker{display:none}
+.deep-dive summary:hover,.deep-dive summary:focus-visible{background:var(--surface-2);outline:none}
+.deep-dive summary span{font-size:13px;letter-spacing:-.01em}
+.deep-dive summary small{color:var(--muted);font-size:10px;font-weight:500;text-align:right}
+.deep-dive summary::after{
+  content:"+";
+  flex:0 0 auto;
+  width:24px;
+  height:24px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:16px;
+  font-weight:400;
+}
+.deep-dive[open] summary::after{content:"−"}
+.deep-dive[open] summary{border-bottom:1px solid var(--line)}
+.deep-dive-body{padding:2px 19px 8px;background:white}
+.deep-dive-item{
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr);
+  gap:12px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+.deep-dive-item:last-child{border-bottom:0}
+.deep-dive-index{color:#a0a09a;font-size:10px;font-variant-numeric:tabular-nums;padding-top:3px}
+.deep-dive-item h3{margin:0 0 6px;font-size:13px;font-weight:650;letter-spacing:-.01em}
+.deep-dive-item p{margin:0;max-width:800px;color:#3f3f3b;font-size:14px;line-height:1.8}
+
 .detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;margin:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .detail-grid>div{padding:14px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
 .detail-grid dt{color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.05em}

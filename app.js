@@ -27,7 +27,8 @@ const typeLabel = value => ({'Theory':'理論研究','Correction':'訂正論文'
 const healthLabel = value => ({'Blocked':'ブロック','Review':'要確認','On track':'順調','Waiting':'待機'}[value] || value);
 const pipelineLabel = value => ({'Prior-Art':'先行研究','Research Gate':'研究ゲート','Theory Frozen':'理論凍結','Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み'}[value] || value);
 const publicationLabel = value => ({'Manuscript':'原稿','Submission Ready':'投稿準備完了','Submitted':'投稿済み','R&R':'R&R'}[value] || value);
-const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'更新差分あり','Verification gate':'検証ゲート','Research reset':'研究ルート再検討'}[value] || value);
+const attentionReasonLabel = value => ({'Blocking gate':'ブロック中','Sync drift':'更新差分あり','Verification gate':'検証ゲート','Research reset':'研究ルート再検討','Workflow retrofit gate':'最新WF差分あり'}[value] || value);
+const workflowBadgeClass = value => ({'要retrofit':'review','限定retrofit':'review','次工程で適用':'waiting','改訂時適用':'waiting'}[value] || 'waiting');
 const recentEventLabel = value => ({'Portfolio review signal detected':'ポートフォリオ差分を検出','Blocking gate active':'ブロック中','Repository observation refreshed':'GitHub上の研究記録を確認して更新'}[value] || value);
 
 function relativeLabel(value) {
@@ -65,7 +66,8 @@ function renderKpis() {
     kpi('ブロック', s.blocked, 'blocked', 'blocked'),
     kpi('投稿準備完了', s.submission_ready, 'submission-ready'),
     kpi('投稿済み', s.submitted, 'submitted'),
-    kpi('要確認', s.review_needed, 'review-needed', 'review')
+    kpi('要確認', s.review_needed, 'review-needed', 'review'),
+    kpi('最新WF要対応', s.workflow_retrofit || 0, 'workflow-retrofit', 'review')
   ].join('');
 }
 
@@ -86,7 +88,7 @@ function renderStagePipeline() {
 function renderTable() {
   const rows = filtered();
   $('#result-count').textContent = `全${state.data.projects.length}件中 ${rows.length}件を表示`;
-  $('#portfolio-body').innerHTML = rows.map(p => `<tr><td class="priority">${esc(p.priority)}</td><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.field||'—')}</td><td class="nowrap">${esc(relativeLabel(p.activity))}</td></tr>`).join('') || '<tr><td colspan="9" class="empty">現在の絞り込み条件に一致する研究はありません。</td></tr>';
+  $('#portfolio-body').innerHTML = rows.map(p => `<tr><td class="priority">${esc(p.priority)}</td><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td><span class="badge ${workflowBadgeClass(p.workflow_status)}">${esc(p.workflow_status||'—')}</span></td><td>${esc(p.field||'—')}</td><td class="nowrap">${esc(relativeLabel(p.activity))}</td></tr>`).join('') || '<tr><td colspan="10" class="empty">現在の絞り込み条件に一致する研究はありません。</td></tr>';
 }
 
 function renderPublication() {
@@ -120,6 +122,7 @@ function rowsForKind(kind) {
   if (kind === 'submission-ready') return all.filter(p => p.publication_lane === 'Submission Ready');
   if (kind === 'submitted') return all.filter(p => p.publication_lane === 'Submitted');
   if (kind === 'review-needed') return all.filter(p => p.review_needed);
+  if (kind === 'workflow-retrofit') return all.filter(p => ['要retrofit','限定retrofit'].includes(p.workflow_status));
   return [];
 }
 
@@ -130,13 +133,14 @@ function titleForKind(kind) {
     blocked:'ブロック中の研究',
     'submission-ready':'投稿準備完了',
     submitted:'投稿済み研究',
-    'review-needed':'要確認の研究'
+    'review-needed':'要確認の研究',
+    'workflow-retrofit':'最新ワークフロー要対応'
   }[kind] || 'ポートフォリオ詳細');
 }
 
 function detailTable(rows) {
   if (!rows.length) return '<div class="detail-empty">この区分に該当する研究はありません。</div>';
-  return `<div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>研究</th><th>優先度</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>研究分野</th><th>更新</th></tr></thead><tbody>${rows.map(p => `<tr><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td class="priority">${esc(p.priority)}</td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td>${esc(p.field||'—')}</td><td>${esc(relativeLabel(p.activity))}</td></tr>`).join('')}</tbody></table></div>`;
+  return `<div class="detail-table-wrap"><table class="detail-table"><thead><tr><th>研究</th><th>優先度</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>最新WF</th><th>研究分野</th><th>更新</th></tr></thead><tbody>${rows.map(p => `<tr><td><button type="button" class="project-detail-link" data-project-id="${esc(p.id)}">${esc(p.project)}</button></td><td class="priority">${esc(p.priority)}</td><td>${esc(typeLabel(p.type))}</td><td>${esc(p.stage)}</td><td class="verdict">${esc(p.verdict)}</td><td><span class="badge ${badgeClass(p.health)}">${esc(healthLabel(p.health))}</span></td><td>${esc(p.next_gate)}</td><td><span class="badge ${workflowBadgeClass(p.workflow_status)}">${esc(p.workflow_status||'—')}</span></td><td>${esc(p.field||'—')}</td><td>${esc(relativeLabel(p.activity))}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
 function explanationBlock(kicker, title, body, background='#f7f7f5') {
@@ -158,12 +162,14 @@ function projectDetail(p) {
       ${explanationBlock('01 / CONTEXT','どんな研究？',p.overview,'#f7f7f5')}
       ${explanationBlock('02 / WHY IT MATTERS','何が面白い？',interesting,'#ffffff')}
       ${explanationBlock('03 / MECHANISM','どういう仕組み？',p.mechanism,'#f7f7f5')}
+      ${explanationBlock('04 / LATEST WORKFLOW',`最新ワークフロー照合 — ${p.workflow_status||'未評価'}`,p.workflow_gap||'—','#fffaf0')}
     </div>
     <dl class="detail-grid">
       <div><dt>種別</dt><dd>${esc(typeLabel(p.type))}</dd></div><div><dt>ステージ</dt><dd>${esc(p.stage)}</dd></div>
       <div><dt>科学的判定</dt><dd>${esc(p.verdict)}</dd></div><div><dt>次のゲート</dt><dd>${esc(p.next_gate)}</dd></div>
       <div><dt>研究分野</dt><dd>${esc(p.field||'—')}</dd></div><div><dt>更新</dt><dd>${esc(relativeLabel(p.activity))}</dd></div>
       <div><dt>要確認</dt><dd>${p.review_needed?'あり':'なし'}</dd></div><div><dt>注意シグナル</dt><dd>${esc(attentionReasonLabel(p.attention_reason)||'—')}</dd></div>
+      <div><dt>最新WF</dt><dd><span class="badge ${workflowBadgeClass(p.workflow_status)}">${esc(p.workflow_status||'—')}</span></dd></div><div><dt>WF棚卸し</dt><dd>2026-09-25</dd></div>
     </dl>
   </div>`;
 }

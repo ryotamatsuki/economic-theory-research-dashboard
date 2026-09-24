@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-09-24T12:12:40Z",
-    "generated_jst": "2026-09-24 21:12 JST",
+    "generated_utc": "2026-09-24T14:35:12Z",
+    "generated_jst": "2026-09-24 23:35 JST",
     "status": "Healthy",
-    "label": "Full branch-aware repository sync"
+    "label": "Formal Verification Gate closure sync"
   },
   "projects": [
     {
@@ -577,16 +577,16 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 14 PASS / ERE外部ポータル投稿待ち",
-      "verdict": "THEORY_FROZEN_REPAIRED",
-      "health": "On track",
-      "next_gate": "Environmental and Resource Economics ポータル → Stage 15",
+      "stage": "Formal Verification Gate CLOSED / PASS",
+      "verdict": "THEORY_FROZEN_REPAIRED_FORMALLY_VERIFIED",
+      "health": "Review",
+      "next_gate": "v2.2 structural-absorption再監査",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "10d",
-      "review_needed": false,
-      "attention_reason": "Submission gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Workflow retrofit gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
       "deep_dive": {
         "question": "政府の防災投資と企業のバックアップ生産拠点への投資が、互いにどのように代替・補完するかを分析します。",
@@ -877,9 +877,9 @@
     "live": 26,
     "p0": 15,
     "blocked": 2,
-    "submission_ready": 8,
+    "submission_ready": 7,
     "submitted": 6,
-    "review_needed": 11
+    "review_needed": 12
   },
   "pipeline": [
     {
@@ -896,11 +896,11 @@
     },
     {
       "label": "Manuscript",
-      "count": 4
+      "count": 5
     },
     {
       "label": "Submission Ready",
-      "count": 8
+      "count": 7
     },
     {
       "label": "Submitted",

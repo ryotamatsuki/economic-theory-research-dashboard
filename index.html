@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="経済理論研究ポートフォリオの公開用・サニタイズ済み進捗ダッシュボード。">
   <title>Economic Theory Research Portfolio</title>
-  <link rel="stylesheet" href="styles.css?v=20260924-revision1">
+  <link rel="stylesheet" href="styles.css?v=20260925-workflow-audit">
   <style>
     a.kpi-button,a.attention-row,a.stage,a.publication-lane,a.project-detail-link{text-decoration:none;color:inherit}
     .stage-pipeline{grid-template-columns:repeat(5,1fr)}
@@ -87,7 +87,7 @@
         <table>
           <thead>
             <tr>
-              <th>優先区分</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>改訂期限</th><th>研究分野</th><th>更新</th>
+              <th>優先区分</th><th>研究</th><th>種別</th><th>ステージ</th><th>科学的判定</th><th>状態</th><th>次のゲート</th><th>最新WF</th><th>改訂期限</th><th>研究分野</th><th>更新</th>
             </tr>
           </thead>
           <tbody id="portfolio-body"></tbody>
@@ -130,6 +130,7 @@
       <div class="methodology-body">
         <p>このページでは研究管理に必要な公開用メタデータのみを表示しています。具体的な投稿先、投稿ID、投稿システム上の内部情報、数式導出、証明、未公開原稿、厳密な反例、詳細なブロッカー、認証情報、非公開の研究エビデンスは含みません。</p>
         <p>投稿先そのものは非公開のGitHub管理記録に保持し、公開ページでは研究分野と一般的な投稿ステータスのみを表示します。研究上の判定は、GitHub上のworkflow・履歴・検証記録を参照しながら節目ごとに評価し、その結果をGitHubへ記録する運用です。公開ページはその状態を必要なタイミングで手動更新しています。</p>
+        <p>「最新WF」は2026年9月25日時点の最新論文作成ワークフローとの整合状況です。「要retrofit」「限定retrofit」は追加監査が必要であることを示す管理ラベルで、それ自体は数学的誤りや科学的欠陥を意味しません。提出済み論文は遡及的に書き換えず、正式な改訂時に最新ワークフローを適用します。</p>
       </div>
     </details>
 
@@ -138,6 +139,6 @@
       <span>PORTFOLIO.yaml / canonical GitHub Issues / Manual Update</span>
     </footer>
   </main>
-  <script src="dashboard.js?v=20260924-revision1" defer></script>
+  <script src="dashboard.js?v=20260925-workflow-audit" defer></script>
 </body>
 </html>

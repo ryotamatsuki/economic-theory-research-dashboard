@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-09-24T23:28:00Z",
-    "generated_jst": "2026-09-25 08:28 JST",
+    "generated_utc": "2026-10-06T02:58:00Z",
+    "generated_jst": "2026-10-06 11:58 JST",
     "status": "Healthy",
-    "label": "Latest workflow audit 2026-09-25"
+    "label": "Full portfolio audit 2026-10-06"
   },
   "projects": [
     {
@@ -156,16 +156,16 @@
       "mechanism": "各企業が一社だけ価格を変えたときに利益が増えないかを全体的に確認し、成立する価格均衡を列挙したうえで、費用に下限がある場合とない場合の違い、さらに厚生への影響を整理します。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "投稿済み / 受付確認",
-      "verdict": "CORRECTION_SUBMITTED",
-      "health": "Waiting",
-      "next_gate": "次の編集ステータス確認",
+      "stage": "改稿中 / Stage 4A独立検証PASS",
+      "verdict": "BER_REDEVELOPMENT_STAGE4A_PASS",
+      "health": "On track",
+      "next_gate": "novelty再監査 → 原稿統合",
       "field": "Industrial Organization / Standards",
-      "activity": "6d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/gandal-shy-foreclosure-correction",
       "deep_dive": {
         "question": "標準化連合に参加しない企業を市場から実質的に締め出すような価格が、本当にナッシュ均衡なのかを再検証します。",
@@ -180,8 +180,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "改訂時適用",
-      "workflow_gap": "提出済み原稿はretrofitしない。正式な改訂・再開時のみv2.2–v2.7差分監査を実施。"
+      "workflow_status": "次工程で適用",
+      "workflow_gap": "Stage 4Aまで再認証済み。Stage 6 novelty/contribution re-kill後に原稿統合・投稿準備へ進む。"
     },
     {
       "id": "shy-stenbacka-correction",
@@ -193,12 +193,12 @@
       "type": "Correction",
       "stage": "Stage 14条件付きPASS / 投稿ポータル確認待ち",
       "verdict": "THEORY_FROZEN_AMENDED",
-      "health": "Review",
-      "next_gate": "RIO認証ポータル確認 → Stage 15",
+      "health": "On track",
+      "next_gate": "認証ポータル確認 → Stage 15",
       "field": "Industrial Organization / Outsourcing",
-      "activity": "1d",
-      "review_needed": true,
-      "attention_reason": "Submission gate",
+      "activity": "1m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/shy-stenbacka-correction",
@@ -215,8 +215,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "要retrofit",
-      "workflow_gap": "Stage 15前にv2.6 author/AI accountabilityとv2.7 reviewer-verifiabilityを追加確認。凍結済み訂正範囲は拡張しない。"
+      "workflow_status": "適用済み",
+      "workflow_gap": "v2.6 author/AI accountabilityとv2.7 reviewer-verifiabilityを含むretrofitはPASS。残りは投稿ポータルQAのみ。"
     },
     {
       "id": "gehrig-shy-stenbacka-correction",
@@ -226,13 +226,13 @@
       "mechanism": "各企業が大きく価格を変える場合まで含めて均衡条件を確認し、その均衡のもとで、顧客の移動による不便さと乗り換え費用を分けて計算し直します。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "N6 Research in Economics 条件付きPASS / N7 blocked",
+      "stage": "N6条件付きPASS / N7 blocked",
       "verdict": "NOTE_THEORY_FROZEN",
       "health": "Blocked",
       "next_gate": "AI-tool terms・privacy確認 → N7 Submission Freeze",
       "field": "Industrial Organization / Price Discrimination",
-      "activity": "0d",
-      "review_needed": true,
+      "activity": "1m",
+      "review_needed": false,
       "attention_reason": "Author compliance gate",
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
@@ -261,14 +261,14 @@
       "mechanism": "企業ごとに異なる知識流出 → R&Dから得られる私的利益が企業間でずれる → 競争する場合と協力する場合の投資額を比較 → どちらが望ましいかの条件を整理します。",
       "priority": "P1",
       "type": "Correction",
-      "stage": "Stage 5 blocked",
+      "stage": "Stage 4完了 / 投稿パッケージ準備待ち",
       "verdict": "CORRECTION_READY",
-      "health": "Blocked",
-      "next_gate": "投稿料・投稿先条件の権威的確認",
+      "health": "On track",
+      "next_gate": "Stage 5最終提出前監査",
       "field": "Industrial Organization / Innovation",
-      "activity": "15d",
-      "review_needed": true,
-      "attention_reason": "Blocking gate",
+      "activity": "1m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/ishikawa-shibata-rd-correction",
@@ -286,7 +286,7 @@
         "round": 0
       },
       "workflow_status": "次工程で適用",
-      "workflow_gap": "Stage 10以降の最新WF監査はまだ未到達。現在のブロッカー解消後、現行workflowで順次適用。"
+      "workflow_gap": "数理・証明ゲートは閉鎖済み。Stage 5で投稿パッケージ、live要件、宣言、最終preflightを処理する。"
     },
     {
       "id": "c022-behrens-lijesen",
@@ -506,12 +506,12 @@
       "mechanism": "各地域は主に自地域で得られる利益を基準に支援先を選ぶ → 他地域との分業から生まれる追加利益を十分に考慮しない → 同じ分野への支援が重なり、望ましい役割分担への移行が遅れます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "JRS投稿済み / 受付確認済み",
+      "stage": "投稿中",
       "verdict": "THEORY_FROZEN",
       "health": "Waiting",
-      "next_gate": "初期編集審査・editor assignment待ち",
+      "next_gate": "次の編集ステータス確認",
       "field": "Regional Economics / Industrial Policy",
-      "activity": "0d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
@@ -581,9 +581,9 @@
       "health": "Waiting",
       "next_gate": "査読者招待または編集判断待ち",
       "field": "Industrial Organization / Spatial Competition",
-      "activity": "1d",
+      "activity": "1m",
       "review_needed": false,
-      "attention_reason": "Verification gate",
+      "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment",
@@ -611,14 +611,14 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 14 technical/public-rule QA PASS / author・portal hold",
-      "verdict": "THEORY_FROZEN_REPAIRED_FORMALLY_VERIFIED",
-      "health": "Review",
-      "next_gate": "v2.7 reviewer-verifiability report → author確認・portal QA",
+      "stage": "投稿準備完了 / 最終監査PASS",
+      "verdict": "THEORY_FROZEN_SUBMISSION_READY",
+      "health": "On track",
+      "next_gate": "投稿ポータル確認 → submit",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "0d",
-      "review_needed": true,
-      "attention_reason": "Workflow retrofit gate",
+      "activity": "1m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
@@ -635,8 +635,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "限定retrofit",
-      "workflow_gap": "v2.2 structural absorption、v2.4 portability、v2.5 exposition、v2.6 provenance/author record、formal verification、proof bridge改善は実施済み。残りはv2.7正式reportと人手確認・portal QA。"
+      "workflow_status": "適用済み",
+      "workflow_gap": "最終独立監査、exact verification、Lean、匿名再現、v2.7 reviewer-verifiabilityまでPASS。残りは投稿ポータル操作のみ。"
     },
     {
       "id": "dynamic-tariff-choice-generative-ai",
@@ -716,14 +716,14 @@
       "mechanism": "返金額によって予約する顧客の種類が変わる → 企業利益の式も区間ごとに変わる → 各候補と境界の利益をすべて比較し、本当に最適な返金額を求め直します。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "Economics Bulletin投稿済み / EB-26-00835",
+      "stage": "投稿中",
       "verdict": "CORRECTION_SUBMITTED",
       "health": "Waiting",
-      "next_gate": "受付メール・次の編集ステータス確認",
+      "next_gate": "次の編集ステータス確認",
       "field": "Industrial Organization / Advance Booking",
-      "activity": "0d",
+      "activity": "1m",
       "review_needed": false,
-      "attention_reason": "Verification gate",
+      "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/ringbom-shy-2004-advance-booking-correction",
@@ -757,7 +757,7 @@
       "health": "On track",
       "next_gate": "認証ポータル確認 → final freeze",
       "field": "Industrial Organization / Price Discrimination",
-      "activity": "0d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -788,16 +788,16 @@
       "mechanism": "銀行の利益関数を基礎から微分して最適な金利・手数料を求め直し、規制による制約が効く場合も含めて市場均衡と政策効果を確認します。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "Stage 1 source/math audit PASS (source-qualified) / Stage 2未凍結",
-      "verdict": "SOURCE_AUDIT_PASS",
-      "health": "Review",
-      "next_gate": "prior-disclosure / novelty kill → corrected theorem certification",
+      "stage": "Stage 10原稿ビルド確認済み / Stage 11待ち",
+      "verdict": "THEORY_FROZEN",
+      "health": "On track",
+      "next_gate": "hostile-referee audit → journal positioning",
       "field": "Banking / Industrial Organization",
-      "activity": "2d",
-      "review_needed": true,
-      "attention_reason": "Source / novelty gate",
-      "pipeline_lane": "Research Gate",
-      "publication_lane": null,
+      "activity": "1m",
+      "review_needed": false,
+      "attention_reason": "Verification gate",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/shy-stenbacka-2007-liquidity-regulation-correction",
       "interesting_point": "元の論文に示された銀行の最適行動を利益関数から計算し直すと、金利や手数料の式、さらに規制の効果について修正が必要になる可能性があります。",
       "deep_dive": {
@@ -814,7 +814,7 @@
         "round": 0
       },
       "workflow_status": "次工程で適用",
-      "workflow_gap": "canonical mainはearly evidence/source audit段階。そこから最新workflowで進め、Stage 10到達時にv2.5/v2.7を新規適用。"
+      "workflow_gap": "Stage-8/9と原稿・supplement buildは確認済み。Stage 11前にbranch status台帳を整合し、現行workflow差分を確認する。"
     },
     {
       "id": "shy-stenbacka-2013-customer-recognition",
@@ -829,7 +829,7 @@
       "health": "On track",
       "next_gate": "認証ポータル確認 → final freeze",
       "field": "Information Economics / Industrial Organization",
-      "activity": "0d",
+      "activity": "1m",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -928,13 +928,14 @@
   "stats": {
     "live": 26,
     "p0": 15,
-    "blocked": 2,
-    "submission_ready": 7,
-    "submitted": 6,
-    "review_needed": 12,
-    "workflow_retrofit": 10,
-    "workflow_revision_only": 6,
-    "workflow_next_stage": 10
+    "blocked": 1,
+    "submission_ready": 8,
+    "submitted": 5,
+    "review_needed": 8,
+    "workflow_retrofit": 8,
+    "workflow_revision_only": 5,
+    "workflow_next_stage": 11,
+    "workflow_current": 2
   },
   "pipeline": [
     {
@@ -943,7 +944,7 @@
     },
     {
       "label": "Research Gate",
-      "count": 6
+      "count": 5
     },
     {
       "label": "Theory Frozen",
@@ -951,32 +952,32 @@
     },
     {
       "label": "Manuscript",
-      "count": 5
+      "count": 6
     },
     {
       "label": "Submission Ready",
-      "count": 7
+      "count": 8
     },
     {
       "label": "Submitted",
-      "count": 6
+      "count": 5
     }
   ],
   "recent": [
     {
-      "when": "0d",
-      "project": "Ringbom–Shy (2004) Correction",
-      "event": "Economics Bulletinへ投稿完了（EB-26-00835）"
+      "when": "1m",
+      "project": "Public Climate Protection & Private Production Redundancy",
+      "event": "最終監査PASS・投稿準備完了"
     },
     {
-      "when": "0d",
-      "project": "GSS (2012) HBP Welfare Reassessment",
-      "event": "Post-audit Stage 14 closure synchronized"
+      "when": "1m",
+      "project": "Gandal–Shy Correction",
+      "event": "desk rejectを反映し改稿ルートへ移行"
     },
     {
-      "when": "0d",
-      "project": "Shy–Stenbacka (2013) Customer Recognition",
-      "event": "Stage 14 submission-ready project added"
+      "when": "1m",
+      "project": "Shy–Stenbacka Correction",
+      "event": "canonical main昇格・Stage 14状態を再確認"
     }
   ]
 }

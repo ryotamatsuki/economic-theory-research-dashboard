@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-06T03:05:00Z",
-    "generated_jst": "2026-10-06 12:05 JST",
+    "generated_utc": "2026-10-09T14:25:06.408Z",
+    "generated_jst": "2026-10-09 23:25 JST",
     "status": "Healthy",
-    "label": "Full portfolio audit 2026-10-06"
+    "label": "Targeted PCPPR submission update 2026-10-09 (other projects unchanged)"
   },
   "projects": [
     {
@@ -611,16 +611,16 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿準備完了 / 最終監査PASS",
+      "stage": "投稿済み / 受付確認・初期編集判断待ち",
       "verdict": "THEORY_FROZEN_SUBMISSION_READY",
-      "health": "On track",
-      "next_gate": "投稿ポータル確認 → submit",
+      "health": "Waiting",
+      "next_gate": "編集担当の割当・初期判断・査読依頼の通知待ち",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "7m",
+      "activity": "0m",
       "review_needed": false,
-      "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
+      "attention_reason": "Editorial status pending",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
       "deep_dive": {
         "question": "政府の防災投資と企業のバックアップ生産拠点への投資が、互いにどのように代替・補完するかを分析します。",
@@ -636,7 +636,7 @@
         "round": 0
       },
       "workflow_status": "適用済み",
-      "workflow_gap": "最終独立監査、exact verification、Lean、匿名再現、v2.7 reviewer-verifiabilityまでPASS。残りは投稿ポータル操作のみ。"
+      "workflow_gap": "最終監査と独立数値監査の修正はPASS。投稿受付を確認済み。原稿は固定し、編集部からの連絡または査読者からの追加資料請求に対応する。"
     },
     {
       "id": "dynamic-tariff-choice-generative-ai",
@@ -929,8 +929,8 @@
     "live": 26,
     "p0": 15,
     "blocked": 2,
-    "submission_ready": 8,
-    "submitted": 5,
+    "submission_ready": 7,
+    "submitted": 6,
     "review_needed": 7,
     "workflow_retrofit": 8,
     "workflow_revision_only": 5,
@@ -956,18 +956,18 @@
     },
     {
       "label": "Submission Ready",
-      "count": 8
+      "count": 7
     },
     {
       "label": "Submitted",
-      "count": 5
+      "count": 6
     }
   ],
   "recent": [
     {
-      "when": "7m",
+      "when": "0m",
       "project": "Public Climate Protection & Private Production Redundancy",
-      "event": "最終監査PASS・投稿準備完了"
+      "event": "正式投稿・受付確認。初期編集判断待ち"
     },
     {
       "when": "8m",

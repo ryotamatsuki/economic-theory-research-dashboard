@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-09T14:25:06.408Z",
-    "generated_jst": "2026-10-09 23:25 JST",
+    "generated_utc": "2026-10-09T21:51:02.013Z",
+    "generated_jst": "2026-10-10 06:51 JST",
     "status": "Healthy",
-    "label": "Targeted PCPPR submission update 2026-10-09 (other projects unchanged)"
+    "label": "JRS 1758654 desk-reject decision recorded (2026-10-10); submission pipeline reconciled"
   },
   "projects": [
     {
@@ -506,16 +506,16 @@
       "mechanism": "各地域は主に自地域で得られる利益を基準に支援先を選ぶ → 他地域との分業から生まれる追加利益を十分に考慮しない → 同じ分野への支援が重なり、望ましい役割分担への移行が遅れます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "投稿中",
+      "stage": "JRS Desk Reject / 次誌向け改稿方針の再評価",
       "verdict": "THEORY_FROZEN",
-      "health": "Waiting",
-      "next_gate": "次の編集ステータス確認",
+      "health": "Review",
+      "next_gate": "政策的な外部性内部化手段の理論化可否・先行研究・次誌適合性を再監査",
       "field": "Regional Economics / Industrial Policy",
-      "activity": "7m",
-      "review_needed": false,
-      "attention_reason": "Journal status",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "JRS desk reject（2026-10-10）：政策的内部化策と投稿先適合性の再評価",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/industrial-policy-composition-regional-value-chains",
       "deep_dive": {
         "question": "各地域が限られた産業政策予算をどの活動へ配るべきかを、地域間の分業関係まで含めて考えます。",
@@ -930,8 +930,8 @@
     "p0": 15,
     "blocked": 2,
     "submission_ready": 7,
-    "submitted": 6,
-    "review_needed": 7,
+    "submitted": 5,
+    "review_needed": 4,
     "workflow_retrofit": 8,
     "workflow_revision_only": 5,
     "workflow_next_stage": 11,
@@ -952,7 +952,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 6
+      "count": 7
     },
     {
       "label": "Submission Ready",
@@ -960,10 +960,15 @@
     },
     {
       "label": "Submitted",
-      "count": 6
+      "count": 5
     }
   ],
   "recent": [
+    {
+      "when": "0d",
+      "project": "Industrial Policy Composition",
+      "event": "JRS 1758654は外部査読前にdesk reject（2026-10-10）。外部性を実務上どう内部化するかの分析不足を指摘。次誌選定前の再監査へ。"
+    },
     {
       "when": "0m",
       "project": "Public Climate Protection & Private Production Redundancy",
@@ -973,11 +978,6 @@
       "when": "8m",
       "project": "Gandal–Shy Correction",
       "event": "desk rejectを反映し改稿ルートへ移行"
-    },
-    {
-      "when": "7m",
-      "project": "Shy–Stenbacka Correction",
-      "event": "canonical main昇格・Stage 14状態を再確認"
     }
   ]
 }

@@ -1,10 +1,11 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-09T21:51:02.013Z",
-    "generated_jst": "2026-10-10 06:51 JST",
+    "generated_utc": "2026-10-19T17:28:59.634Z",
+    "generated_jst": "2026-10-20 02:28:59 JST",
     "status": "Healthy",
-    "label": "JRS 1758654 desk-reject decision recorded (2026-10-10); submission pipeline reconciled"
+    "label": "2026-10-20 verified point-in-time update: technical resubmission author approved; editorial rejection reconciled",
+    "source_checkpoint_date": "2026-10-20"
   },
   "projects": [
     {
@@ -506,14 +507,14 @@
       "mechanism": "各地域は主に自地域で得られる利益を基準に支援先を選ぶ → 他地域との分業から生まれる追加利益を十分に考慮しない → 同じ分野への支援が重なり、望ましい役割分担への移行が遅れます。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "JRS Desk Reject / 次誌向け改稿方針の再評価",
+      "stage": "編集判断後の研究再検討・新規性監査",
       "verdict": "THEORY_FROZEN",
       "health": "Review",
-      "next_gate": "政策的な外部性内部化手段の理論化可否・先行研究・次誌適合性を再監査",
+      "next_gate": "先行定理・独自性・政策含意の再監査",
       "field": "Regional Economics / Industrial Policy",
       "activity": "0d",
       "review_needed": true,
-      "attention_reason": "JRS desk reject（2026-10-10）：政策的内部化策と投稿先適合性の再評価",
+      "attention_reason": "外部査読前の不採用判断後に新規性・政策関連性を再監査",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/industrial-policy-composition-regional-value-chains",
@@ -531,7 +532,7 @@
         "round": 0
       },
       "workflow_status": "改訂時適用",
-      "workflow_gap": "提出済み。AI開示等は統合済みのため現提出物は変更せず、改訂時にv2.7を含む最新workflow差分を適用。"
+      "workflow_gap": "旧投稿は外部査読前に不採用。現在は次誌未選定・新定理未確立の探索段階で、原論文の理論凍結は保持。"
     },
     {
       "id": "oe-ef-wsp-combinatorial-assignment",
@@ -611,14 +612,14 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿済み / 受付確認・初期編集判断待ち",
+      "stage": "技術差戻し対応済み・著者承認完了",
       "verdict": "THEORY_FROZEN_SUBMISSION_READY",
       "health": "Waiting",
-      "next_gate": "編集担当の割当・初期判断・査読依頼の通知待ち",
+      "next_gate": "編集部の技術チェック結果待ち",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "0m",
+      "activity": "0d",
       "review_needed": false,
-      "attention_reason": "Editorial status pending",
+      "attention_reason": "Editorial technical recheck pending",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
@@ -636,7 +637,7 @@
         "round": 0
       },
       "workflow_status": "適用済み",
-      "workflow_gap": "最終監査と独立数値監査の修正はPASS。投稿受付を確認済み。原稿は固定し、編集部からの連絡または査読者からの追加資料請求に対応する。"
+      "workflow_gap": "修正書類を再提出し著者最終承認まで完了。編集部の技術チェックの通過と査読開始は未確認。"
     },
     {
       "id": "dynamic-tariff-choice-generative-ai",
@@ -966,18 +967,18 @@
   "recent": [
     {
       "when": "0d",
-      "project": "Industrial Policy Composition",
-      "event": "JRS 1758654は外部査読前にdesk reject（2026-10-10）。外部性を実務上どう内部化するかの分析不足を指摘。次誌選定前の再監査へ。"
-    },
-    {
-      "when": "0m",
       "project": "Public Climate Protection & Private Production Redundancy",
-      "event": "正式投稿・受付確認。初期編集判断待ち"
+      "event": "投稿形式を修正し、著者の最終承認が完了。編集部による技術確認の結果待ち。"
     },
     {
-      "when": "8m",
-      "project": "Gandal–Shy Correction",
-      "event": "desk rejectを反映し改稿ルートへ移行"
+      "when": "0d",
+      "project": "Industrial Policy Composition",
+      "event": "外部査読前の不採用判断を受け、先行研究との重複と政策的意義を再検討。次の投稿先は未決定。"
+    },
+    {
+      "when": "1d",
+      "project": "Research workflow",
+      "event": "先行研究との差異・独創性の検証手順が更新。各論文の認定到達段階は自動変更せず。"
     }
   ]
 }

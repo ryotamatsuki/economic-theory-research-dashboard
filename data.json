@@ -1,10 +1,10 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-19T17:28:59.634Z",
-    "generated_jst": "2026-10-20 02:28:59 JST",
+    "generated_utc": "2026-10-19T17:36:31.476Z",
+    "generated_jst": "2026-10-20 02:36:31 JST",
     "status": "Healthy",
-    "label": "2026-10-20 verified point-in-time update: technical resubmission author approved; editorial rejection reconciled",
+    "label": "2026-10-20 verified portfolio update: editorial states and pending manuscript-format PR",
     "source_checkpoint_date": "2026-10-20"
   },
   "projects": [
@@ -86,14 +86,14 @@
       "mechanism": "企業による互換化が進む → 共通規格に参加する特別な利益が小さくなる → それでも残る市場上の不利や調整コストによって、政府が連合に残るかどうかが決まります。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "R9再開発完了 / 投稿準備",
+      "stage": "R9短縮稿の検証完了・著者レビュー待ち",
       "verdict": "THEORY_FROZEN_REVISED_LIMITED_NOVELTY",
       "health": "On track",
-      "next_gate": "認証ポータル確認 → final freeze",
+      "next_gate": "未マージの改訂内容を確認 → 投稿システムで最終確認",
       "field": "Industrial Organization / Standards",
-      "activity": "12d",
+      "activity": "7d",
       "review_needed": false,
-      "attention_reason": "Verification gate",
+      "attention_reason": "Submission package review pending",
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/private-compatibility-standards-coalitions",
@@ -112,7 +112,7 @@
         "round": 0
       },
       "workflow_status": "要retrofit",
-      "workflow_gap": "R9再開発結果を現行canonical workflowへ対応付け、最終freeze前にv2.5–v2.7の明示記録とAI/accountability整合を閉じる。"
+      "workflow_gap": "短縮版と補足資料の厳密性・体裁検証は実施済み。変更は未マージで著者承認待ち。投稿ポータル・最終申告は未確認。"
     },
     {
       "id": "shy-2002-correction",
@@ -979,6 +979,11 @@
       "when": "1d",
       "project": "Research workflow",
       "event": "先行研究との差異・独創性の検証手順が更新。各論文の認定到達段階は自動変更せず。"
+    },
+    {
+      "when": "7d",
+      "project": "Private Compatibility",
+      "event": "短縮原稿と補足証明の検証が進展。変更は著者レビュー待ちで、投稿手続きは未完了。"
     }
   ]
 }

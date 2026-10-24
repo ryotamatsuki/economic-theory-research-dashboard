@@ -1,13 +1,48 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-19T17:36:31.476Z",
-    "generated_jst": "2026-10-20 02:36:31 JST",
+    "generated_utc": "2026-10-24T10:15:00.000Z",
+    "generated_jst": "2026-10-24 19:15:00 JST",
     "status": "Healthy",
-    "label": "2026-10-20 verified portfolio update: editorial states and pending manuscript-format PR",
-    "source_checkpoint_date": "2026-10-20"
+    "label": "2026-10-24 verified editorial-mail and GitHub research-checkpoint update",
+    "source_checkpoint_date": "2026-10-24"
   },
   "projects": [
+    {
+      "id": "v2b-endogenous-product-design",
+      "project": "V2b Product Design & Compatibility",
+      "overview": "政府間で互換性協定を結んだ後、企業が製品設計を変更できるとき、国際協定への参加判断がどう変わるかを分析する理論研究です。",
+      "research_question": "企業の事後的な製品設計変更を無視した政策評価は、同じ交渉制度の下で国際規格協定の成立予測を逆転させ得るか。",
+      "mechanism": "各企業の私的設計選択が自国の消費者余剰と企業の世界市場利潤へ波及し、政府の参加同意と加盟国の拒否誘因を変化させます。",
+      "priority": "P0",
+      "type": "Theory",
+      "stage": "投稿中",
+      "verdict": "THEORY_FROZEN_SUBMITTED_LIMITED_FORMAL_AUDIT",
+      "health": "Waiting",
+      "next_gate": "編集部の次のステータス確認",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Awaiting editorial processing",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
+      "repository_url": "https://github.com/ryotamatsuki/standards-coalitions-differentiation-cournot",
+      "interesting_point": "企業側の設計調整を考慮すると、政府の交渉ルールは同一でも協定成立の予測が逆転し得ます。",
+      "deep_dive": {
+        "question": "同じ国際協定ルールでも、企業の内生的な製品設計が政府の参加判断を逆転させるか。",
+        "setup": "3か国の政府が国際的な互換性を協議し、その後に企業が残余製品差別化と生産量を選択します。",
+        "result": "設計を固定すると成立する協定が、事後設計調整によって全協定深度で不成立になり得る条件を示します。",
+        "significance": "標準化の評価には企業の私的設計反応だけでなく、加盟時の拒否選択肢を組み込む必要があります。"
+      },
+      "revision": {
+        "status": "none",
+        "decision": null,
+        "decision_date": null,
+        "deadline": null,
+        "round": 0
+      },
+      "workflow_status": "投稿済み",
+      "workflow_gap": "新規投稿は編集部判断待ち。既存の数学・AI開示監査は投稿前に実施されているが、全面的なLean形式証明ではない。"
+    },
     {
       "id": "information-appropriability",
       "project": "Information Appropriability",
@@ -86,14 +121,14 @@
       "mechanism": "企業による互換化が進む → 共通規格に参加する特別な利益が小さくなる → それでも残る市場上の不利や調整コストによって、政府が連合に残るかどうかが決まります。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "R9短縮稿の検証完了・著者レビュー待ち",
+      "stage": "初回投稿は不採択・再研究と短縮版の投稿準備中",
       "verdict": "THEORY_FROZEN_REVISED_LIMITED_NOVELTY",
       "health": "On track",
-      "next_gate": "未マージの改訂内容を確認 → 投稿システムで最終確認",
+      "next_gate": "投稿規定・著者承認・再提出前監査",
       "field": "Industrial Organization / Standards",
-      "activity": "7d",
+      "activity": "1d",
       "review_needed": false,
-      "attention_reason": "Submission package review pending",
+      "attention_reason": "Pre-submission compliance",
       "pipeline_lane": "Submission Ready",
       "publication_lane": "Submission Ready",
       "repository_url": "https://github.com/ryotamatsuki/private-compatibility-standards-coalitions",
@@ -332,12 +367,12 @@
       "mechanism": "各地域は自地域の成功確率や便益を重視して研究テーマを選ぶため、全国全体で見た『重複による保険』と『重複による無駄』のバランスからずれる可能性を分析します。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "先行研究精査",
-      "verdict": "UNRESOLVED",
+      "stage": "一般機構の検証は部分的進展・研究再構成中",
+      "verdict": "PARTIAL_IJIO_RESPONSE_REVISE",
       "health": "Review",
-      "next_gate": "Exact Prior-Art Re-Kill",
+      "next_gate": "近接先行研究・新しい政策命題の再監査",
       "field": "Public Economics / Innovation",
-      "activity": "31d",
+      "activity": "0d",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -612,12 +647,12 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "技術差戻し対応済み・著者承認完了",
+      "stage": "投稿中",
       "verdict": "THEORY_FROZEN_SUBMISSION_READY",
       "health": "Waiting",
-      "next_gate": "編集部の技術チェック結果待ち",
+      "next_gate": "査読移行または編集判断待ち",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "0d",
+      "activity": "3d",
       "review_needed": false,
       "attention_reason": "Editorial technical recheck pending",
       "pipeline_lane": "Submitted",
@@ -927,16 +962,16 @@
     }
   ],
   "stats": {
-    "live": 26,
-    "p0": 15,
+    "live": 27,
+    "p0": 16,
     "blocked": 2,
     "submission_ready": 7,
-    "submitted": 5,
+    "submitted": 6,
     "review_needed": 4,
     "workflow_retrofit": 8,
     "workflow_revision_only": 5,
     "workflow_next_stage": 11,
-    "workflow_current": 2
+    "workflow_current": 3
   },
   "pipeline": [
     {
@@ -961,29 +996,29 @@
     },
     {
       "label": "Submitted",
-      "count": 5
+      "count": 6
     }
   ],
   "recent": [
     {
       "when": "0d",
-      "project": "Public Climate Protection & Private Production Redundancy",
-      "event": "投稿形式を修正し、著者の最終承認が完了。編集部による技術確認の結果待ち。"
+      "project": "V2b Product Design & Compatibility",
+      "event": "原稿の事前監査・Highlights確認後、学術誌への初回投稿が受け付けられ、編集部の次の判断待ち。"
     },
     {
       "when": "0d",
-      "project": "Industrial Policy Composition",
-      "event": "外部査読前の不採用判断を受け、先行研究との重複と政策的意義を再検討。次の投稿先は未決定。"
+      "project": "Regional Public R&D",
+      "event": "一般化した利害分解を追加検証。ただし固有の政策命題と先行研究との差異は未確定。"
     },
     {
-      "when": "1d",
-      "project": "Research workflow",
-      "event": "先行研究との差異・独創性の検証手順が更新。各論文の認定到達段階は自動変更せず。"
+      "when": "3d",
+      "project": "Public Climate Protection & Private Production Redundancy",
+      "event": "技術修正を再提出。直近の投稿ポータルでは担当編集者が割り当てられた状態。"
     },
     {
-      "when": "7d",
+      "when": "3d",
       "project": "Private Compatibility",
-      "event": "短縮原稿と補足証明の検証が進展。変更は著者レビュー待ちで、投稿手続きは未完了。"
+      "event": "前回の不採択を踏まえた再研究を継続し、短縮版の規定・著者承認を確認中。"
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-10-24T10:00:09.229Z",
-    "generated_jst": "2026-10-24 19:00:09 JST",
+    "generated_utc": "2026-11-07T23:21:58.820Z",
+    "generated_jst": "2026-11-08 08:21 JST",
     "status": "Healthy",
-    "label": "2026-10-24 editorial-mail and research-checkpoint update",
-    "source_checkpoint_date": "2026-10-24"
+    "label": "2026-11-08 Gmail editorial decisions and GitHub manuscript-PR audit",
+    "source_checkpoint_date": "2026-11-08"
   },
   "projects": [
     {
@@ -20,7 +20,7 @@
       "verdict": "THEORY_FROZEN_SUBMITTED_LIMITED_FORMAL_AUDIT",
       "health": "Waiting",
       "next_gate": "編集部の次のステータス確認",
-      "activity": "0d",
+      "activity": "14d",
       "review_needed": false,
       "attention_reason": "Awaiting editorial processing",
       "pipeline_lane": "Submitted",
@@ -56,7 +56,7 @@
       "health": "Review",
       "next_gate": "Stage 0再設定",
       "field": "Information Economics / Organizational Economics",
-      "activity": "31d",
+      "activity": "64d",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Research Gate",
@@ -80,20 +80,20 @@
     },
     {
       "id": "shared-core-entry",
-      "project": "Public Innovation Hubs",
-      "overview": "複数の地域政府が公共のイノベーション拠点に投資し、その一方で民間の共通拠点もサービスを提供する市場を分析する研究です。",
-      "interesting_point": "他地域が公共投資を増やしたとき、自地域も対抗して投資を増やすのか、逆に減らすのかが、民間拠点の価格の動きによって変わり得ます。",
+      "project": "Private Innovation Intermediation / Public Access",
+      "overview": "民間のイノベーション仲介サービスが立地や利用者を選ぶとき、公的なアクセス確保の価値と、その費用を地域政府がどこまで負担するかを分析する理論研究です。",
+      "interesting_point": "民間サービスが成立していても、地域に必要な基礎的アクセスを確保するために公的な供給が正当化される条件を調べます。",
       "mechanism": "公共投資が増える → 利用者の行き先が変わる → 民間拠点が価格を変える → 利用者がさらに移動する → 地域政府の最適な投資額も変わる、という連鎖を解きます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "Stage 11R Astra repair / limited recheck待ち",
-      "verdict": "REPAIR_WITHIN_STAGE_11",
+      "stage": "改訂草稿の内部再査読・新規性再確認中",
+      "verdict": "BOUNDED_INTERNAL_EDITORIAL_GO_WITH_NOVELTY_AND_SUBMISSION_GATES_OPEN",
       "health": "Review",
-      "next_gate": "生成物同期・CI → Astra limited recheck",
+      "next_gate": "理論の適用範囲・新規性・原稿と形式証拠の再点検",
       "field": "Public Economics / Regional Economics",
-      "activity": "31d",
+      "activity": "0d",
       "review_needed": true,
-      "attention_reason": "Sync drift",
+      "attention_reason": "Unmerged scholarly revision and novelty gate",
       "pipeline_lane": "Manuscript",
       "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/writepaper_public_co-creation_hubs",
@@ -111,7 +111,7 @@
         "round": 0
       },
       "workflow_status": "要retrofit",
-      "workflow_gap": "Stage 11RのAstra修復は実装済み。生成物同期・CI・限定再チェックを閉じたうえで、次の投稿向けclosure時に最新workflow差分を確認する。"
+      "workflow_gap": "従前のStage 11Rだけでは現在を表せない。新しいDraft PR #73では命題の適用条件を限定修正し、内部評価は条件付きで前進したが、独立した新規性審査・最終CI・学術誌への提出は未完了。"
     },
     {
       "id": "private-compatibility",
@@ -126,7 +126,7 @@
       "health": "On track",
       "next_gate": "投稿規定・著者承認・再提出前監査",
       "field": "Industrial Organization / Standards",
-      "activity": "1d",
+      "activity": "14d",
       "review_needed": false,
       "attention_reason": "Pre-submission compliance",
       "pipeline_lane": "Submission Ready",
@@ -157,16 +157,16 @@
       "mechanism": "値下げ → 他社からの顧客移動に加えて既存顧客の購入量も変化 → 企業利益を改めて計算 → 成立する価格均衡の条件を組み直します。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "査読中 / 内部再検証で修正論点",
+      "stage": "初回投稿は不採択・査読意見を踏まえ再研究中",
       "verdict": "REPAIR_REQUIRED",
       "health": "Review",
-      "next_gate": "査読結果待ち＋均衡族・均衡選択の整理",
+      "next_gate": "後続研究への影響を特定・均衡選択の再検証",
       "field": "Industrial Organization",
-      "activity": "31d",
-      "review_needed": false,
-      "attention_reason": "Verification gate",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Reviewer significance and scope repair",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/stable-pricing-switching-costs",
       "deep_dive": {
         "question": "乗り換え費用がある市場で、企業が値下げしたときの利益を正しく計算すると、既存の価格均衡はどこまで維持されるのかを調べます。",
@@ -182,7 +182,7 @@
         "round": 0
       },
       "workflow_status": "改訂時適用",
-      "workflow_gap": "提出済み原稿は変更しない。改訂時に追加均衡族・均衡選択修正をglobality、scope、AI accountability、reviewer verifiabilityまで含めて再監査。"
+      "workflow_gap": "11月6日、掲載重要性の不足を理由に不採択。訂正自体は査読者が概ね妥当と評価したが、既存研究のどの結論に影響するかが未確認。新稿の数学・新規性・編集品質を再監査する。"
     },
     {
       "id": "gandal-shy-correction",
@@ -197,7 +197,7 @@
       "health": "On track",
       "next_gate": "novelty再監査 → 原稿統合",
       "field": "Industrial Organization / Standards",
-      "activity": "8m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -232,7 +232,7 @@
       "health": "On track",
       "next_gate": "認証ポータル確認 → Stage 15",
       "field": "Industrial Organization / Outsourcing",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -267,7 +267,7 @@
       "health": "Blocked",
       "next_gate": "AI利用条件確認 → Submission Freeze",
       "field": "Industrial Organization / Price Discrimination",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Author compliance gate",
       "pipeline_lane": "Submission Ready",
@@ -302,7 +302,7 @@
       "health": "On track",
       "next_gate": "Stage 5最終提出前監査",
       "field": "Industrial Organization / Innovation",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -337,7 +337,7 @@
       "health": "Review",
       "next_gate": "人手による独立検証",
       "field": "Industrial Organization",
-      "activity": "31d",
+      "activity": "64d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -372,7 +372,7 @@
       "health": "Review",
       "next_gate": "近接先行研究・新しい政策命題の再監査",
       "field": "Public Economics / Innovation",
-      "activity": "0d",
+      "activity": "14d",
       "review_needed": true,
       "attention_reason": "Sync drift",
       "pipeline_lane": "Prior-Art",
@@ -407,7 +407,7 @@
       "health": "Review",
       "next_gate": "新規メカニズム探索",
       "field": "Organizational Economics / Digital Economics",
-      "activity": "31d",
+      "activity": "64d",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -442,7 +442,7 @@
       "health": "Waiting",
       "next_gate": "査読結果待ち",
       "field": "Transportation Economics / Industrial Organization",
-      "activity": "30d",
+      "activity": "63d",
       "review_needed": false,
       "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
@@ -477,7 +477,7 @@
       "health": "On track",
       "next_gate": "live fee gate確認 → Stage 15 freeze",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "30d",
+      "activity": "63d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -512,7 +512,7 @@
       "health": "On track",
       "next_gate": "Stage 12R journal positioning → Stage 13R literature integration",
       "field": "Industrial Organization / Innovation Economics",
-      "activity": "25d",
+      "activity": "58d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -547,7 +547,7 @@
       "health": "Review",
       "next_gate": "先行定理・独自性・政策含意の再監査",
       "field": "Regional Economics / Industrial Policy",
-      "activity": "0d",
+      "activity": "19d",
       "review_needed": true,
       "attention_reason": "外部査読前の不採用判断後に新規性・政策関連性を再監査",
       "pipeline_lane": "Manuscript",
@@ -582,7 +582,7 @@
       "health": "On track",
       "next_gate": "D18境界探索",
       "field": "Mechanism Design / Random Assignment",
-      "activity": "25d",
+      "activity": "58d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -617,7 +617,7 @@
       "health": "Waiting",
       "next_gate": "査読者招待または編集判断待ち",
       "field": "Industrial Organization / Spatial Competition",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
@@ -647,16 +647,16 @@
       "mechanism": "政府の防災投資 → 生産停止リスクが変わる → 企業のバックアップ投資や立地が変わる → その反応を見越して地域政府が防災政策を選びます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿中",
-      "verdict": "THEORY_FROZEN_SUBMISSION_READY",
-      "health": "Waiting",
-      "next_gate": "査読移行または編集判断待ち",
+      "stage": "初回投稿は不採択・別誌向けの改訂草稿を審査中",
+      "verdict": "JPET_REDEVELOPMENT_DRAFT_INTERNAL_CONDITIONAL_NOT_CERTIFIED_FOR_SUBMISSION",
+      "health": "Review",
+      "next_gate": "新規性・原稿・形式検証・著者承認の最終確認",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "3d",
-      "review_needed": false,
-      "attention_reason": "Editorial technical recheck pending",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Journal scope and novelty reassessment",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/public-climate-protection-private-production-redundancy",
       "deep_dive": {
         "question": "政府の防災投資と企業のバックアップ生産拠点への投資が、互いにどのように代替・補完するかを分析します。",
@@ -671,8 +671,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "適用済み",
-      "workflow_gap": "修正書類を再提出し著者最終承認まで完了。編集部の技術チェックの通過と査読開始は未確認。"
+      "workflow_status": "要retrofit",
+      "workflow_gap": "11月4日、外部査読前に投稿先の専門分野との不一致で不採択。別誌向け改訂案はDraft PR #41で管理中。内部模擬査読結果と実際の学術誌判断は区別し、新規性・数学・原稿PDF・提出準備を再確認する。"
     },
     {
       "id": "dynamic-tariff-choice-generative-ai",
@@ -687,7 +687,7 @@
       "health": "Blocked",
       "next_gate": "closest-prior-art source確認 → Stage 11再判定",
       "field": "Digital Economics / Industrial Organization",
-      "activity": "23d",
+      "activity": "56d",
       "review_needed": false,
       "attention_reason": "Source / novelty gate",
       "pipeline_lane": "Manuscript",
@@ -722,7 +722,7 @@
       "health": "On track",
       "next_gate": "投稿ルート・fee・最終package確認 → Stage 15",
       "field": "Industrial Organization / Regional Economics",
-      "activity": "18d",
+      "activity": "50d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -757,7 +757,7 @@
       "health": "Waiting",
       "next_gate": "次の編集ステータス確認",
       "field": "Industrial Organization / Advance Booking",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Journal status",
       "pipeline_lane": "Submitted",
@@ -793,7 +793,7 @@
       "health": "On track",
       "next_gate": "認証ポータル確認 → final freeze",
       "field": "Industrial Organization / Price Discrimination",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -829,7 +829,7 @@
       "health": "On track",
       "next_gate": "hostile-referee audit → journal positioning",
       "field": "Banking / Industrial Organization",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Manuscript",
@@ -865,7 +865,7 @@
       "health": "On track",
       "next_gate": "認証ポータル確認 → final freeze",
       "field": "Information Economics / Industrial Organization",
-      "activity": "7m",
+      "activity": "32d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Submission Ready",
@@ -901,7 +901,7 @@
       "health": "Review",
       "next_gate": "source freeze → independent re-derivation",
       "field": "Industrial Organization / Tying",
-      "activity": "12d",
+      "activity": "45d",
       "review_needed": false,
       "attention_reason": "Research reset",
       "pipeline_lane": "Research Gate",
@@ -937,7 +937,7 @@
       "health": "On track",
       "next_gate": "theory freeze → independent production path",
       "field": "Industrial Organization / Spatial Competition",
-      "activity": "12d",
+      "activity": "45d",
       "review_needed": false,
       "attention_reason": "Verification gate",
       "pipeline_lane": "Research Gate",
@@ -966,12 +966,12 @@
     "p0": 16,
     "blocked": 2,
     "submission_ready": 7,
-    "submitted": 6,
-    "review_needed": 4,
-    "workflow_retrofit": 8,
+    "submitted": 4,
+    "review_needed": 9,
+    "workflow_retrofit": 9,
     "workflow_revision_only": 5,
     "workflow_next_stage": 11,
-    "workflow_current": 3
+    "workflow_current": 2
   },
   "pipeline": [
     {
@@ -988,7 +988,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 7
+      "count": 9
     },
     {
       "label": "Submission Ready",
@@ -996,29 +996,29 @@
     },
     {
       "label": "Submitted",
-      "count": 6
+      "count": 4
     }
   ],
   "recent": [
     {
-      "when": "0d",
-      "project": "V2b Product Design & Compatibility",
-      "event": "原稿の事前監査・Highlights確認後、学術誌への初回投稿が受け付けられ、編集部の次の判断待ち。"
+      "when": "2d",
+      "project": "Shy (2002) Correction",
+      "event": "11月6日、査読コメントを伴う不採択。訂正の妥当性は概ね認められた一方、既存研究への影響と論文としての意義が課題となった。"
     },
     {
-      "when": "0d",
-      "project": "Regional Public R&D",
-      "event": "一般化した利害分解を追加検証。ただし固有の政策命題と先行研究との差異は未確定。"
-    },
-    {
-      "when": "3d",
+      "when": "4d",
       "project": "Public Climate Protection & Private Production Redundancy",
-      "event": "技術修正を再提出。直近の投稿ポータルでは担当編集者が割り当てられた状態。"
+      "event": "11月4日、投稿先との分野不一致で外部査読前に不採択。別誌向けの改訂草稿は未提出で、独立審査と最終確認が残る。"
     },
     {
-      "when": "3d",
-      "project": "Private Compatibility",
-      "event": "前回の不採択を踏まえた再研究を継続し、短縮版の規定・著者承認を確認中。"
+      "when": "4d",
+      "project": "Private Innovation Intermediation / Public Access",
+      "event": "理論命題の適用条件を修正した新しい改訂草稿がDraft PR #73にある。内部評価は条件付きで改善、正式な投稿前ゲートは未完了。"
+    },
+    {
+      "when": "15d",
+      "project": "V2b Product Design & Compatibility",
+      "event": "10月24日の投稿受付は確認済み。今回のGmail確認では、その後の新たな編集判断は確認されなかった。"
     }
   ]
 }

@@ -1,13 +1,49 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-07T23:21:58.820Z",
-    "generated_jst": "2026-11-08 08:21 JST",
+    "generated_utc": "2026-11-17T01:00:00Z",
+    "generated_jst": "2026-11-17 10:00 JST",
     "status": "Healthy",
-    "label": "2026-11-08 Gmail editorial decisions and GitHub manuscript-PR audit",
-    "source_checkpoint_date": "2026-11-08"
+    "label": "2026-11-17 journal status reconciliation (other project research checkpoints retained)",
+    "source_checkpoint_date": "2026-11-17"
   },
   "projects": [
+    {
+      "id": "rc01-policy-resolution-product-differentiation",
+      "project": "Policy Resolution & Product Differentiation (RC01)",
+      "overview": "固定価格の円環市場で、政策変更に伴う企業の参加・退出反応から、観測できない製品差別化構造を識別できる条件を分析します。",
+      "research_question": "政策の調整精度は、企業行動を通じた市場構造の識別可能性と厚生評価をどう変えるか。",
+      "mechanism": "参加政策を変えると企業の参加・退出が変化し、初期市場シェアだけでは区別できない異なる市場構造を識別できる区間が生じ得ます。",
+      "interesting_point": "政策の調整精度が低いと、市場構造の違いを識別できる区間を逃す可能性があります。",
+      "priority": "P0",
+      "type": "Theory",
+      "stage": "投稿中（2026-11-17投稿完了）",
+      "verdict": "THEORY_FROZEN_SUBMITTED",
+      "health": "Waiting",
+      "next_gate": "編集部の次のステータス確認",
+      "field": "Industrial Organization / Partial Identification",
+      "activity": "0d",
+      "review_needed": false,
+      "attention_reason": "Awaiting editorial processing",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
+      "repository_url": "https://github.com/ryotamatsuki/optimal-firm-number-policy",
+      "deep_dive": {
+        "question": "観測可能な市場シェアと政策への企業参加反応から、未知の製品間距離を識別できるか。",
+        "setup": "円環市場、固定価格、企業参加政策を用いて分析します。",
+        "result": "一定の条件のもとで識別区間が存在し、離散的な政策メニューはその区間を逃し得ます。",
+        "significance": "政策の調整精度と市場構造の識別、情報不足による厚生損失の関係を明らかにします。"
+      },
+      "revision": {
+        "status": "none",
+        "decision": null,
+        "decision_date": null,
+        "deadline": null,
+        "round": 0
+      },
+      "workflow_status": "投稿済み",
+      "workflow_gap": "2026年11月17日に投稿完了。外部査読への移行は未確認。S03とは別論文。"
+    },
     {
       "id": "v2b-endogenous-product-design",
       "project": "V2b Product Design & Compatibility",
@@ -16,15 +52,15 @@
       "mechanism": "各企業の私的設計選択が自国の消費者余剰と企業の世界市場利潤へ波及し、政府の参加同意と加盟国の拒否誘因を変化させます。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿中",
+      "stage": "編集審査で不採択・再投稿方針検討",
       "verdict": "THEORY_FROZEN_SUBMITTED_LIMITED_FORMAL_AUDIT",
-      "health": "Waiting",
-      "next_gate": "編集部の次のステータス確認",
-      "activity": "14d",
-      "review_needed": false,
-      "attention_reason": "Awaiting editorial processing",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "health": "Review",
+      "next_gate": "交渉制度への依存性と一般性の再評価",
+      "activity": "8d",
+      "review_needed": true,
+      "attention_reason": "Post-editorial redevelopment decision",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/standards-coalitions-differentiation-cournot",
       "interesting_point": "企業側の設計調整を考慮すると、政府の交渉ルールは同一でも協定成立の予測が逆転し得ます。",
       "deep_dive": {
@@ -40,8 +76,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "投稿済み",
-      "workflow_gap": "新規投稿は編集部判断待ち。既存の数学・AI開示監査は投稿前に実施されているが、全面的なLean形式証明ではない。"
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "初期編集審査で不採択。制度依存性を踏まえ理論的貢献の一般性を再検討する。再投稿は未実施。"
     },
     {
       "id": "information-appropriability",
@@ -612,16 +648,16 @@
       "mechanism": "各企業が品質を一方的に大きく変えた場合まで利益を比較し、同じ品質を選ぶ候補が本当にナッシュ均衡かを確認したうえで、異なる品質を選ぶ均衡が成立する条件も調べます。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "Editor assigned / 初期編集審査中",
-      "verdict": "THEORY_FROZEN",
-      "health": "Waiting",
-      "next_gate": "査読者招待または編集判断待ち",
+      "stage": "外部査読後に不採択・再投稿方針検討",
+      "verdict": "THEORY_FROZEN_EXTERNAL_REVIEW_LIMITED_SCOPE",
+      "health": "Review",
+      "next_gate": "貢献範囲・論文形式・説明構成を再検討",
       "field": "Industrial Organization / Spatial Competition",
-      "activity": "32d",
-      "review_needed": false,
-      "attention_reason": "Journal status",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "activity": "0d",
+      "review_needed": true,
+      "attention_reason": "Post-review redevelopment decision",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment",
       "deep_dive": {
         "question": "Economides (1989) の品質競争モデルで、公刊された対称的な品質選択が本当にナッシュ均衡なのかを再検証します。",
@@ -637,7 +673,7 @@
         "round": 0
       },
       "workflow_status": "改訂時適用",
-      "workflow_gap": "提出済み。既存exposition/submission QAは凍結し、正式改訂時のみv2.7等の後発workflow差分を適用。"
+      "workflow_gap": "外部査読後の不採択を受け、次の投稿形式と研究貢献の提示方法を検討。再投稿は未実施。"
     },
     {
       "id": "public-climate-protection-private-production-redundancy",
@@ -962,14 +998,14 @@
     }
   ],
   "stats": {
-    "live": 27,
-    "p0": 16,
+    "live": 28,
+    "p0": 17,
     "blocked": 2,
     "submission_ready": 7,
-    "submitted": 4,
-    "review_needed": 9,
+    "submitted": 3,
+    "review_needed": 11,
     "workflow_retrofit": 9,
-    "workflow_revision_only": 5,
+    "workflow_revision_only": 6,
     "workflow_next_stage": 11,
     "workflow_current": 2
   },
@@ -988,7 +1024,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 9
+      "count": 11
     },
     {
       "label": "Submission Ready",
@@ -996,29 +1032,39 @@
     },
     {
       "label": "Submitted",
-      "count": 4
+      "count": 3
     }
   ],
   "recent": [
     {
-      "when": "2d",
+      "when": "0d",
+      "project": "Policy Resolution & Product Differentiation (RC01)",
+      "event": "11月17日、正式投稿を完了。編集部の次の連絡待ち。"
+    },
+    {
+      "when": "0d",
+      "project": "Economides Quality Reassessment",
+      "event": "11月17日、外部査読後に不採択。論文形式と貢献の提示方法を再検討する。"
+    },
+    {
+      "when": "8d",
+      "project": "V2b Product Design & Compatibility",
+      "event": "11月9日、初期編集審査で不採択。交渉制度への依存性と一般性を再評価する。"
+    },
+    {
+      "when": "11d",
       "project": "Shy (2002) Correction",
       "event": "11月6日、査読コメントを伴う不採択。訂正の妥当性は概ね認められた一方、既存研究への影響と論文としての意義が課題となった。"
     },
     {
-      "when": "4d",
+      "when": "13d",
       "project": "Public Climate Protection & Private Production Redundancy",
       "event": "11月4日、投稿先との分野不一致で外部査読前に不採択。別誌向けの改訂草稿は未提出で、独立審査と最終確認が残る。"
     },
     {
-      "when": "4d",
+      "when": "13d",
       "project": "Private Innovation Intermediation / Public Access",
       "event": "理論命題の適用条件を修正した新しい改訂草稿がDraft PR #73にある。内部評価は条件付きで改善、正式な投稿前ゲートは未完了。"
-    },
-    {
-      "when": "15d",
-      "project": "V2b Product Design & Compatibility",
-      "event": "10月24日の投稿受付は確認済み。今回のGmail確認では、その後の新たな編集判断は確認されなかった。"
     }
   ]
 }

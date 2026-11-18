@@ -1003,9 +1003,9 @@
     "blocked": 2,
     "submission_ready": 7,
     "submitted": 4,
-    "review_needed": 11,
+    "review_needed": 10,
     "workflow_retrofit": 9,
-    "workflow_revision_only": 6,
+    "workflow_revision_only": 5,
     "workflow_next_stage": 11,
     "workflow_current": 2
   },

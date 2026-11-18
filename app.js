@@ -121,7 +121,7 @@ function rowsForKind(kind) {
   if (kind === 'blocked') return all.filter(p => p.health === 'Blocked');
   if (kind === 'submission-ready') return all.filter(p => p.publication_lane === 'Submission Ready');
   if (kind === 'submitted') return all.filter(p => p.publication_lane === 'Submitted');
-  if (kind === 'review-needed') return all.filter(p => p.review_needed);
+  if (kind === 'review-needed') return all.filter(p => p.review_needed || p.health === 'Review');
   if (kind === 'workflow-retrofit') return all.filter(p => ['要retrofit','限定retrofit'].includes(p.workflow_status));
   return [];
 }

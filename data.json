@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-17T01:00:00Z",
-    "generated_jst": "2026-11-17 10:00 JST",
+    "generated_utc": "2026-11-18T17:27:02.210Z",
+    "generated_jst": "2026-11-19 02:27:02 JST",
     "status": "Healthy",
-    "label": "2026-11-17 journal status reconciliation (other project research checkpoints retained)",
-    "source_checkpoint_date": "2026-11-17"
+    "label": "2026-11-19 verified journal submissions and lifecycle reconciliation",
+    "source_checkpoint_date": "2026-11-19"
   },
   "projects": [
     {
@@ -17,14 +17,14 @@
       "interesting_point": "政策の調整精度が低いと、市場構造の違いを識別できる区間を逃す可能性があります。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "投稿中（2026-11-17投稿完了）",
+      "stage": "技術確認への修正再提出済み（11月19日）",
       "verdict": "THEORY_FROZEN_SUBMITTED",
       "health": "Waiting",
-      "next_gate": "編集部の次のステータス確認",
+      "next_gate": "技術確認の結果を確認",
       "field": "Industrial Organization / Partial Identification",
       "activity": "0d",
       "review_needed": false,
-      "attention_reason": "Awaiting editorial processing",
+      "attention_reason": "Awaiting technical check",
       "pipeline_lane": "Submitted",
       "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/optimal-firm-number-policy",
@@ -41,8 +41,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "投稿済み",
-      "workflow_gap": "2026年11月17日に投稿完了。外部査読への移行は未確認。S03とは別論文。"
+      "workflow_status": "修正再提出済み",
+      "workflow_gap": "11月17日の初回投稿と11月19日の技術確認対応による再提出は同一論文の同一投稿。技術確認の完了・査読開始は未確認。"
     },
     {
       "id": "v2b-endogenous-product-design",
@@ -642,22 +642,22 @@
     },
     {
       "id": "economides-quality-equilibrium-reassessment",
-      "project": "Economides Quality Reassessment",
+      "project": "Economides (1989) Correction Note",
       "overview": "企業が立地だけでなく製品の品質も選ぶ空間競争モデルについて、Economides (1989) が示した品質均衡を再検証する訂正研究です。",
       "interesting_point": "既存研究が示した『両社が同じ品質を選ぶ均衡』が成立しない範囲があり、その近くでは両社が異なる品質を選ぶ別の均衡が存在することを示します。",
       "mechanism": "各企業が品質を一方的に大きく変えた場合まで利益を比較し、同じ品質を選ぶ候補が本当にナッシュ均衡かを確認したうえで、異なる品質を選ぶ均衡が成立する条件も調べます。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "外部査読後に不採択・再投稿方針検討",
+      "stage": "訂正短報を正式投稿済み（11月19日）・編集処理待ち",
       "verdict": "THEORY_FROZEN_EXTERNAL_REVIEW_LIMITED_SCOPE",
-      "health": "Review",
-      "next_gate": "貢献範囲・論文形式・説明構成を再検討",
+      "health": "Waiting",
+      "next_gate": "次の編集ステータスを確認",
       "field": "Industrial Organization / Spatial Competition",
       "activity": "0d",
-      "review_needed": true,
-      "attention_reason": "Post-review redevelopment decision",
-      "pipeline_lane": "Manuscript",
-      "publication_lane": "Manuscript",
+      "review_needed": false,
+      "attention_reason": "Awaiting editorial processing",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment",
       "deep_dive": {
         "question": "Economides (1989) の品質競争モデルで、公刊された対称的な品質選択が本当にナッシュ均衡なのかを再検証します。",
@@ -672,8 +672,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "改訂時適用",
-      "workflow_gap": "外部査読後の不採択を受け、次の投稿形式と研究貢献の提示方法を検討。再投稿は未実施。"
+      "workflow_status": "投稿済み",
+      "workflow_gap": "2026年11月19日に6ページの訂正短報を正式投稿。長編原稿は11月17日に外部査読後不採択。新投稿の外部査読移行は未確認。"
     },
     {
       "id": "public-climate-protection-private-production-redundancy",
@@ -1002,7 +1002,7 @@
     "p0": 17,
     "blocked": 2,
     "submission_ready": 7,
-    "submitted": 3,
+    "submitted": 4,
     "review_needed": 11,
     "workflow_retrofit": 9,
     "workflow_revision_only": 6,
@@ -1024,7 +1024,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 11
+      "count": 10
     },
     {
       "label": "Submission Ready",
@@ -1032,14 +1032,19 @@
     },
     {
       "label": "Submitted",
-      "count": 3
+      "count": 4
     }
   ],
   "recent": [
     {
       "when": "0d",
+      "project": "Economides (1989) Correction Note",
+      "event": "11月19日、訂正短報を正式投稿。編集部の次の連絡待ち。元の長編原稿の不採択履歴は保持。"
+    },
+    {
+      "when": "0d",
       "project": "Policy Resolution & Product Differentiation (RC01)",
-      "event": "11月17日、正式投稿を完了。編集部の次の連絡待ち。"
+      "event": "11月19日、技術確認の指摘事項に対応して同一投稿の修正版を再提出。確認結果待ち。"
     },
     {
       "when": "0d",

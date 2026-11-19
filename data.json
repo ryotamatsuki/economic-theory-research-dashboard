@@ -2,9 +2,9 @@
   "schema_version": 3,
   "sync": {
     "generated_utc": "2026-11-18T17:27:02.210Z",
-    "generated_jst": "2026-11-19 02:27:02 JST",
+    "generated_jst": "2026-11-19 JST (manual update)",
     "status": "Healthy",
-    "label": "2026-11-19 verified journal submissions and lifecycle reconciliation",
+    "label": "2026-11-19 Green Subsidies submission receipt reconciliation",
     "source_checkpoint_date": "2026-11-19"
   },
   "projects": [
@@ -508,16 +508,16 @@
       "mechanism": "他地域の支援が増える → 企業の投資や競争力が変わる → 自地域のインフラ投資の価値が変わる → 地域政府が補助とインフラの組み合わせを調整します。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "Stage 14 conditional pass / Lean extension verification-only",
+      "stage": "投稿受付済み・技術確認中",
       "verdict": "THEORY_FROZEN",
-      "health": "On track",
-      "next_gate": "live fee gate確認 → Stage 15 freeze",
+      "health": "Waiting",
+      "next_gate": "技術確認結果・受付番号の確認",
       "field": "Environmental Economics / Industrial Organization",
-      "activity": "63d",
+      "activity": "0d",
       "review_needed": false,
-      "attention_reason": "Verification gate",
-      "pipeline_lane": "Submission Ready",
-      "publication_lane": "Submission Ready",
+      "attention_reason": "Editorial status pending",
+      "pipeline_lane": "Submitted",
+      "publication_lane": "Submitted",
       "repository_url": "https://github.com/ryotamatsuki/strategic-local-green-policy-competition",
       "deep_dive": {
         "question": "地域政府が企業へのグリーン補助と公共インフラ投資を同時に選ぶとき、他地域の政策にどう反応するかを分析します。",
@@ -532,8 +532,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "要retrofit",
-      "workflow_gap": "Stage 14資産は旧workflow起点。Stage 15前にstructural absorption/portabilityの差分確認、v2.6 accountability、v2.7 reviewer verifiabilityを閉じる。"
+      "workflow_status": "投稿済み（技術確認中）",
+      "workflow_gap": "技術確認の結果待ち。投稿システム生成PDFは直接照合できていない。内部の独立査読・原稿管理ゲートは投稿状況と区別して継続管理。"
     },
     {
       "id": "standardization-scope-direction-innovation",
@@ -1001,8 +1001,8 @@
     "live": 28,
     "p0": 17,
     "blocked": 2,
-    "submission_ready": 7,
-    "submitted": 4,
+    "submission_ready": 6,
+    "submitted": 5,
     "review_needed": 10,
     "workflow_retrofit": 9,
     "workflow_revision_only": 5,
@@ -1028,14 +1028,19 @@
     },
     {
       "label": "Submission Ready",
-      "count": 7
+      "count": 6
     },
     {
       "label": "Submitted",
-      "count": 4
+      "count": 5
     }
   ],
   "recent": [
+    {
+      "when": "0d",
+      "project": "Green Subsidies & Public Infrastructure",
+      "event": "11月19日、論文を正式投稿。投稿書類の技術確認中。外部査読は未確認。"
+    },
     {
       "when": "0d",
       "project": "Economides (1989) Correction Note",

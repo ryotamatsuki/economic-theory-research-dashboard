@@ -72,7 +72,7 @@ function renderKpis() {
 }
 
 function renderAttention() {
-  const rows = state.data.projects.filter(p => p.review_needed || p.health === 'Blocked');
+  const rows = state.data.projects.filter(p => p.review_needed || p.health === 'Review' || p.health === 'Blocked');
   const el = $('#attention-list');
   if (!rows.length) {
     el.innerHTML = '<div class="empty">現在、要対応の案件はありません。</div>';

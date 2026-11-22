@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-22T05:22:14.150Z",
+    "generated_utc": "2026-11-22T05:22:37.959Z",
     "generated_jst": "2026-11-22 JST (manual update)",
     "status": "Healthy",
     "label": "2026-11-22 editorial decisions and research-stage reconciliation",
@@ -1004,8 +1004,8 @@
     "submission_ready": 6,
     "submitted": 3,
     "review_needed": 12,
-    "workflow_retrofit": 9,
-    "workflow_revision_only": 5,
+    "workflow_retrofit": 8,
+    "workflow_revision_only": 7,
     "workflow_next_stage": 11,
     "workflow_current": 2
   },

@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-18T17:27:02.210Z",
-    "generated_jst": "2026-11-19 JST (manual update)",
+    "generated_utc": "2026-11-22T05:21:02.398Z",
+    "generated_jst": "2026-11-22 JST (manual update)",
     "status": "Healthy",
-    "label": "2026-11-19 Green Subsidies submission receipt reconciliation",
-    "source_checkpoint_date": "2026-11-19"
+    "label": "2026-11-22 editorial decisions and research-stage reconciliation",
+    "source_checkpoint_date": "2026-11-22"
   },
   "projects": [
     {
@@ -17,12 +17,12 @@
       "interesting_point": "政策の調整精度が低いと、市場構造の違いを識別できる区間を逃す可能性があります。",
       "priority": "P0",
       "type": "Theory",
-      "stage": "技術確認への修正再提出済み（11月19日）",
+      "stage": "修正再提出後、11月20日に査読段階への移行予告。査読者割当は未確認",
       "verdict": "THEORY_FROZEN_SUBMITTED",
       "health": "Waiting",
-      "next_gate": "技術確認の結果を確認",
+      "next_gate": "投稿システムの具体的な査読状態・査読者割当を確認",
       "field": "Industrial Organization / Partial Identification",
-      "activity": "0d",
+      "activity": "2d",
       "review_needed": false,
       "attention_reason": "Awaiting technical check",
       "pipeline_lane": "Submitted",
@@ -42,7 +42,7 @@
         "round": 0
       },
       "workflow_status": "修正再提出済み",
-      "workflow_gap": "11月17日の初回投稿と11月19日の技術確認対応による再提出は同一論文の同一投稿。技術確認の完了・査読開始は未確認。"
+      "workflow_gap": "11月17日投稿と11月19日修正再提出は同一投稿。11月20日に出版社の査読段階への移行を伝える自動通知を受信。ただし査読者の割当・正式Under Review状態は未確認。"
     },
     {
       "id": "v2b-endogenous-product-design",
@@ -508,16 +508,16 @@
       "mechanism": "他地域の支援が増える → 企業の投資や競争力が変わる → 自地域のインフラ投資の価値が変わる → 地域政府が補助とインフラの組み合わせを調整します。",
       "priority": "P1",
       "type": "Theory",
-      "stage": "投稿受付済み・技術確認中",
-      "verdict": "THEORY_FROZEN",
-      "health": "Waiting",
-      "next_gate": "技術確認結果・受付番号の確認",
+      "stage": "11月22日、外部査読前に不採択。現行モデルはNO-GO、新機構候補はHOLD",
+      "verdict": "CURRENT_MODEL_NO_GO_NEW_MECHANISM_HOLD",
+      "health": "Review",
+      "next_gate": "希少な共用インフラの利用枠配分について先行理論への吸収・実例を監査（Stage 0未認定）",
       "field": "Environmental Economics / Industrial Organization",
       "activity": "0d",
-      "review_needed": false,
-      "attention_reason": "Editorial status pending",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "review_needed": true,
+      "attention_reason": "Post-editorial redevelopment decision",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/strategic-local-green-policy-competition",
       "deep_dive": {
         "question": "地域政府が企業へのグリーン補助と公共インフラ投資を同時に選ぶとき、他地域の政策にどう反応するかを分析します。",
@@ -532,8 +532,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "投稿済み（技術確認中）",
-      "workflow_gap": "技術確認の結果待ち。投稿システム生成PDFは直接照合できていない。内部の独立査読・原稿管理ゲートは投稿状況と区別して継続管理。"
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "11月19日の正式投稿は11月22日に不採択。外部査読前の編集判断であり現在は投稿中ではない。独立EPOCH探索では現行モデル延長NO-GO、共用インフラ利用枠配分はHOLD。新しい独立論文のStage 0 GOも再投稿もない。"
     },
     {
       "id": "standardization-scope-direction-innovation",
@@ -648,16 +648,16 @@
       "mechanism": "各企業が品質を一方的に大きく変えた場合まで利益を比較し、同じ品質を選ぶ候補が本当にナッシュ均衡かを確認したうえで、異なる品質を選ぶ均衡が成立する条件も調べます。",
       "priority": "P0",
       "type": "Correction",
-      "stage": "訂正短報を正式投稿済み（11月19日）・編集処理待ち",
-      "verdict": "THEORY_FROZEN_EXTERNAL_REVIEW_LIMITED_SCOPE",
-      "health": "Waiting",
-      "next_gate": "次の編集ステータスを確認",
+      "stage": "11月21日、編集判断で不採択。貢献・新規性をStage 6から再監査",
+      "verdict": "SHORT_NOTE_CONTRIBUTION_REDEVELOPMENT_REQUIRED",
+      "health": "Review",
+      "next_gate": "検証可能な先行研究と独立貢献を再評価、短報の投稿先を再選定",
       "field": "Industrial Organization / Spatial Competition",
-      "activity": "0d",
-      "review_needed": false,
-      "attention_reason": "Awaiting editorial processing",
-      "pipeline_lane": "Submitted",
-      "publication_lane": "Submitted",
+      "activity": "1d",
+      "review_needed": true,
+      "attention_reason": "Post-editorial redevelopment decision",
+      "pipeline_lane": "Manuscript",
+      "publication_lane": "Manuscript",
       "repository_url": "https://github.com/ryotamatsuki/economides-quality-equilibrium-reassessment",
       "deep_dive": {
         "question": "Economides (1989) の品質競争モデルで、公刊された対称的な品質選択が本当にナッシュ均衡なのかを再検証します。",
@@ -672,8 +672,8 @@
         "deadline": null,
         "round": 0
       },
-      "workflow_status": "投稿済み",
-      "workflow_gap": "2026年11月19日に6ページの訂正短報を正式投稿。長編原稿は11月17日に外部査読後不採択。新投稿の外部査読移行は未確認。"
+      "workflow_status": "改訂時適用",
+      "workflow_gap": "11月19日投稿の訂正短報は11月21日に不採択。編集部のアドバイザー評価はあったが詳細な正式査読報告なし。11月17日の長編版RIO査読後不採択とは別履歴。BER向けAI模擬査読はStage 11 NO-GOだが実誌の決定ではない。移管・再投稿は未確認。"
     },
     {
       "id": "public-climate-protection-private-production-redundancy",
@@ -1002,8 +1002,8 @@
     "p0": 17,
     "blocked": 2,
     "submission_ready": 6,
-    "submitted": 5,
-    "review_needed": 10,
+    "submitted": 3,
+    "review_needed": 12,
     "workflow_retrofit": 9,
     "workflow_revision_only": 5,
     "workflow_next_stage": 11,
@@ -1024,7 +1024,7 @@
     },
     {
       "label": "Manuscript",
-      "count": 10
+      "count": 12
     },
     {
       "label": "Submission Ready",
@@ -1032,27 +1032,37 @@
     },
     {
       "label": "Submitted",
-      "count": 5
+      "count": 3
     }
   ],
   "recent": [
     {
       "when": "0d",
       "project": "Green Subsidies & Public Infrastructure",
-      "event": "11月19日、論文を正式投稿。投稿書類の技術確認中。外部査読は未確認。"
+      "event": "11月22日、外部査読前に不採択。現行モデル継続はNO-GO、希少な共用インフラ利用枠配分はHOLD（独立Stage 0未進行）。"
     },
     {
-      "when": "0d",
+      "when": "1d",
       "project": "Economides (1989) Correction Note",
-      "event": "11月19日、訂正短報を正式投稿。編集部の次の連絡待ち。元の長編原稿の不採択履歴は保持。"
+      "event": "11月21日、不採択。編集部アドバイザーの評価はあったが詳細な正式査読報告はない。短報の独立貢献と先行文献をStage 6から再検証。新投稿先未確定。"
     },
     {
-      "when": "0d",
+      "when": "2d",
       "project": "Policy Resolution & Product Differentiation (RC01)",
-      "event": "11月19日、技術確認の指摘事項に対応して同一投稿の修正版を再提出。確認結果待ち。"
+      "event": "11月20日、出版社から査読段階への移行を伝える自動通知。11月19日の修正再提出は同一投稿で、査読者の割当は未確認。"
     },
     {
-      "when": "0d",
+      "when": "3d",
+      "project": "Green Subsidies & Public Infrastructure",
+      "event": "11月19日に正式投稿していたが、11月22日の不採択により技術確認段階は履歴となった。"
+    },
+    {
+      "when": "3d",
+      "project": "Economides (1989) Correction Note",
+      "event": "11月19日に正式投稿していたが、11月21日に不採択。長編版と別投稿。"
+    },
+    {
+      "when": "5d",
       "project": "Economides 長編版（旧RIO投稿）",
       "event": "11月17日、外部査読後に不採択。論文形式と貢献の提示方法を再検討する。"
     },

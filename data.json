@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-22T05:22:37.959Z",
+    "generated_utc": "2026-11-22T05:24:22.755Z",
     "generated_jst": "2026-11-22 JST (manual update)",
     "status": "Healthy",
     "label": "2026-11-22 editorial decisions and research-stage reconciliation",
@@ -198,7 +198,7 @@
       "health": "Review",
       "next_gate": "後続研究への影響を特定・均衡選択の再検証",
       "field": "Industrial Organization",
-      "activity": "0d",
+      "activity": "2d",
       "review_needed": true,
       "attention_reason": "Reviewer significance and scope repair",
       "pipeline_lane": "Manuscript",
@@ -218,7 +218,7 @@
         "round": 0
       },
       "workflow_status": "改訂時適用",
-      "workflow_gap": "11月6日、掲載重要性の不足を理由に不採択。訂正自体は査読者が概ね妥当と評価したが、既存研究のどの結論に影響するかが未確認。新稿の数学・新規性・編集品質を再監査する。"
+      "workflow_gap": "11月6日、掲載重要性の不足を理由に不採択。訂正自体は査読者が概ね妥当と評価したが、既存研究のどの結論に影響するかが未確認。新稿の数学・新規性・編集品質を再監査する。 11月20日に他誌移管候補の再案内があったが、移管の手続・別誌への再投稿は行われていない。"
     },
     {
       "id": "gandal-shy-correction",
@@ -1050,6 +1050,11 @@
       "when": "2d",
       "project": "Policy Resolution & Product Differentiation (RC01)",
       "event": "11月20日、出版社から査読段階への移行を伝える自動通知。11月19日の修正再提出は同一投稿で、査読者の割当は未確認。"
+    },
+    {
+      "when": "2d",
+      "project": "Shy (2002) Correction",
+      "event": "11月20日、他誌への移管候補の再案内。移管手続や新規投稿は未実施。従前の不採択判断は変わらない。"
     },
     {
       "when": "3d",

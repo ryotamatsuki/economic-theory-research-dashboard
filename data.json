@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "sync": {
-    "generated_utc": "2026-11-22T05:21:02.398Z",
+    "generated_utc": "2026-11-22T05:22:14.150Z",
     "generated_jst": "2026-11-22 JST (manual update)",
     "status": "Healthy",
     "label": "2026-11-22 editorial decisions and research-stage reconciliation",
@@ -673,7 +673,7 @@
         "round": 0
       },
       "workflow_status": "改訂時適用",
-      "workflow_gap": "11月19日投稿の訂正短報は11月21日に不採択。編集部のアドバイザー評価はあったが詳細な正式査読報告なし。11月17日の長編版RIO査読後不採択とは別履歴。BER向けAI模擬査読はStage 11 NO-GOだが実誌の決定ではない。移管・再投稿は未確認。"
+      "workflow_gap": "11月19日に投稿した訂正短報は11月21日に編集部アドバイザーの評価を経て不採択。詳細な正式査読報告はない。11月17日の長編版の外部査読後不採択とは別履歴。次の投稿先候補に向けたAI模擬査読はStage 11 NO-GOだが、実際の投稿先からの判断ではない。移管・再投稿は未確認。"
     },
     {
       "id": "public-climate-protection-private-production-redundancy",
@@ -1063,26 +1063,26 @@
     },
     {
       "when": "5d",
-      "project": "Economides 長編版（旧RIO投稿）",
+      "project": "Economides 長編版（過去の投稿）",
       "event": "11月17日、外部査読後に不採択。論文形式と貢献の提示方法を再検討する。"
     },
     {
-      "when": "8d",
+      "when": "13d",
       "project": "V2b Product Design & Compatibility",
       "event": "11月9日、初期編集審査で不採択。交渉制度への依存性と一般性を再評価する。"
     },
     {
-      "when": "11d",
+      "when": "16d",
       "project": "Shy (2002) Correction",
       "event": "11月6日、査読コメントを伴う不採択。訂正の妥当性は概ね認められた一方、既存研究への影響と論文としての意義が課題となった。"
     },
     {
-      "when": "13d",
+      "when": "18d",
       "project": "Public Climate Protection & Private Production Redundancy",
       "event": "11月4日、投稿先との分野不一致で外部査読前に不採択。別誌向けの改訂草稿は未提出で、独立審査と最終確認が残る。"
     },
     {
-      "when": "13d",
+      "when": "14d",
       "project": "Private Innovation Intermediation / Public Access",
       "event": "理論命題の適用条件を修正した新しい改訂草稿がDraft PR #73にある。内部評価は条件付きで改善、正式な投稿前ゲートは未完了。"
     }
